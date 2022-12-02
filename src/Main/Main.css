@@ -1,3 +1,19 @@
+header {
+  background-color: white;
+  position:static;
+  width: 100vw;
+}
+
+.main-content {
+
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+
+.main-content-squeaks {
+  padding: 0em 1em;
+}
+
 .main-image-container {
   height: 2.5em;
   width: 2.5em;

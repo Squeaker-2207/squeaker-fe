@@ -1,0 +1,15 @@
+.new-squeak {
+  width: 100vw;
+  margin: auto;
+}
+
+.new-squeak-form {
+  width: 80%;
+}
+
+input[type=text] {
+  width: 80vw;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
