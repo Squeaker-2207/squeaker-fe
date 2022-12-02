@@ -24,8 +24,6 @@ jobs:
 workflows:
   test_my_app:
     jobs:
-      - build_and_test
-
       - cypress/run:
           start: npm start
       - build
