@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(7, 95, 133);
+  margin: 0;
+}
+
+.app-image-container {
+  height: 100px;
+  width: 100px;
+}
+
+.home-logo {
+}
+
+.main-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.spacer {
+  height: auto;
+}
