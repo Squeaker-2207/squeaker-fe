@@ -9,7 +9,6 @@ import './App.css'
 
 const App = () => {
   const page = window.location.pathname
-  console.log(page);
 
   return (
     <main className='app column center'>
