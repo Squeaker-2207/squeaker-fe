@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export const Home = () => {
   return (
-    <main className='main-page border'>
+    <main className='main-page center'>
       <div className='home-logo column center center-x'>      
         <div className='app-image-container'>
           <img src={sqrl} alt='hey now' />
@@ -15,11 +15,13 @@ export const Home = () => {
       </div> 
 
       <div className='spacer'></div> 
+      <div className='spacer'></div> 
 
       <div className=' buttons column center'>
-        <Link to='/main' >
+        <Link to='/user' >
           <button>User</button>
         </Link>
+      <div className='spacer'></div> 
         <Link to='/admin' >
           <button>Admin</button>
         </Link>

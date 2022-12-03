@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
 import sqrl from '../images/SqueakerIcon.png'
 import '../App.css'
-import './Main.css'
+import './User.css'
 import { Squeak } from '../Squeak/Squeak'
 import { NewSqueak } from '../NewSqueak/NewSqueak'
+import { Link } from 'react-router-dom'
 
 
-export const Main = () => {
-  /**
-   * this is where all the squeaks will be displayed
-   */
+export const User = () => {
 
   const [squeaks, setSqueaks] = useState([])
   const [isSqueaking, setIsSqueaking] = useState(false)
@@ -52,7 +50,9 @@ export const Main = () => {
         <div className='main-content row'>
 
         <nav className='main-options column'>
-          <button>👤</button>
+          <Link to='/user/:id'>
+            <button>👤</button>
+          </Link>
           <button onClick={startSqueaking} >💬</button>
         </nav>
 
