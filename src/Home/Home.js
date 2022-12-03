@@ -12,7 +12,9 @@ export const Home = () => {
           <img src={sqrl} />
         </div>
         <h1>SQUEAKR</h1>
-      </div>  
+      </div> 
+
+      <div className='spacer'></div> 
 
       <div className=' buttons column center'>
         <Link to='/main' >

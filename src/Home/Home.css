@@ -8,17 +8,20 @@ h1 {
   margin: 0;
 }
 
-.main-page {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.app-image-container {
+  height: 100px;
+  width: 100px;
 }
 
 .home-logo {
 }
 
-.app-image-container {
-  height: 100px;
-  width: 100px;
+.main-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.spacer {
+  height: auto;
 }
