@@ -8,8 +8,14 @@ h1 {
   margin: 0;
 }
 
-.home-logo {
+.main-page {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.home-logo {
 }
 
 .app-image-container {
