@@ -15,9 +15,9 @@ export const Squeak = ({ id, text }) => {
       <span className='squeak-text'>{text}</span>
 
       <div className='squeak-options row'>
-        <span>🌰</span>
-        <span>👁️‍🗨️</span>
-        <span>❌</span>
+        <button>🌰</button>
+        <button>👁️‍🗨️</button>
+        <button>❌</button>
       </div>
     </div>
   )

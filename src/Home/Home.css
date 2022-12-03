@@ -13,9 +13,6 @@ h1 {
   width: 100px;
 }
 
-.home-logo {
-}
-
 .main-page {
   height: 100vh;
   display: flex;
@@ -23,5 +20,5 @@ h1 {
 }
 
 .spacer {
-  height: auto;
+  height: .5em;
 }

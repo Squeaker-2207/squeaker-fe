@@ -10,6 +10,11 @@ header {
   grid-template-columns: 1fr 6fr;
 }
 
+button {
+  font-size: 1.5em;
+  width: min-content;
+}
+
 .main-content-squeaks {
   padding: 0em 1em;
 }
