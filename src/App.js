@@ -8,7 +8,7 @@ import { Main } from './Main/Main'
 import './App.css'
 
 const App = () => {
-  const page = window.location.pathname
+  // const page = window.location.pathname
 
   return (
     <main className='app column center'>

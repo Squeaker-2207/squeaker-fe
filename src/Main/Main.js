@@ -42,7 +42,7 @@ export const Main = () => {
       <header className='row center'>
         <h1>SQUEAKR</h1>
         <div className='main-image-container'>
-          <img src={sqrl} />
+          <img src={sqrl} alt='alt text' />
         </div>
       </header>
 

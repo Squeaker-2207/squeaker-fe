@@ -8,7 +8,7 @@ export const Squeak = ({ id, text }) => {
     <div className='squeak'>
       <div className='user-info row'>
         <div className='squeak-avatar-container'>
-          <img src='' />
+          <img src='' alt='alt text' />
         </div>
         <span>{id}</span>
       </div>

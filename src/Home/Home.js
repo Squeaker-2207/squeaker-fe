@@ -9,7 +9,7 @@ export const Home = () => {
     <main className='main-page border'>
       <div className='home-logo column center center-x'>      
         <div className='app-image-container'>
-          <img src={sqrl} />
+          <img src={sqrl} alt='hey now' />
         </div>
         <h1>SQUEAKR</h1>
       </div> 
