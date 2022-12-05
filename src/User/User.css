@@ -11,7 +11,8 @@ header {
 }
 
 button {
-  font-size: 1.5em;
+  min-width:fit-content;
+  font-size: 1em;
   width: min-content;
 }
 

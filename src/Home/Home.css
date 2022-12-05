@@ -22,3 +22,7 @@ h1 {
 .spacer {
   height: .5em;
 }
+
+.debug {
+  background-color: teal;
+}
