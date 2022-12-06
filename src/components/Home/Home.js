@@ -1,11 +1,10 @@
 import React, { useState, useEffect} from 'react'
 import { useQuery } from '@apollo/client'
-import sqrl from '../images/SqueakerIcon.png'
-import '../App.css'
+import sqrl from '../../images/SqueakerIcon.png'
 import './Home.css'
 import { Link } from 'react-router-dom'
-import { GetUser } from '../queries/getUser'
-import { GetSqueaks } from '../queries/getSqueaks'
+import { GetUser } from '../../queries/getUser'
+import { GetSqueaks } from '../../queries/getSqueaks'
 
 export const Home = () => {
   const [loggingIn, setLoggingIn] = useState(false)

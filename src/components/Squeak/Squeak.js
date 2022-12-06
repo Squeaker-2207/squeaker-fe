@@ -1,5 +1,4 @@
 import React from 'react'
-import '../App.css'
 import './Squeak.css'
 
 export const Squeak = ({ id, text }) => {
