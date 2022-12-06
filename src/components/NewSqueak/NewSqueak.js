@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import '../App.css'
 import './NewSqueak.css'
 
 export const NewSqueak = ({addSubmittedSqueak, stopSqueaking}) => {

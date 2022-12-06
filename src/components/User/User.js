@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import sqrl from '../images/SqueakerIcon.png'
-import '../App.css'
+import sqrl from '../../images/SqueakerIcon.png'
 import './User.css'
 import { Squeak } from '../Squeak/Squeak'
 import { NewSqueak } from '../NewSqueak/NewSqueak'

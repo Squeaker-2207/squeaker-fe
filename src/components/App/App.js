@@ -1,11 +1,12 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
-import { Admin } from './Admin/Admin'
-import { Error } from './Error/Error'
-import { Home } from './Home/Home'
-import { User } from './User/User'
+import { Error } from '../Error/Error'
+import { Home } from '../Home/Home'
+import { User } from '../User/User'
+import { Admin } from '../Admin/Admin'
 import './App.css'
+
 
 const App = () => {
 
