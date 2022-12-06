@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import sqrl from '../images/SqueakerIcon.png'
 import '../App.css'
 import './Home.css'
 import { Link } from 'react-router-dom'
+// import { GetUser } from '../queries/getUser'
+// import { GetSqueaks } from '../queries/getSqueaks'
 
 export const Home = () => {
   const [loggingIn, setLoggingIn] = useState(false)
+  const [newUser, setNewUser] = useState(false)
+
+  // console.log(GetUser("Jort Jeggings"), GetSqueaks());
 
   const isLoggingIn = () => {
     setLoggingIn(true)
@@ -14,7 +19,7 @@ export const Home = () => {
   const notLoggingIn = () => {
     setLoggingIn(false)
   }
-  const [newUser, setNewUser] = useState(false)
+
 
   const isNewUser = () => {
     setNewUser(true)
