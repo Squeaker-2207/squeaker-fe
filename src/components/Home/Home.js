@@ -9,6 +9,8 @@ export const Home = () => {
   const [loggingIn, setLoggingIn] = useState(false)
   const [newUser, setNewUser] = useState(false)
 
+  // console.log(GetUser("Jort Jeggings"), GetSqueaks());
+
   const isLoggingIn = () => {
     setLoggingIn(true)
   }
