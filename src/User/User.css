@@ -1,26 +1,23 @@
-header {
-  background-color: white;
-  position:static;
-  width: 100vw;
+
+.user {
+  width: 100%;
+  height: 100vh;
 }
 
-.main-content {
-
-  display: grid;
-  grid-template-columns: 1fr 6fr;
+.user-content {
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
 }
 
-button {
-  min-width:fit-content;
-  font-size: 1em;
-  width: min-content;
+.user-content-squeaks {
+  width: 100%;
+  padding: 0 2%;
 }
 
-.main-content-squeaks {
-  padding: 0em 1em;
+.user-options {
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
 }
 
-.main-image-container {
-  height: 2.5em;
-  width: 2.5em;
-}

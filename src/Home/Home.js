@@ -4,7 +4,9 @@ import '../App.css'
 import './Home.css'
 import { Link } from 'react-router-dom'
 
-export const Home = () => {
+export const Home = ({ setPage }) => {
+  setPage(window.location.pathname)
+
   const [loggingIn, setLoggingIn] = useState(false)
 
   const isLoggingIn = () => {
@@ -24,9 +26,10 @@ export const Home = () => {
     setNewUser(false)
   }
 
+
   return (
-    <main className='main-page center'>
-      <div className='home-logo column center center-x'>      
+    <main className='main-page column'>
+      <div className='home-logo column center-x'>      
         <div className='app-image-container'>
           <img src={sqrl} alt='hey now' />
         </div>
@@ -37,7 +40,7 @@ export const Home = () => {
       <div className='spacer'></div> 
 
         {!loggingIn && !newUser &&
-          <div className='column center distribute'>        
+          <div className='home-options column center distribute'>        
               <button onClick={isLoggingIn} >Login</button>
               <div className='spacer'></div> 
               <button onClick={isNewUser} >I'm A New User</button>

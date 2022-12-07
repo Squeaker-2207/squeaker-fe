@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import sqrl from '../images/SqueakerIcon.png'
 import '../App.css'
 import './User.css'
 import { Squeak } from '../Squeak/Squeak'
@@ -7,10 +6,11 @@ import { NewSqueak } from '../NewSqueak/NewSqueak'
 import { Link } from 'react-router-dom'
 
 
-export const User = () => {
-
+export const User = ({ setPage }) => {
   const [squeaks, setSqueaks] = useState([])
   const [isSqueaking, setIsSqueaking] = useState(false)
+
+  setPage(window.location.pathname)
 
   const displaySqueaks = () => {
     return squeaks.map(squeak => {
@@ -36,29 +36,23 @@ export const User = () => {
   }
 
   return (
-    <main>
-      <header className='row center'>
-        <h1>SQUEAKR</h1>
-        <div className='main-image-container'>
-          <img src={sqrl} alt='alt text' />
-        </div>
-      </header>
+    <main className='user'>
 
       {isSqueaking && <NewSqueak addSubmittedSqueak={addSubmittedSqueak} stopSqueaking={stopSqueaking}/> }
 
       {!isSqueaking && 
-        <div className='main-content row'>
+        <div className='user-content'>
 
-        <nav className='main-options column'>
-          <Link to='/user/:id'>
-            <button>👤</button>
-          </Link>
-          <button onClick={startSqueaking} >💬</button>
-        </nav>
+          <nav className='user-options'>
+            <Link to='/user/:id'>
+              <button>👤</button>
+            </Link>
+            <button onClick={startSqueaking} >💬</button>
+          </nav>
 
-        <section className='main-content-squeaks column center'>
-          {displaySqueaks()}
-        </section>
+          <section className='user-content-squeaks'>
+            {displaySqueaks()}
+          </section>
 
         </div>
       }

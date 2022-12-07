@@ -1,18 +1,46 @@
 /* elements  */
 
+#root {
+  background: linear-gradient(0.25turn, #ffffff, #000000, #ffffff);
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+}
+
 button {
   width:fit-content;
 }
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(7, 95, 133);
+  margin: 0;
+}
+
+header {
+  background-color: white;
+  position:static;
+}
+
 img {
   height: 100%;
   width: 100%;
 }
 
+main {
+  height: 100vh;
+}
+
 /* attributes */
 
-.column {
-  display: flex;
-  flex-direction: column;
+.app {
+  background-color: rgb(255, 255, 255);
+}
+
+.border {
+  border: 1px dashed red;
 }
 
 .center {
@@ -24,16 +52,47 @@ img {
   justify-content: center;
 }
 
-.row {
+.column {
+  width: auto;
   display: flex;
-  flex-direction: row;
-}
-
-.border {
-  border: 1px dashed red;
-}
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}      
 
 .distribute {
   width: 100%;
   justify-content: space-around;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}  
+
+/* main logo  */
+
+.main-content-squeaks {
+  padding: 0em 1em;
+}
+
+.logo-image-container {
+  height: 2.5em;
+  width: 2.5em;
+}
+
+/* breakpoints */
+
+@media screen and (min-width: 500px) {
+  .column {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .row {
+    width: 75%;
+    margin: 0 auto;
+
+  }
+
 }
