@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
-import sqrl from '../../images/SqueakerIcon.png'
-import { Admin } from '../Admin/Admin.js'
-import { Error } from '../Error/Error'
-import { Home } from '../Home/Home'
-import { User } from '../User/User'
+import sqrl from '../images/SqueakerIcon.png'
+import { Admin } from './components/Admin/Admin'
+import { Error } from './components/Error/Error'
+import { Home } from './components/Home/Home'
+import { User } from './components/User/User'
 import './App.css'
-
 
 const App = () => {
   const [page, setPage] = useState('/')

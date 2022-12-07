@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../App.css'
+import '../App/App.css'
 import './User.css'
 import { Squeak } from '../Squeak/Squeak'
 import { NewSqueak } from '../NewSqueak/NewSqueak'
