@@ -7,6 +7,7 @@ import { Home } from './Home/Home'
 import { User } from './User/User'
 import './App.css'
 
+
 const App = () => {
   const [page, setPage] = useState('/')
 
