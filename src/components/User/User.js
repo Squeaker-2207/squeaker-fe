@@ -45,9 +45,9 @@ export const User = ({ setPage }) => {
 
           <nav className='user-options'>
             <Link to='/user/:id'>
-              <button>👤</button>
+              <button id='user-info-button'>👤</button>
             </Link>
-            <button onClick={startSqueaking} >💬</button>
+            <button id='new-squeak-button' onClick={startSqueaking} >💬</button>
           </nav>
 
           <section className='user-content-squeaks'>

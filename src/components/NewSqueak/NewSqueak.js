@@ -14,8 +14,8 @@ export const NewSqueak = ({addSubmittedSqueak, stopSqueaking}) => {
   return (
     <div className='new-squeak column center' >
       <form className='new-squeak-form column center'>
-        <input className='column center' type="text" name="squeak" value={squeakContent} onChange={event => setSqueakContent(event.target.value)} />
-        <button onClick={event => submitNewSqueak(event)}>Squeak!</button>
+        <input className='text-input column center' type="text" name="squeak" value={squeakContent} onChange={event => setSqueakContent(event.target.value)} />
+        <button id='post-new-squeak-button' onClick={event => submitNewSqueak(event)}>Squeak!</button>
       </form>
     </div>
   )
