@@ -28,7 +28,6 @@ export const Home = ({ setPage }) => {
     setNewUser(false)
   }
 
-
   return (
     <main className='main-page column'>
       <div className='home-logo column center-x'>      

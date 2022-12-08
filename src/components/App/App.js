@@ -10,6 +10,7 @@ import './App.css'
 
 const App = () => {
   const [page, setPage] = useState('/')
+  const [squeaks, setSqueaks] = useState([])
 
   return (
     <main className='app column center'>

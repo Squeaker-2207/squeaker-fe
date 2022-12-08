@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { Squeak } from '../Squeak/Squeak'
 
 export const Admin = ({ setPage }) => {
-  const [squeaks, setSqueaks] = useState()
-  setSqueaks([])
+  const [squeaks, setSqueaks] = useState([])
 
   setPage(window.location.pathname)
 

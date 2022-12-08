@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom'
 export const User = ({ setPage }) => {
   const [squeaks, setSqueaks] = useState([])
   const [isSqueaking, setIsSqueaking] = useState(false)
-
   setPage(window.location.pathname)
 
   const displaySqueaks = () => {
@@ -47,6 +46,7 @@ export const User = ({ setPage }) => {
             <Link to='/user/:id'>
               <button id='user-info-button'>👤</button>
             </Link>
+            <div className='spacer'></div>
             <button id='new-squeak-button' onClick={startSqueaking} >💬</button>
           </nav>
 

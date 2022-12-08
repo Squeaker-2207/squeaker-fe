@@ -13,7 +13,7 @@ describe('empty spec', () => {
     cy.get('.submit-button').should('be.visible').click()
   });
 
-  it.skip('user can check their own info', () => {
+  it('user can check their own info', () => {
     cy.get('#login-button').should('be.visible').click()
     cy.get('.text-input').should('be.visible').type('USERNAME')
     cy.get('.submit-button').should('be.visible').click()
@@ -22,7 +22,7 @@ describe('empty spec', () => {
     cy.get('h2').should('be.visible').contains('Oh nose\!') // refactor with user ID
   });
 
-  it('user can squeak', () => {
+  it.skip('user can squeak', () => {
     cy.get('#login-button').should('be.visible').click()
     cy.get('.text-input').should('be.visible').type('USERNAME')
     cy.get('.submit-button').should('be.visible').click()
@@ -30,7 +30,6 @@ describe('empty spec', () => {
     cy.get('#new-squeak-button').should('be.visible').click()
     cy.get('.text-input').should('be.visible').type('That\'s me Squeakin\'')
     cy.get('#post-new-squeak-button').should('be.visible').click()
-    cy.wait(500)
 
     cy.get('.squeak-text').should('be.visible').contains('That\'s me Squeakin\'')
 
