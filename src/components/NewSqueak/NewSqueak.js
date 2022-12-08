@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 import './NewSqueak.css'
 
-export const NewSqueak = ({addSubmittedSqueak, stopSqueaking}) => {
+export const NewSqueak = ({addSubmittedSqueak, stopSqueaking, userName}) => {
   const [squeakContent, setSqueakContent] = useState('')
 
   const submitNewSqueak = (event) => {
+    event.preventDefault()
     stopSqueaking()
     addSubmittedSqueak({
       id: Date.now(),
-      text: squeakContent})
+      user: userName,
+      text: squeakContent
+    })
   }
 
   return (

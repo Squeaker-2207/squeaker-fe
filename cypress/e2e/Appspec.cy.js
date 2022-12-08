@@ -22,17 +22,14 @@ describe('empty spec', () => {
     cy.get('h2').should('be.visible').contains('Oh nose\!') // refactor with user ID
   });
 
-  it.skip('user can squeak', () => {
+  it('user can squeak', () => {
     cy.get('#login-button').should('be.visible').click()
     cy.get('.text-input').should('be.visible').type('USERNAME')
     cy.get('.submit-button').should('be.visible').click()
-
     cy.get('#new-squeak-button').should('be.visible').click()
     cy.get('.text-input').should('be.visible').type('That\'s me Squeakin\'')
     cy.get('#post-new-squeak-button').should('be.visible').click()
-
     cy.get('.squeak-text').should('be.visible').contains('That\'s me Squeakin\'')
-
   });
 
 })

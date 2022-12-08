@@ -11,6 +11,8 @@ import './App.css'
 const App = () => {
   const [page, setPage] = useState('/')
   const [squeaks, setSqueaks] = useState([])
+  const [flaggedSqueaks, setFlaggedSqueaks] = useState([])
+  const [userName, setUserName] = useState('')
 
   return (
     <main className='app column center'>
@@ -26,10 +28,47 @@ const App = () => {
       }
 
       <Routes>
-        <Route path='/' element={<Home setPage={setPage} />} />
-        <Route path='/user' element={<User setPage={setPage} />} />
-        <Route path='admin' element={<Admin setPage={setPage}/>} />
-        <Route path='*' element={<Error setPage={setPage}/>} />
+        <Route 
+          path='/' 
+          element={
+            <Home 
+              setPage={setPage} 
+              setUserName={setUserName}
+            />
+          } 
+        />
+        <Route 
+          path='/user' 
+          element={
+            <User 
+              setPage={setPage}
+              userName={userName}
+              squeaks={squeaks}
+              setSqueaks={setSqueaks}
+              flaggedSqueaks={flaggedSqueaks}
+              setFlaggedSqueaks={setFlaggedSqueaks} 
+            />
+          } 
+        />
+        <Route 
+          path='admin' 
+          element={
+            <Admin 
+            setPage={setPage}
+            userName={userName}
+            squeaks={squeaks}
+            flaggedSqueaks={flaggedSqueaks}
+          />
+          } 
+        />
+        <Route 
+          path='*' 
+          element={
+            <Error 
+              setPage={setPage}
+            />
+          } 
+        />
       </Routes> 
 
     </main>

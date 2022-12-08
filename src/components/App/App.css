@@ -89,12 +89,12 @@ main {
 
 @media screen and (min-width: 500px) {
   .column {
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
   }
 
   .row {
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
 
   }

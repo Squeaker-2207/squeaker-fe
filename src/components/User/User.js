@@ -6,8 +6,7 @@ import { NewSqueak } from '../NewSqueak/NewSqueak'
 import { Link } from 'react-router-dom'
 
 
-export const User = ({ setPage }) => {
-  const [squeaks, setSqueaks] = useState([])
+export const User = ({ setPage, userName, squeaks, setSqueaks, flaggedSqueaks, setFlaggedSqueaks }) => {
   const [isSqueaking, setIsSqueaking] = useState(false)
   setPage(window.location.pathname)
 
@@ -16,7 +15,10 @@ export const User = ({ setPage }) => {
       return (
         <Squeak 
           id={squeak.id}
+          userName={userName}
           text={squeak.text}
+          flaggedSqueaks={flaggedSqueaks}
+          setFlaggedSqueaks={setFlaggedSqueaks}
         />
       )
     })
@@ -37,13 +39,13 @@ export const User = ({ setPage }) => {
   return (
     <main className='user'>
 
-      {isSqueaking && <NewSqueak addSubmittedSqueak={addSubmittedSqueak} stopSqueaking={stopSqueaking}/> }
+      {isSqueaking && <NewSqueak addSubmittedSqueak={addSubmittedSqueak} stopSqueaking={stopSqueaking} userName={userName}/> }
 
       {!isSqueaking && 
         <div className='user-content'>
 
           <nav className='user-options'>
-            <Link to='/user/:id'>
+            <Link to={'/user/:id'}>
               <button id='user-info-button'>👤</button>
             </Link>
             <div className='spacer'></div>
