@@ -16,7 +16,7 @@ const App = () => {
 //   const [squeaks, setSqueaks] = useState([])
 //   const [flaggedSqueaks, setFlaggedSqueaks] = useState([])
   const [userName, setUserName] = useState('')
- const [isAdminTabClicked, SetIsAdminClicked] = useState(false)
+// const [isAdminTabClicked, SetIsAdminClicked] = useState(false)
   return (
     <main className='app column center'>
       {page !== '/' && 
@@ -47,7 +47,7 @@ const App = () => {
               setPage={setPage}
               userName={userName}
 //               squeaks={squeaks}
-              isAdminTabClicked={isAdminTabClicked}
+//              isAdminTabClicked={isAdminTabClicked}
 //               setSqueaks={setSqueaks}
 //               flaggedSqueaks={flaggedSqueaks}
 //               setFlaggedSqueaks={setFlaggedSqueaks} 
