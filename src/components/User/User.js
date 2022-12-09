@@ -3,9 +3,9 @@ import React, { useEffect } from 'react'
 // import sqrl from "../../images/SqueakerIcon.png";
 import "./User.css";
 // import { Squeak } from "../Squeak/Squeak";
-import { NewSqueak } from "../NewSqueak/NewSqueak";
+// import { NewSqueak } from "../NewSqueak/NewSqueak";
 // import { GetSqueaks } from "../../queries/getSqueaks";
-  import { Link } from 'react-router-dom'
+//  import { Link } from 'react-router-dom'
 
 //import Navbar from "../Navigation/Navbar";
 
@@ -49,17 +49,17 @@ export const User = ({ isAdminTabClicked }) => {
     
   //       <div className='user-content'>
      
-{/* {isAdmin && <Navbar />} */}
-          {/* <nav className='user-options'>
-            <Link to={'/user/:id'}>
-              <button id='user-info-button'>👤</button>
-            </Link>
-            <div className='spacer'></div>
+//{/* {isAdmin && <Navbar />} */}
+//          {/* <nav className='user-options'>
+//            <Link to={'/user/:id'}>
+//              <button id='user-info-button'>👤</button>
+//            </Link>
+//            <div className='spacer'></div>
             <button id='new-squeak-button'  >💬</button>
-          </nav>
+//          </nav>
 
-          <section className='user-content-squeaks'>
-            {/* {displaySqueaks()} */}
+//          <section className='user-content-squeaks'>
+//            {/* {displaySqueaks()} */}
     //       </section>
 
     //     </div>
