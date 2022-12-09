@@ -15,14 +15,14 @@ export const User = ({ isAdminTabClicked }) => {
 
   const { userId } = useParams();
   const { data: userById } = GetUser(userId);
-  const { isAdmin } = user;
+  const { isAdmin = false } = user || {};
   const { loading, error, data } = GetSqueaks();
 
   useEffect(() => {
     if (!user) {
       setUser(userById);
     }
-  }, [user, userById]);
+  }, [user, userById, setUser]);
 
   if (error) return <p>Error : {error.message}</p>;
   if (loading) return <p>Loading...</p>;
