@@ -1,5 +1,5 @@
-import React from "react";
-//import { UserContext, useContext, UserContext } from "../../contexts/userContext";
+import React, { useState, useEffect } from 'react'
+
 import sqrl from "../../images/SqueakerIcon.png";
 import "./User.css";
 import { Squeak } from "../Squeak/Squeak";
@@ -13,6 +13,7 @@ export const User = ({ isAdminTabClicked }) => {
   const { username, id, isAdmin } = user;
   const { loading, error, data } = GetSqueaks();
   const [userData, setUserData] = useState()
+  import { Link } from 'react-router-dom'
 
   useEffect(()=> {
     const getUserData = async() => {
@@ -42,18 +43,18 @@ export const User = ({ isAdminTabClicked }) => {
 
     <main className='user'>
 
-      {isSqueaking && <NewSqueak addSubmittedSqueak={addSubmittedSqueak} stopSqueaking={stopSqueaking} userName={userName}/> }
+   <NewSqueak />
 
-      {!isSqueaking && 
+    
         <div className='user-content'>
-          <NewSqueak />
+     
 {/* {isAdmin && <Navbar />} */}
           <nav className='user-options'>
             <Link to={'/user/:id'}>
               <button id='user-info-button'>👤</button>
             </Link>
             <div className='spacer'></div>
-            <button id='new-squeak-button' onClick={startSqueaking} >💬</button>
+            <button id='new-squeak-button'  >💬</button>
           </nav>
 
           <section className='user-content-squeaks'>
@@ -61,7 +62,7 @@ export const User = ({ isAdminTabClicked }) => {
           </section>
 
         </div>
-      }
+      
 
     </main>
   );
