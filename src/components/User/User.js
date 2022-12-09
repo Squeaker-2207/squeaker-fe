@@ -1,28 +1,28 @@
-import React from "react";
-//import { UserContext } from "../../contexts/userContext";
+import React, { useContext, useEffect } from "react";
+import { UserContext } from "../../contexts/userContext";
 import sqrl from "../../images/SqueakerIcon.png";
 import "./User.css";
 import { Squeak } from "../Squeak/Squeak";
 import { NewSqueak } from "../NewSqueak/NewSqueak";
 import { GetSqueaks } from "../../queries/getSqueaks";
+import { useParams } from "react-router-dom";
 
-//import Navbar from "../Navigation/Navbar";
+import { GetUser } from "../../queries/getUser";
+import Navbar from "../Navigation/Navbar";
 
 export const User = ({ isAdminTabClicked }) => {
- // const [user] = useContext(UserContext);
-  // const { username, id, isAdmin } = user;
-  const { loading, error, data } = GetSqueaks();
-  // const [userData, setUserData] = useState()
+  const [user, setUser] = useContext(UserContext);
 
-  // useEffect(()=> {
-  //   const getUserData = async() => {
-  //     const result = await user
-  //     await setUserData("")
-  //   }
-  //   getUserData()
-  // },[user])
-  
-  // console.log(userData);
+  const { userId } = useParams();
+  const { data: userById } = GetUser(userId);
+  const { isAdmin } = user;
+  const { loading, error, data } = GetSqueaks();
+
+  useEffect(() => {
+    if (!user) {
+      setUser(userById);
+    }
+  }, [user, userById]);
 
   if (error) return <p>Error : {error.message}</p>;
   if (loading) return <p>Loading...</p>;
@@ -40,7 +40,7 @@ export const User = ({ isAdminTabClicked }) => {
 
   return (
     <main>
-      {/* {isAdmin && <Navbar />} */}
+      {isAdmin && <Navbar />}
       <header className="row center">
         <h1>SQUEAKR</h1>
         <div className="main-image-container">

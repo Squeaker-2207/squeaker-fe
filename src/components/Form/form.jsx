@@ -5,23 +5,13 @@ import { UserContext } from "../../contexts/userContext";
 import { GetUsers } from "../../queries/getAllUsers";
 
 export default function Form({ notLoggingIn, buttonText }) {
-  const users = GetUsers();
-  const [allUsers, setAllUsers] = useState();
+  const {data} = GetUsers();
   const [loginUsername, setUsername] = useState("");
 
   const [, setLogin] = useContext(LoginContext);
-  const [, setId] = useContext(UserContext);
+  const [, setUser] = useContext(UserContext);
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const getData = async () => {
-      const result = await users;
-      await setAllUsers(result.data?.fetchUsers);
-    };
-
-    getData();
-  }, [users]);
 
   const handleChange = (event) => {
     setUsername(event.currentTarget.value);
@@ -33,8 +23,8 @@ export default function Form({ notLoggingIn, buttonText }) {
     setLogin(setLogin);
   };
 
-  const handleSubmit = async () => {
-    const user = allUsers?.find((user) => {
+  const onSubmit = async () => {
+    const user = data?.find((user) => {
       return user.username?.toLowerCase() === loginUsername.toLowerCase();
     });
     if (!user) {
@@ -42,8 +32,8 @@ export default function Form({ notLoggingIn, buttonText }) {
       console.log("Lets create a new account");
       return navigate("/");
     } else {
-      await setId(user);
-      return navigate("/user");
+      await setUser(user);
+      return navigate(`/user/${user.id}`);
     }
   };
 
@@ -55,7 +45,7 @@ export default function Form({ notLoggingIn, buttonText }) {
         onChange={(event) => handleChange(event)}
         type="text"
       ></input>
-      <button type="button" onClick={() => handleSubmit()}>
+      <button type="button" onClick={() => onSubmit()}>
         {buttonText}
       </button>
     </div>

@@ -15,5 +15,5 @@ const GET_USERS = gql`
 export const GetUsers = () => {
   const { data, error, loading } = useQuery(GET_USERS);
 
-  return { data, error, loading };
+  return { data: data?.fetchUsers, error, loading };
 };
