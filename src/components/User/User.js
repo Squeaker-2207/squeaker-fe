@@ -1,4 +1,4 @@
-import React, {useContext,useState, useEffect} from "react";
+import React, {useContext} from "react";
 import { UserContext } from "../../contexts/userContext";
 import sqrl from "../../images/SqueakerIcon.png";
 import "./User.css";
@@ -6,7 +6,7 @@ import { Squeak } from "../Squeak/Squeak";
 import { NewSqueak } from "../NewSqueak/NewSqueak";
 import { GetSqueaks } from "../../queries/getSqueaks";
 
-import Navbar from "../Navigation/Navbar";
+//import Navbar from "../Navigation/Navbar";
 
 export const User = ({ isAdminTabClicked }) => {
   const [user] = useContext(UserContext);

@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Home } from "../Home/Home";
+//import { Home } from "../Home/Home";
 import "../Home/Home";
 import sqrl from "../../images/SqueakerIcon.png";
 
 export default function LoadingPage (setUserSelection) {
   const [loggingIn, setLoggingIn] = useState(false);
   const [newUser, setNewUser] = useState(false);
-  const [buttonText, setButton] = useState("");
+  //const [buttonText, setButton] = useState("");
   const isLoggingIn = () => {
     setLoggingIn(true);
     setUserSelection({loggingIn: true})

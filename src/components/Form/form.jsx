@@ -1,5 +1,5 @@
-import { useContext, redirect, useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../../contexts/loginContext";
 import { UserContext } from "../../contexts/userContext";
 import { GetUsers } from "../../queries/getAllUsers";
