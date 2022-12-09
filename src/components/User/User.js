@@ -31,9 +31,10 @@ export const User = ({ isAdminTabClicked }) => {
       <Squeak
         id={squeak.id}
         content={squeak.content}
+        name={squeak.username}
         key={squeak.id}
         isAdminTabClicked={isAdminTabClicked}
-        data={data}
+        squeak={squeak}
       />
     );
   });

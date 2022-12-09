@@ -4,7 +4,7 @@ import { LoginContext } from "../../contexts/loginContext";
 import { UserContext } from "../../contexts/userContext";
 import { GetUsers } from "../../queries/getAllUsers";
 
-export default function Form({ notLoggingIn, buttonText }) {
+export default function LoginForm({isNewUser,newUser }) {
   const {data} = GetUsers();
   const [loginUsername, setUsername] = useState("");
 
@@ -30,7 +30,7 @@ export default function Form({ notLoggingIn, buttonText }) {
     if (!user) {
         //please don delete it will work once the loading page is done
       console.log("Lets create a new account");
-      return navigate("/");
+      return navigate("/create-account");
     } else {
       await setUser(user);
       return navigate(`/user/${user.id}`);
@@ -46,8 +46,13 @@ export default function Form({ notLoggingIn, buttonText }) {
         type="text"
       ></input>
       <button type="button" onClick={() => onSubmit()}>
-        {buttonText}
+        Login
       </button>
+      {!newUser && (
+          <button type="button" onClick={isNewUser}>
+            I'm A New User
+          </button>
+        )}
     </div>
   );
 }
