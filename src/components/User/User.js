@@ -55,7 +55,7 @@ export const User = ({ isAdminTabClicked }) => {
 //              <button id='user-info-button'>👤</button>
 //            </Link>
 //            <div className='spacer'></div>
-            <button id='new-squeak-button'  >💬</button>
+    //        <button id='new-squeak-button'  >💬</button>
 //          </nav>
 
 //          <section className='user-content-squeaks'>
