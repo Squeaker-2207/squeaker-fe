@@ -16,6 +16,7 @@ const App = () => {
 //   const [squeaks, setSqueaks] = useState([])
 //   const [flaggedSqueaks, setFlaggedSqueaks] = useState([])
   const [userName, setUserName] = useState('')
+
  const [isAdminTabClicked, SetIsAdminClicked] = useState(false)
 
   console.log(SetIsAdminClicked)
@@ -51,7 +52,7 @@ const App = () => {
               setPage={setPage}
               userName={userName}
 //               squeaks={squeaks}
-              isAdminTabClicked={isAdminTabClicked}
+//              isAdminTabClicked={isAdminTabClicked}
 //               setSqueaks={setSqueaks}
 //               flaggedSqueaks={flaggedSqueaks}
 //               setFlaggedSqueaks={setFlaggedSqueaks} 

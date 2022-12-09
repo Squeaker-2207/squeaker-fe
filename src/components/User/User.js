@@ -1,25 +1,28 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { UserContext } from "../../contexts/userContext";
+
 import "./User.css";
-import { Squeak } from "../Squeak/Squeak";
-import { NewSqueak } from "../NewSqueak/NewSqueak";
-import { GetSqueaks } from "../../queries/getSqueaks";
-  import { Link } from 'react-router-dom'
+// import { Squeak } from "../Squeak/Squeak";
+// import { NewSqueak } from "../NewSqueak/NewSqueak";
+// import { GetSqueaks } from "../../queries/getSqueaks";
+//  import { Link } from 'react-router-dom'
 
 //import Navbar from "../Navigation/Navbar";
 
 export const User = ({ isAdminTabClicked }) => {
  const [user] = useContext(UserContext);
  // const { username, id, isAdmin } = user;
-  const { loading, error, data } = GetSqueaks();
-  const [userData, setUserData] = useState()
+  // const { loading, error, data } = GetSqueaks();
+  // const [userData, setUserData] = useState()
 
   useEffect(()=> {
+
     const getUserData = async() => {
       // const result = await user
       await setUserData("")
     }
     getUserData()
+
   },[])
   
   // unnecessary console logs to trick circleCI
@@ -40,31 +43,32 @@ export const User = ({ isAdminTabClicked }) => {
     )
   })
 
-  return (
 
-    <main className='user'>
+  // return (
 
-   <NewSqueak />
+  //   <main className='user'>
+
+  //  <NewSqueak />
 
     
-        <div className='user-content'>
+  //       <div className='user-content'>
      
-{/* {isAdmin && <Navbar />} */}
-          <nav className='user-options'>
-            <Link to={'/user/:id'}>
-              <button id='user-info-button'>👤</button>
-            </Link>
-            <div className='spacer'></div>
-            <button id='new-squeak-button'  >💬</button>
-          </nav>
+//{/* {isAdmin && <Navbar />} */}
+//          {/* <nav className='user-options'>
+//            <Link to={'/user/:id'}>
+//              <button id='user-info-button'>👤</button>
+//            </Link>
+//            <div className='spacer'></div>
+    //        <button id='new-squeak-button'  >💬</button>
+//          </nav>
 
-          <section className='user-content-squeaks'>
-            {displaySqueaks()}
-          </section>
+//          <section className='user-content-squeaks'>
+//            {/* {displaySqueaks()} */}
+    //       </section>
 
-        </div>
+    //     </div>
       
 
-    </main>
-  );
-};
+    // </main>
+  // );
+  } 
