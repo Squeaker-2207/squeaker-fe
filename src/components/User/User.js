@@ -5,6 +5,7 @@ import "./User.css";
 import { Squeak } from "../Squeak/Squeak";
 import { NewSqueak } from "../NewSqueak/NewSqueak";
 import { GetSqueaks } from "../../queries/getSqueaks";
+  import { Link } from 'react-router-dom'
 
 //import Navbar from "../Navigation/Navbar";
 
@@ -13,7 +14,6 @@ export const User = ({ isAdminTabClicked }) => {
   const { username, id, isAdmin } = user;
   const { loading, error, data } = GetSqueaks();
   const [userData, setUserData] = useState()
-  import { Link } from 'react-router-dom'
 
   useEffect(()=> {
     const getUserData = async() => {
