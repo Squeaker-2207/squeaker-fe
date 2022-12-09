@@ -12,21 +12,21 @@ import { GetSqueaks } from "../../queries/getSqueaks";
 export const User = ({ isAdminTabClicked }) => {
 //  const [user] = useContext(UserContext);
  // const { username, id, isAdmin } = user;
-  const { loading, error, data } = GetSqueaks();
-  const [userData, setUserData] = useState()
+  // const { loading, error, data } = GetSqueaks();
+  // const [userData, setUserData] = useState()
 
   useEffect(()=> {
     const getUserData = async() => {
-      const result = await user
-      await setUserData("")
+      // const result = await user
+      // await setUserData("")
     }
 //     getUserData()
   },[])
   
   // console.log(userData);
 
-  if (error) return <p>Error : {error.message}</p>;
-  if (loading) return <p>Loading...</p>;
+  // if (error) return <p>Error : {error.message}</p>;
+  // if (loading) return <p>Loading...</p>;
 //  const displaySqueaks = data.allSqueaks.map((squeak) => {
     return (
     <div>placeholder</div>
@@ -38,7 +38,7 @@ export const User = ({ isAdminTabClicked }) => {
 //        data={data}
 //      />
     );
-  });
+  
 
   return (
 
@@ -59,7 +59,7 @@ export const User = ({ isAdminTabClicked }) => {
           </nav>
 
           <section className='user-content-squeaks'>
-            {displaySqueaks()}
+            {/* {displaySqueaks()} */}
           </section>
 
         </div>
@@ -67,4 +67,5 @@ export const User = ({ isAdminTabClicked }) => {
 
     </main>
   );
-};
+  }
+
