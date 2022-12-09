@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext,useState, useEffect} from "react";
 import { UserContext } from "../../contexts/userContext";
 import sqrl from "../../images/SqueakerIcon.png";
 import "./User.css";
@@ -10,8 +10,19 @@ import Navbar from "../Navigation/Navbar";
 
 export const User = ({ isAdminTabClicked }) => {
   const [user] = useContext(UserContext);
-  const { username, id, isAdmin } = user;
+  // const { username, id, isAdmin } = user;
   const { loading, error, data } = GetSqueaks();
+  // const [userData, setUserData] = useState()
+
+  // useEffect(()=> {
+  //   const getUserData = async() => {
+  //     const result = await user
+  //     await setUserData("")
+  //   }
+  //   getUserData()
+  // },[user])
+  
+  // console.log(userData);
 
   if (error) return <p>Error : {error.message}</p>;
   if (loading) return <p>Loading...</p>;
@@ -29,7 +40,7 @@ export const User = ({ isAdminTabClicked }) => {
 
   return (
     <main>
-      {isAdmin && <Navbar />}
+      {/* {isAdmin && <Navbar />} */}
       <header className="row center">
         <h1>SQUEAKR</h1>
         <div className="main-image-container">

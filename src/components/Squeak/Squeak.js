@@ -1,7 +1,7 @@
 import React from 'react'
 import './Squeak.css'
 
-export const Squeak = ({ id, content,isAdminTabClicked}) => {
+export const Squeak = ({ id, content,isAdminTabClicked = false}) => {
   return (
     <div className='squeak'>
       <div className='user-info row'>
