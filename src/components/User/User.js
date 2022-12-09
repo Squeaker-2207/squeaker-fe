@@ -1,49 +1,53 @@
-import React, { useState } from 'react'
-import '../App/App.css'
-import './User.css'
-import { Squeak } from '../Squeak/Squeak'
-import { NewSqueak } from '../NewSqueak/NewSqueak'
-import { Link } from 'react-router-dom'
+import React from "react";
+//import { UserContext } from "../../contexts/userContext";
+import sqrl from "../../images/SqueakerIcon.png";
+import "./User.css";
+import { Squeak } from "../Squeak/Squeak";
+import { NewSqueak } from "../NewSqueak/NewSqueak";
+import { GetSqueaks } from "../../queries/getSqueaks";
 
+//import Navbar from "../Navigation/Navbar";
 
-export const User = ({ setPage, userName, squeaks, setSqueaks, flaggedSqueaks, setFlaggedSqueaks }) => {
-  const [isSqueaking, setIsSqueaking] = useState(false)
-  setPage(window.location.pathname)
+export const User = ({ isAdminTabClicked }) => {
+ const [user] = useContext(UserContext);
+  const { username, id, isAdmin } = user;
+  const { loading, error, data } = GetSqueaks();
+  const [userData, setUserData] = useState()
 
-  const displaySqueaks = () => {
-    return squeaks.map(squeak => {
-      return (
-        <Squeak 
-          id={squeak.id}
-          userName={userName}
-          text={squeak.text}
-          flaggedSqueaks={flaggedSqueaks}
-          setFlaggedSqueaks={setFlaggedSqueaks}
-        />
-      )
-    })
-  }
-
-  const startSqueaking = () => {
-    setIsSqueaking(true)
-  }
+  useEffect(()=> {
+    const getUserData = async() => {
+      const result = await user
+      await setUserData("")
+    }
+//     getUserData()
+  },[])
   
-  const stopSqueaking = () => {
-    setIsSqueaking(false)
-  }
-  
-  const addSubmittedSqueak = (submittedSqueak) => {
-    setSqueaks(squeaks => [...squeaks, submittedSqueak])
-  }
+  // console.log(userData);
+
+  if (error) return <p>Error : {error.message}</p>;
+  if (loading) return <p>Loading...</p>;
+  const displaySqueaks = data.allSqueaks.map((squeak) => {
+    return (
+      <Squeak
+        id={squeak.id}
+        content={squeak.content}
+        key={squeak.id}
+        isAdminTabClicked={isAdminTabClicked}
+        data={data}
+      />
+    );
+  });
 
   return (
+
     <main className='user'>
 
       {isSqueaking && <NewSqueak addSubmittedSqueak={addSubmittedSqueak} stopSqueaking={stopSqueaking} userName={userName}/> }
 
       {!isSqueaking && 
         <div className='user-content'>
-
+          <NewSqueak />
+{/* {isAdmin && <Navbar />} */}
           <nav className='user-options'>
             <Link to={'/user/:id'}>
               <button id='user-info-button'>👤</button>
@@ -58,6 +62,7 @@ export const User = ({ setPage, userName, squeaks, setSqueaks, flaggedSqueaks, s
 
         </div>
       }
+
     </main>
-  )
-}
+  );
+};

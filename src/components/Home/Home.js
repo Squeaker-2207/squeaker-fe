@@ -1,7 +1,9 @@
+
 import React, { useState } from 'react'
 import chippy from '../../images/SqueakerIcon.png'
 import './Home.css'
 import { Link } from 'react-router-dom'
+import Form from "../Form/form";
 // import { GetUser } from '../../queries/getUser'
 // import { GetSqueaks } from '../../queries/getSqueaks'
 
@@ -22,12 +24,9 @@ export const Home = ({ setPage, setUserName }) => {
   }
 
   const isNewUser = () => {
-    setNewUser(true)
-  }
-
-  const notNewUser = () => {
-    setNewUser(false)
-  }
+    setNewUser(true);
+    setButton("Create Account");
+  };
 
   const handleChange = (event) => {
     setTextValue(event.target.value)
@@ -76,19 +75,34 @@ export const Home = ({ setPage, setUserName }) => {
           </div>
         }
 
-        <div className='spacer'></div> 
 
-        <div className='debug row distribute'>debug only:        
-          <Link to='/user' >
+      <div className="spacer"></div>
+      <div className="spacer"></div>
+
+      {!loggingIn && !newUser && (
+        <div className="column center distribute">
+          <button onClick={isLoggingIn}>Login</button>
+          <div className="spacer"></div>
+          <button type="button" onClick={isNewUser}>
+            I'm A New User
+          </button>
+        </div>
+      )}
+
+      <div className="buttons column center">
+        {loggingIn && <Form buttonText={buttonText} loggingIn={loggingIn} />}
+        {newUser && <Form buttonText={buttonText} />}
+        <div className="spacer"></div>
+        <div className="debug row distribute">
+          debug only:
+          <Link to="/user">
             <button>User</button>
           </Link>
-          <Link to='/admin' >
+          <Link to="/admin">
             <button>Admin</button>
           </Link>
         </div>
       </div>
-      
-
     </main>
-  )
-}
+  );
+};

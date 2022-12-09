@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 import sqrl from '../../images/SqueakerIcon.png'
@@ -5,15 +6,17 @@ import { Admin } from '../Admin/Admin.js'
 import { Error } from '../Error/Error'
 import { Home } from '../Home/Home'
 import { User } from '../User/User'
+
 import './App.css'
 
 
 const App = () => {
-  const [page, setPage] = useState('/')
-  const [squeaks, setSqueaks] = useState([])
-  const [flaggedSqueaks, setFlaggedSqueaks] = useState([])
-  const [userName, setUserName] = useState('')
 
+  const [page, setPage] = useState('/')
+//   const [squeaks, setSqueaks] = useState([])
+//   const [flaggedSqueaks, setFlaggedSqueaks] = useState([])
+  const [userName, setUserName] = useState('')
+ const [isAdminTabClicked, SetIsAdminClicked] = useState(false)
   return (
     <main className='app column center'>
       {page !== '/' && 
@@ -43,10 +46,11 @@ const App = () => {
             <User 
               setPage={setPage}
               userName={userName}
-              squeaks={squeaks}
-              setSqueaks={setSqueaks}
-              flaggedSqueaks={flaggedSqueaks}
-              setFlaggedSqueaks={setFlaggedSqueaks} 
+//               squeaks={squeaks}
+              isAdminTabClicked={isAdminTabClicked}
+//               setSqueaks={setSqueaks}
+//               flaggedSqueaks={flaggedSqueaks}
+//               setFlaggedSqueaks={setFlaggedSqueaks} 
             />
           } 
         />
@@ -69,8 +73,8 @@ const App = () => {
             />
           } 
         />
-      </Routes> 
 
+      </Routes> 
     </main>
   )
 }

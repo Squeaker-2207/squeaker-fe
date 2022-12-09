@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Squeak.css'
 import chippy from '../../images/SqueakerIcon.png'
 
-export const Squeak = ({ id, userName, text, flaggedSqueaks, setFlaggedSqueaks }) => {
+export const Squeak = ({ id, userName, text, flaggedSqueaks, setFlaggedSqueaks, isAdminTabClicked = false }) => {
   const [nuts, setNuts] = useState(0)
   const [nutted, setNutted] = useState(false)
 
@@ -34,11 +34,10 @@ export const Squeak = ({ id, userName, text, flaggedSqueaks, setFlaggedSqueaks }
       </div>
       <span className='squeak-text'>{text}</span>
       <p>Squeak ID: {id}</p>
-
       <div className='squeak-options row'>
         <button onClick={nutSqueak} >🌰{nuts}</button>
         <button onClick={reportSqueak} >👁️‍🗨️</button>
-        <button onClick='' >❌</button>
+        {isAdminTabClicked && <button>❌</button>}
       </div>
     </div>
   )
