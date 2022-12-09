@@ -75,7 +75,7 @@ export const Home = ({ setPage, setUserName }) => {
           </div>
         }
 
-
+      </div>
       <div className="spacer"></div>
       <div className="spacer"></div>
 
@@ -102,7 +102,7 @@ export const Home = ({ setPage, setUserName }) => {
             <button>Admin</button>
           </Link>
         </div>
-        </div>
+        
         </div>
     </main>
   );
