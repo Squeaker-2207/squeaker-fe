@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { UserContext, useContext } from "../../contexts/userContext";
+// import { UserContext, useContext } from "../../contexts/userContext";
 import sqrl from "../../images/SqueakerIcon.png";
 import "./User.css";
 import { Squeak } from "../Squeak/Squeak";
@@ -10,8 +10,8 @@ import { GetSqueaks } from "../../queries/getSqueaks";
 //import Navbar from "../Navigation/Navbar";
 
 export const User = ({ isAdminTabClicked }) => {
-  const [user] = useContext(UserContext);
-  const { username, id, isAdmin } = user;
+//  const [user] = useContext(UserContext);
+ // const { username, id, isAdmin } = user;
   const { loading, error, data } = GetSqueaks();
   const [userData, setUserData] = useState()
 
@@ -27,15 +27,16 @@ export const User = ({ isAdminTabClicked }) => {
 
   if (error) return <p>Error : {error.message}</p>;
   if (loading) return <p>Loading...</p>;
-  const displaySqueaks = data.allSqueaks.map((squeak) => {
+//  const displaySqueaks = data.allSqueaks.map((squeak) => {
     return (
-      <Squeak
-        id={squeak.id}
-        content={squeak.content}
-        key={squeak.id}
-        isAdminTabClicked={isAdminTabClicked}
-        data={data}
-      />
+    <div>placeholder</div>
+//      <Squeak
+//        id={squeak.id}
+//        content={squeak.content}
+//        key={squeak.id}
+//        isAdminTabClicked={isAdminTabClicked}
+//        data={data}
+//      />
     );
   });
 
