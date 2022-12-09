@@ -1,66 +1,58 @@
-import React, { useState } from 'react'
-import sqrl from '../../images/SqueakerIcon.png'
-import './User.css'
-import { Squeak } from '../Squeak/Squeak'
-import { NewSqueak } from '../NewSqueak/NewSqueak'
-import { Link } from 'react-router-dom'
+import React from "react";
+//import { UserContext } from "../../contexts/userContext";
+import sqrl from "../../images/SqueakerIcon.png";
+import "./User.css";
+import { Squeak } from "../Squeak/Squeak";
+import { NewSqueak } from "../NewSqueak/NewSqueak";
+import { GetSqueaks } from "../../queries/getSqueaks";
 
+//import Navbar from "../Navigation/Navbar";
 
-export const User = () => {
+export const User = ({ isAdminTabClicked }) => {
+ // const [user] = useContext(UserContext);
+  // const { username, id, isAdmin } = user;
+  const { loading, error, data } = GetSqueaks();
+  // const [userData, setUserData] = useState()
 
-  const [squeaks, setSqueaks] = useState([])
-  const [isSqueaking, setIsSqueaking] = useState(false)
-
-  const displaySqueaks = () => {
-    return squeaks.map(squeak => {
-      return (
-        <Squeak 
-          id={squeak.id}
-          text={squeak.text}
-        />
-      )
-    })
-  }
-
-  const startSqueaking = () => {
-    setIsSqueaking(true)
-  }
+  // useEffect(()=> {
+  //   const getUserData = async() => {
+  //     const result = await user
+  //     await setUserData("")
+  //   }
+  //   getUserData()
+  // },[user])
   
-  const stopSqueaking = () => {
-    setIsSqueaking(false)
-  }
-  
-  const addSubmittedSqueak = (submittedSqueak) => {
-    setSqueaks(squeaks => [...squeaks, submittedSqueak])
-  }
+  // console.log(userData);
+
+  if (error) return <p>Error : {error.message}</p>;
+  if (loading) return <p>Loading...</p>;
+  const displaySqueaks = data.allSqueaks.map((squeak) => {
+    return (
+      <Squeak
+        id={squeak.id}
+        content={squeak.content}
+        key={squeak.id}
+        isAdminTabClicked={isAdminTabClicked}
+        data={data}
+      />
+    );
+  });
 
   return (
     <main>
-      <header className='row center'>
+      {/* {isAdmin && <Navbar />} */}
+      <header className="row center">
         <h1>SQUEAKR</h1>
-        <div className='main-image-container'>
-          <img src={sqrl} alt='alt text' />
+        <div className="main-image-container">
+          <img src={sqrl} alt="alt text" />
         </div>
       </header>
 
-      {isSqueaking && <NewSqueak addSubmittedSqueak={addSubmittedSqueak} stopSqueaking={stopSqueaking}/> }
-
-      {!isSqueaking && 
-        <div className='main-content row'>
-
-        <nav className='main-options column'>
-          <Link to='/user/:id'>
-            <button>👤</button>
-          </Link>
-          <button onClick={startSqueaking} >💬</button>
-        </nav>
-
-        <section className='main-content-squeaks column center'>
-          {displaySqueaks()}
-        </section>
-
-        </div>
-      }
+      <NewSqueak />
+      <button>💬</button>
+      <section className="main-content-squeaks column center">
+        {displaySqueaks}
+      </section>
     </main>
-  )
-}
+  );
+};

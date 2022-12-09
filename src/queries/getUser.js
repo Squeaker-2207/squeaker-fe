@@ -1,22 +1,31 @@
 import { gql, useQuery } from "@apollo/client";
 
-// fetch users
+// fetch user
 const GET_USER = gql`
-  query Users($username: String!) {
-    users(username: $username) {
-      username
+  query FetchUser($id: String!) {
+    fetchUser(id: $id) {
       id
-      is_admin
+      username
+      isAdmin
+    }
+    allSqueaks {
+      id
+      nuts
+      content
+      reports
+      approved
+      user {
+        id
+        username
+      }
     }
   }
 `;
 
-
-
-export const GetUser = (username) => {
-  const { error, data, loading } = useQuery(GET_USER, {
+export const GetUser = (id) => {
+  const { data, error, loading } = useQuery(GET_USER, {
     variables: {
-      username,
+      id,
     },
   });
 
@@ -26,35 +35,3 @@ export const GetUser = (username) => {
     loading,
   };
 };
-
-// const GET_CHARACTER = gql`
-//   query GetCharacter($id: ID!) {
-//     character(id: $id) {
-//         name
-//         id
-//         image
-//         episode {
-//           name
-//           episode
-//       }
-//     }
-//   }
-// `;
-
-// export const useCharacter = (id) => {
-//   const { error, data, loading } = useQuery(GET_CHARACTER, {
-//     variables: {
-//       id
-//     },
-//   });
-
-//   return {
-//     data,
-//     error,
-//     loading,
-//   };
-// };
-
-// fetch squeaks
-
-// fetch BadWords API
