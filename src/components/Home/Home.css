@@ -12,5 +12,6 @@
 }
 
 .debug {
+  width: fit-content !important;
   background-color: teal;
 }

@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
-import sqrl from '../images/SqueakerIcon.png'
-import '../App.css'
+import chippy from '../../images/SqueakerIcon.png'
 import './Home.css'
 import { Link } from 'react-router-dom'
+// import { GetUser } from '../../queries/getUser'
+// import { GetSqueaks } from '../../queries/getSqueaks'
 
-export const Home = ({ setPage }) => {
+export const Home = ({ setPage, setUserName }) => {
   setPage(window.location.pathname)
 
   const [loggingIn, setLoggingIn] = useState(false)
+  const [newUser, setNewUser] = useState(false)
+  const [textValue, setTextValue] = useState('')
 
   const isLoggingIn = () => {
     setLoggingIn(true)
@@ -15,8 +18,8 @@ export const Home = ({ setPage }) => {
 
   const notLoggingIn = () => {
     setLoggingIn(false)
+    setUserName(textValue)
   }
-  const [newUser, setNewUser] = useState(false)
 
   const isNewUser = () => {
     setNewUser(true)
@@ -26,12 +29,15 @@ export const Home = ({ setPage }) => {
     setNewUser(false)
   }
 
+  const handleChange = (event) => {
+    setTextValue(event.target.value)
+  }
 
   return (
     <main className='main-page column'>
       <div className='home-logo column center-x'>      
         <div className='app-image-container'>
-          <img src={sqrl} alt='hey now' />
+          <img src={chippy} alt='chipmunk logo' />
         </div>
         <h1>SQUEAKR</h1>
       </div> 
@@ -41,22 +47,22 @@ export const Home = ({ setPage }) => {
 
         {!loggingIn && !newUser &&
           <div className='home-options column center distribute'>        
-              <button onClick={isLoggingIn} >Login</button>
+              <button id='login-button' onClick={isLoggingIn} >Login</button>
               <div className='spacer'></div> 
-              <button onClick={isNewUser} >I'm A New User</button>
+              <button id='new-user-button' onClick={isNewUser} >I'm A New User</button>
           </div>
         }
 
       <div className='buttons column center'>
 
         {loggingIn && 
-        <div className='column center'>
+        <form className='column center'>
           <span>Enter Username:</span> 
-          <input type='text'></input>
+          <input value={textValue} onChange={event => handleChange(event)} className='text-input' type='text'></input>
           <Link to='/user' >
-            <button onClick={notLoggingIn} >Submit</button>
+            <button className='submit-button' onClick={event => notLoggingIn(event)} >Submit</button>
           </Link>
-        </div>  
+        </form>  
         }
 
         

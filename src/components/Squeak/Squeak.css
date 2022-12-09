@@ -7,8 +7,22 @@
   margin-bottom: 1em;
 }
 
+.squeak-avatar-container {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid rgb(7, 95, 133);
+  border-radius: .5em;
+  box-shadow: .1em .1em rgb(7, 95, 133);
+
+}
+
+.squeak-username {
+  font-size: 1.5em;
+  padding-left: .5em;
+}
+
 .squeak-text {
-  padding: .5em;
 }
 
 .squeak-options {

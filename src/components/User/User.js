@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
-import '../App.css'
+import '../App/App.css'
 import './User.css'
 import { Squeak } from '../Squeak/Squeak'
 import { NewSqueak } from '../NewSqueak/NewSqueak'
 import { Link } from 'react-router-dom'
 
 
-export const User = ({ setPage }) => {
-  const [squeaks, setSqueaks] = useState([])
+export const User = ({ setPage, userName, squeaks, setSqueaks, flaggedSqueaks, setFlaggedSqueaks }) => {
   const [isSqueaking, setIsSqueaking] = useState(false)
-
   setPage(window.location.pathname)
 
   const displaySqueaks = () => {
@@ -17,7 +15,10 @@ export const User = ({ setPage }) => {
       return (
         <Squeak 
           id={squeak.id}
+          userName={userName}
           text={squeak.text}
+          flaggedSqueaks={flaggedSqueaks}
+          setFlaggedSqueaks={setFlaggedSqueaks}
         />
       )
     })
@@ -38,16 +39,17 @@ export const User = ({ setPage }) => {
   return (
     <main className='user'>
 
-      {isSqueaking && <NewSqueak addSubmittedSqueak={addSubmittedSqueak} stopSqueaking={stopSqueaking}/> }
+      {isSqueaking && <NewSqueak addSubmittedSqueak={addSubmittedSqueak} stopSqueaking={stopSqueaking} userName={userName}/> }
 
       {!isSqueaking && 
         <div className='user-content'>
 
           <nav className='user-options'>
-            <Link to='/user/:id'>
-              <button>👤</button>
+            <Link to={'/user/:id'}>
+              <button id='user-info-button'>👤</button>
             </Link>
-            <button onClick={startSqueaking} >💬</button>
+            <div className='spacer'></div>
+            <button id='new-squeak-button' onClick={startSqueaking} >💬</button>
           </nav>
 
           <section className='user-content-squeaks'>
