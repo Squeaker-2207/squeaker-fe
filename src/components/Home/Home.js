@@ -102,8 +102,6 @@ export const Home = ({ setPage, setUserName }) => {
             <button>Admin</button>
           </Link>
         </div>
-      </div>
     </main>
-    }
   );
 };
