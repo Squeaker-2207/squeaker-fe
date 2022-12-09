@@ -60,8 +60,8 @@ const App = () => {
             <Admin 
             setPage={setPage}
             userName={userName}
-            squeaks={squeaks}
-            flaggedSqueaks={flaggedSqueaks}
+//            squeaks={squeaks}
+//            flaggedSqueaks={flaggedSqueaks}
           />
           } 
         />
