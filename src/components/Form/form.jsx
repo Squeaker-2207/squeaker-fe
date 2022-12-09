@@ -40,7 +40,7 @@ export default function Form({ notLoggingIn, buttonText }) {
     if (!user) {
         //please don delete it will work once the loading page is done
       console.log("Lets create a new account");
-      return navigate("/admin");
+      return navigate("/");
     } else {
       await setId(user);
       return navigate("/user");
