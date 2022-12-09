@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
+import { UserContext, useContext } from "../../contexts/userContext";
 import sqrl from "../../images/SqueakerIcon.png";
 import "./User.css";
 import { Squeak } from "../Squeak/Squeak";
@@ -10,7 +10,7 @@ import { GetSqueaks } from "../../queries/getSqueaks";
 //import Navbar from "../Navigation/Navbar";
 
 export const User = ({ isAdminTabClicked }) => {
- // const [user] = useContext(UserContext);
+  const [user] = useContext(UserContext);
   const { username, id, isAdmin } = user;
   const { loading, error, data } = GetSqueaks();
   const [userData, setUserData] = useState()
