@@ -3,12 +3,15 @@ import { gql, useQuery } from "@apollo/client";
 const GET_SQUEAKS = gql`
   query AllSqueaks {
     allSqueaks {
-      userID
-      squeakID
+      id
       nuts
       content
-      reported
+      reports
       approved
+      user {
+        id
+        username
+      }
     }
   }
 `;
