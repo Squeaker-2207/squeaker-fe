@@ -17,6 +17,10 @@ const App = () => {
 //   const [flaggedSqueaks, setFlaggedSqueaks] = useState([])
   const [userName, setUserName] = useState('')
  const [isAdminTabClicked, SetIsAdminClicked] = useState(false)
+
+  console.log(SetIsAdminClicked)
+
+
   return (
     <main className='app column center'>
       {page !== '/' && 

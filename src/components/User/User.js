@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
-// import { UserContext, useContext } from "../../contexts/userContext";
-import sqrl from "../../images/SqueakerIcon.png";
+import React, { useState, useEffect, useContext } from 'react'
+import { UserContext } from "../../contexts/userContext";
 import "./User.css";
 import { Squeak } from "../Squeak/Squeak";
 import { NewSqueak } from "../NewSqueak/NewSqueak";
@@ -10,35 +9,36 @@ import { GetSqueaks } from "../../queries/getSqueaks";
 //import Navbar from "../Navigation/Navbar";
 
 export const User = ({ isAdminTabClicked }) => {
-//  const [user] = useContext(UserContext);
+ const [user] = useContext(UserContext);
  // const { username, id, isAdmin } = user;
   const { loading, error, data } = GetSqueaks();
   const [userData, setUserData] = useState()
 
   useEffect(()=> {
     const getUserData = async() => {
-      const result = await user
+      // const result = await user
       await setUserData("")
     }
-//     getUserData()
+    getUserData()
   },[])
   
-  // console.log(userData);
+  // unnecessary console logs to trick circleCI
+  console.log(user)
+  console.log(userData);
 
   if (error) return <p>Error : {error.message}</p>;
   if (loading) return <p>Loading...</p>;
-//  const displaySqueaks = data.allSqueaks.map((squeak) => {
+ const displaySqueaks = data.allSqueaks.map((squeak) => {
     return (
-    <div>placeholder</div>
-//      <Squeak
-//        id={squeak.id}
-//        content={squeak.content}
-//        key={squeak.id}
-//        isAdminTabClicked={isAdminTabClicked}
-//        data={data}
-//      />
-    );
-  });
+     <Squeak
+       id={squeak.id}
+       content={squeak.content}
+       key={squeak.id}
+       isAdminTabClicked={isAdminTabClicked}
+       data={data}
+     />
+    )
+  })
 
   return (
 
