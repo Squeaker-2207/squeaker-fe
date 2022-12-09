@@ -9,7 +9,7 @@ import { GetSqueaks } from "../../queries/getSqueaks";
 //import Navbar from "../Navigation/Navbar";
 
 export const User = ({ isAdminTabClicked }) => {
-  const [user] = useContext(UserContext);
+ // const [user] = useContext(UserContext);
   // const { username, id, isAdmin } = user;
   const { loading, error, data } = GetSqueaks();
   // const [userData, setUserData] = useState()
