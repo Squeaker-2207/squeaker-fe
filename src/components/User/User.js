@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 // import { UserContext, useContext } from "../../contexts/userContext";
-import sqrl from "../../images/SqueakerIcon.png";
+// import sqrl from "../../images/SqueakerIcon.png";
 import "./User.css";
-import { Squeak } from "../Squeak/Squeak";
+// import { Squeak } from "../Squeak/Squeak";
 import { NewSqueak } from "../NewSqueak/NewSqueak";
-import { GetSqueaks } from "../../queries/getSqueaks";
+// import { GetSqueaks } from "../../queries/getSqueaks";
   import { Link } from 'react-router-dom'
 
 //import Navbar from "../Navigation/Navbar";
@@ -16,10 +16,10 @@ export const User = ({ isAdminTabClicked }) => {
   // const [userData, setUserData] = useState()
 
   useEffect(()=> {
-    const getUserData = async() => {
+    // const getUserData = async() => {
       // const result = await user
       // await setUserData("")
-    }
+    // }
 //     getUserData()
   },[])
   
@@ -40,17 +40,17 @@ export const User = ({ isAdminTabClicked }) => {
     );
   
 
-  return (
+  // return (
 
-    <main className='user'>
+  //   <main className='user'>
 
-   <NewSqueak />
+  //  <NewSqueak />
 
     
-        <div className='user-content'>
+  //       <div className='user-content'>
      
 {/* {isAdmin && <Navbar />} */}
-          <nav className='user-options'>
+          {/* <nav className='user-options'>
             <Link to={'/user/:id'}>
               <button id='user-info-button'>👤</button>
             </Link>
@@ -60,12 +60,11 @@ export const User = ({ isAdminTabClicked }) => {
 
           <section className='user-content-squeaks'>
             {/* {displaySqueaks()} */}
-          </section>
+    //       </section>
 
-        </div>
+    //     </div>
       
 
-    </main>
-  );
-  }
-
+    // </main>
+  // );
+  } 
