@@ -25,7 +25,6 @@ export const Home = ({ setPage, setUserName }) => {
 
   const isNewUser = () => {
     setNewUser(true);
-    setButton("Create Account");
   };
 
   const handleChange = (event) => {
@@ -70,7 +69,7 @@ export const Home = ({ setPage, setUserName }) => {
             <span>Enter New Username:</span> 
             <input type='text'></input>
             <Link className='column center distribute' to='/user' >
-              <button onClick={notNewUser}>Create New User</button>
+              <button>Create New User</button>
             </Link>
           </div>
         }
@@ -90,8 +89,8 @@ export const Home = ({ setPage, setUserName }) => {
       )}
 
       <div className="buttons column center">
-        {loggingIn && <Form buttonText={buttonText} loggingIn={loggingIn} />}
-        {newUser && <Form buttonText={buttonText} />}
+        {loggingIn && <Form loggingIn={loggingIn} />}
+        {newUser && <Form />}
         <div className="spacer"></div>
         <div className="debug row distribute">
           debug only:
