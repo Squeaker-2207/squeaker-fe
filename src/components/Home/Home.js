@@ -104,5 +104,6 @@ export const Home = ({ setPage, setUserName }) => {
         </div>
       </div>
     </main>
+    }
   );
 };
