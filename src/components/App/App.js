@@ -20,7 +20,7 @@ const App = () => {
       <Routes>
         {/* <Route exact path='/' element={<LoadingPage setUserSelection={setUserSelection}/>}/> */}
         <Route path='/' element={<Home/>} />
-        <Route path='/user' element={<User isAdminTabClicked={isAdminTabClicked}/>} />
+        <Route path='/user/:userId' element={<User isAdminTabClicked={isAdminTabClicked}/>} />
         <Route path='/admin' element={<Admin SetIsAdminClicked={SetIsAdminClicked}/>} />
         <Route path='*' element={<Error />} />
       </Routes> 
