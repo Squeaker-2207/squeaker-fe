@@ -1,5 +1,5 @@
-import React, {useContext} from "react";
-import { UserContext } from "../../contexts/userContext";
+import React from "react";
+//import { UserContext } from "../../contexts/userContext";
 import sqrl from "../../images/SqueakerIcon.png";
 import "./User.css";
 import { Squeak } from "../Squeak/Squeak";
