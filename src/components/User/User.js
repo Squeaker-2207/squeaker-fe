@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/userContext";
 import sqrl from "../../images/SqueakerIcon.png";
 import "./User.css";
-import { Squeak } from "../Squeak/Squeak";
+// import { Squeak } from "../Squeak/Squeak";
 import { NewSqueak } from "../NewSqueak/NewSqueak";
 import { GetSqueaks } from "../../queries/getSqueaks";
 import { useParams } from "react-router-dom";
@@ -31,14 +31,15 @@ export const User = ({ isAdminTabClicked }) => {
   // if (loading) return <p>Loading...</p>;
 //  const displaySqueaks = data.allSqueaks.map((squeak) => {
     return (
-      <Squeak
-        id={squeak.id}
-        content={squeak.content}
-        name={squeak.username}
-        key={squeak.id}
-        isAdminTabClicked={isAdminTabClicked}
-        squeak={squeak}
-      />
+    
+//      <Squeak
+//        id={squeak.id}
+//        content={squeak.content}
+//        name={squeak.username}
+//        key={squeak.id}
+//        isAdminTabClicked={isAdminTabClicked}
+//        squeak={squeak}
+//     />
     );
  // });
 
@@ -55,7 +56,7 @@ export const User = ({ isAdminTabClicked }) => {
       <NewSqueak />
       <button>💬</button>
       <section className="main-content-squeaks column center">
-        {displaySqueaks}
+      //  {displaySqueaks}
       </section>
     </main>
   );
