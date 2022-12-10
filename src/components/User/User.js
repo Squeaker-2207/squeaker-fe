@@ -31,7 +31,7 @@ export const User = ({ isAdminTabClicked }) => {
   // if (loading) return <p>Loading...</p>;
 //  const displaySqueaks = data.allSqueaks.map((squeak) => {
     return (
-    
+    <div>hey</div>
 //      <Squeak
 //        id={squeak.id}
 //        content={squeak.content}
