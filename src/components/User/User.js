@@ -13,7 +13,7 @@ export const User = ({ isAdminTabClicked }) => {
   const [user, setUser] = useContext(UserContext);
   const { userId } = useParams();
   const { data: userById } = GetUser(userId);
-  // const { isAdmin = false } = user || {};
+  const { isAdmin = false } = user || {};
   const { loading, error, data } = GetSqueaks();
 
   useEffect(() => {
@@ -25,6 +25,8 @@ export const User = ({ isAdminTabClicked }) => {
   if (error) return <p>Error : {error.message}</p>;
   if (loading) return <p>Loading...</p>;
   const displaySqueaks = data.allSqueaks.map((squeak) => {
+
+    console.log(isAdmin)
     return (
       <Squeak
         id={squeak.id}

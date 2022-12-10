@@ -15,7 +15,8 @@ import "./Squeak.css";
 // `;
 
 export const Squeak = ({ isAdminTabClicked = false, squeak }) => {
-  const { id: squeakId, content, nuts} = squeak;
+  const { id: content, nuts, user} = squeak;
+  console.log(user)
   const [count, setCount] = useState(nuts);
 
 
@@ -29,8 +30,7 @@ export const Squeak = ({ isAdminTabClicked = false, squeak }) => {
   return (
     <div className="squeak">
       <div className="user-info row">
-        <div className="squeak-avatar-container"></div>
-        <span>{squeakId}</span>
+        <span>{user.username}</span>
       </div>
       <span className="squeak-text">{content}</span>
 
