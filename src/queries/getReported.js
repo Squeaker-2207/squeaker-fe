@@ -8,7 +8,10 @@ const GET_REPORTED = gql`
       reports
       nuts
       approved
-      score
+      score{
+        metric
+        probability
+      }
       user {
         id
         username

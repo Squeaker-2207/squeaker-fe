@@ -25,8 +25,6 @@ export const User = ({ isAdminTabClicked }) => {
   if (error) return <p>Error : {error.message}</p>;
   if (loading) return <p>Loading...</p>;
   const displaySqueaks = data.allSqueaks.map((squeak) => {
-
-    console.log(isAdmin)
     return (
       <Squeak
         id={squeak.id}
@@ -41,8 +39,7 @@ export const User = ({ isAdminTabClicked }) => {
 
   return (
     <main>
-      {/* {isAdmin && ⬇️} */}
-      <Navbar />
+      {isAdmin && <Navbar />}
       <header className="row center">
         <h1>SQUEAKR</h1>
         <div className="main-image-container">
