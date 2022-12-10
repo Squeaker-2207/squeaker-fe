@@ -19,7 +19,11 @@ A React-based twitter clone built around robust moderation tools. Uses a service
 # <a name="contents"></a> Table of contents
 - [Setup](#setup)
 - [Deployed Link](#deployment)
+- [Project Specs](#specs)
+- [Challenges](#challenges)
+- [Wins](#wins)
 - [Endpoints](#endpoints)
+- [Future Extensions](#future)
 
 # <a name="setup"></a>Getting Started with Create React App
 
@@ -30,4 +34,18 @@ Add setup instructions at a later time
 # <a name="deployment"></a>Deployed UI
 Please take a look at the link to our deployed UI: https://squeaker-nyiwdrp0h-squeakr-fe.vercel.app/
 
+# <a name="specs"></a>Project Specs
+The project specs and rubric for Squeakr can be found [here](https://mod4.turing.edu/projects/capstone/)
 
+# <a name="challenges"></a>Challenges
+- 
+- 
+
+
+# <a name="wins"></a>Wins
+- 
+-
+-
+
+# <a name="future"></a>Future Extensions
+- 
