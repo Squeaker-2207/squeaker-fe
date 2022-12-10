@@ -40,7 +40,7 @@ export const User = ({ isAdminTabClicked }) => {
         squeak={squeak}
       />
     );
-  });
+ // });
 
   return (
     <main>
