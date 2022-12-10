@@ -1,21 +1,22 @@
-import { gql, useMutation } from "@apollo/client";
+// import { gql, useMutation } from "@apollo/client";
 import React from "react";
 import { useState } from "react";
 import "./Squeak.css";
 
-const UPDATE_NUT = gql`
-  mutation UpdateNut($id: ID!) {
-    updateSqueak(input: { id: $id, nut: true }) {
-      squeak {
-        content
-        nuts
-      }
-    }
-  }
-`;
+// const UPDATE_NUT = gql`
+//   mutation UpdateNut($id: ID!) {
+//     updateSqueak(input: { id: $id, nut: true }) {
+//       squeak {
+//         content
+//         nuts
+//       }
+//     }
+//   }
+// `;
 
 export const Squeak = ({ isAdminTabClicked = false, squeak }) => {
-  const { id: squeakId, content, nuts, user } = squeak;
+  const { id: content, nuts, user} = squeak;
+  console.log(user)
   const [count, setCount] = useState(nuts);
 
 
@@ -29,8 +30,7 @@ export const Squeak = ({ isAdminTabClicked = false, squeak }) => {
   return (
     <div className="squeak">
       <div className="user-info row">
-        <div className="squeak-avatar-container"></div>
-        <span>{squeakId}</span>
+        <span>{user.username}</span>
       </div>
       <span className="squeak-text">{content}</span>
 

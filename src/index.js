@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { LoginProvider } from "./contexts/loginContext";
 import { UserProvider } from "./contexts/userContext";
+
 const client = new ApolloClient({
   uri: "https://squeakr-be.fly.dev/graphql/",
   cache: new InMemoryCache(),

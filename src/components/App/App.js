@@ -13,18 +13,11 @@ const App = () => {
     <main className="app column center">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/admin"
-          element={<Admin SetIsAdminClicked={SetIsAdminClicked} />}
-        />
+        <Route path="/admin" element={<Admin SetIsAdminClicked={SetIsAdminClicked}/>}/>
         <Route path="/create-account" element={<CreateNewUser />} />
-        <Route
-          path="/user/:userId"
-          element={<User isAdminTabClicked={isAdminTabClicked} />}
-        />
+        <Route path="/user/:userId" element={<User isAdminTabClicked={isAdminTabClicked} />} />
         <Route path="*" element={<Error />} />
       </Routes>
-
     </main>
   );
 };
