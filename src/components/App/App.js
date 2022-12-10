@@ -24,8 +24,10 @@ const App = () => {
         />
         <Route path="*" element={<Error />} />
       </Routes>
+
     </main>
   );
 };
 
-export default App;
+
+export default App

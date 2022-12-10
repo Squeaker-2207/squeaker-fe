@@ -39,6 +39,7 @@ export const Squeak = ({ isAdminTabClicked = false, squeak }) => {
           🌰 {count}
         </button>
         <button>👁️‍🗨️</button>
+
         {isAdminTabClicked && <button>❌</button>}
       </div>
     </div>

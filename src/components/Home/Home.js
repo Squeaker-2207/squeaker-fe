@@ -11,17 +11,22 @@ export const Home = () => {
     setNewUser(true);
   };
 
+  const handleChange = (event) => {
+    setTextValue(event.target.value)
+  }
+
   return (
-    <main className="main-page center">
-      <div className="home-logo column center center-x">
-        <div className="app-image-container">
-          <img src={sqrl} alt="hey now" />
+    <main className='main-page column'>
+      <div className='home-logo column center-x'>      
+        <div className='app-image-container'>
+          <img src={chippy} alt='chipmunk logo' />
         </div>
         <h1>SQUEAKR</h1>
       </div>
       <div className="forms-container">
         {!newUser ? <LoginForm isNewUser={isNewUser} newUser={newUser}/> : <CreateNewUser />}
       </div>
+
     </main>
   );
 };

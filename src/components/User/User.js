@@ -7,10 +7,12 @@ import { NewSqueak } from "../NewSqueak/NewSqueak";
 import { GetSqueaks } from "../../queries/getSqueaks";
 import { useParams } from "react-router-dom";
 
+
 import { GetUser } from "../../queries/getUser";
 import Navbar from "../Navigation/Navbar";
 
 export const User = ({ isAdminTabClicked }) => {
+
   const [user, setUser] = useContext(UserContext);
 
   const { userId } = useParams();
@@ -24,9 +26,10 @@ export const User = ({ isAdminTabClicked }) => {
     }
   }, [user, userById, setUser]);
 
-  if (error) return <p>Error : {error.message}</p>;
-  if (loading) return <p>Loading...</p>;
-  const displaySqueaks = data.allSqueaks.map((squeak) => {
+
+  // if (error) return <p>Error : {error.message}</p>;
+  // if (loading) return <p>Loading...</p>;
+//  const displaySqueaks = data.allSqueaks.map((squeak) => {
     return (
       <Squeak
         id={squeak.id}
@@ -57,3 +60,4 @@ export const User = ({ isAdminTabClicked }) => {
     </main>
   );
 };
+
