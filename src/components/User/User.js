@@ -56,7 +56,7 @@ export const User = ({ isAdminTabClicked }) => {
       <NewSqueak />
       <button>💬</button>
       <section className="main-content-squeaks column center">
-      //  {displaySqueaks}
+     
       </section>
     </main>
   );
