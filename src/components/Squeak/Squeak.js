@@ -15,8 +15,10 @@ import "./Squeak.css";
 // `;
 
 export const Squeak = ({squeak }) => {
-  const { id: content, nuts, user} = squeak;
-  console.log(user)
+  const { id: squeakId, content, nuts, user} = squeak;
+
+  const {id: userId} = user
+
   const [count, setCount] = useState(nuts);
 
 
@@ -40,7 +42,7 @@ export const Squeak = ({squeak }) => {
         </button>
         <button>👁️‍🗨️</button>
 
-        {<button>❌</button>}
+        {userId === squeakId && <button>❌</button>}
       </div>
     </div>
   );
