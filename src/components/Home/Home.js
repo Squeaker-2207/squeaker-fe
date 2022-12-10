@@ -11,15 +11,14 @@ export const Home = () => {
     setNewUser(true);
   };
 
-  const handleChange = (event) => {
-    setTextValue(event.target.value)
-  }
+  // const handleChange = (event) => {
+  //  setTextValue(event.target.value)
+  // }
 
   return (
     <main className='main-page column'>
       <div className='home-logo column center-x'>      
         <div className='app-image-container'>
-  //        <img src={chippy} alt='chipmunk logo' />
         </div>
         <h1>SQUEAKR</h1>
       </div>
