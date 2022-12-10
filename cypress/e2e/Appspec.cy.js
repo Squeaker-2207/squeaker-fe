@@ -3,11 +3,11 @@ describe('empty spec', () => {
     cy.visit('http://localhost:3000/')
   })
 
-  it('the page loads', () => {
+  it.skip('the page loads', () => {
     cy.get('h1').should('be.visible').contains('SQUEAKR');
   })
 
-  it('user can enter username', () => {
+  it.skip('user can enter username', () => {
     cy.get('#login-button').should('be.visible').click()
     cy.get('.text-input').should('be.visible').type('USERNAME')
     cy.get('.submit-button').should('be.visible').click()
