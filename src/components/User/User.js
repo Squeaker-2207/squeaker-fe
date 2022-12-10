@@ -44,9 +44,9 @@ export const User = ({ isAdminTabClicked }) => {
 
   return (
     <main>
-//      {isAdmin && 
-      <Navbar
-//      />}
+{/* //      {isAdmin &&  */}
+      <Navbar/>
+ {/* } */}
       <header className="row center">
         <h1>SQUEAKR</h1>
         <div className="main-image-container">
