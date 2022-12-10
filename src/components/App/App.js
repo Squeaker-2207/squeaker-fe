@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Error } from "../Error/Error";
 import { Home } from "../Home/Home";
