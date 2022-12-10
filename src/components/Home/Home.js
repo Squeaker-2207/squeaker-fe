@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import sqrl from "../../images/SqueakerIcon.png";
+// import sqrl from "../../images/SqueakerIcon.png";
 import "./Home.css";
 import LoginForm from "../LoginForm/LoginPageForm";
 import CreateNewUser from "../CreateNewUserForm/CreateNewUserForm";
@@ -19,7 +19,7 @@ export const Home = () => {
     <main className='main-page column'>
       <div className='home-logo column center-x'>      
         <div className='app-image-container'>
-          <img src={chippy} alt='chipmunk logo' />
+  //        <img src={chippy} alt='chipmunk logo' />
         </div>
         <h1>SQUEAKR</h1>
       </div>
