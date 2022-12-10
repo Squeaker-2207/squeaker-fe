@@ -2,18 +2,18 @@ import React, { useState, useEffect, useContext } from 'react'
 import { UserContext } from "../../contexts/userContext";
 
 import "./User.css";
-// import { Squeak } from "../Squeak/Squeak";
-// import { NewSqueak } from "../NewSqueak/NewSqueak";
-// import { GetSqueaks } from "../../queries/getSqueaks";
-//  import { Link } from 'react-router-dom'
+import { Squeak } from "../Squeak/Squeak";
+import { NewSqueak } from "../NewSqueak/NewSqueak";
+import { GetSqueaks } from "../../queries/getSqueaks";
+ import { Link } from 'react-router-dom'
 
-//import Navbar from "../Navigation/Navbar";
+import Navbar from "../Navigation/Navbar";
 
 export const User = ({ isAdminTabClicked }) => {
  const [user] = useContext(UserContext);
- // const { username, id, isAdmin } = user;
-  // const { loading, error, data } = GetSqueaks();
-  // const [userData, setUserData] = useState()
+ const { username, id, isAdmin } = user;
+  const { loading, error, data } = GetSqueaks();
+  const [userData, setUserData] = useState()
 
   useEffect(()=> {
 
@@ -28,6 +28,8 @@ export const User = ({ isAdminTabClicked }) => {
   // unnecessary console logs to trick circleCI
   console.log(user)
   console.log(userData);
+  console.log(username)
+  console.log(id)
 
   if (error) return <p>Error : {error.message}</p>;
   if (loading) return <p>Loading...</p>;
@@ -44,31 +46,28 @@ export const User = ({ isAdminTabClicked }) => {
   })
 
 
-  // return (
+  return (
 
-  //   <main className='user'>
+    <main className='user'>
 
-  //  <NewSqueak />
+   <NewSqueak />
 
     
-  //       <div className='user-content'>
+        <div className='user-content'>
      
-//{/* {isAdmin && <Navbar />} */}
-//          {/* <nav className='user-options'>
-//            <Link to={'/user/:id'}>
-//              <button id='user-info-button'>👤</button>
-//            </Link>
-//            <div className='spacer'></div>
-    //        <button id='new-squeak-button'  >💬</button>
-//          </nav>
+        {isAdmin && <Navbar />}
+         <nav className='user-options'>
+           <Link to={'/user/:id'}>
+             <button id='user-info-button'>👤</button>
+           </Link>
+           <div className='spacer'></div>
+           <button id='new-squeak-button'  >💬</button>
+         </nav>
 
-//          <section className='user-content-squeaks'>
-//            {/* {displaySqueaks()} */}
-    //       </section>
-
-    //     </div>
-      
-
-    // </main>
-  // );
+         <section className='user-content-squeaks'>
+           {displaySqueaks()}
+          </section>
+        </div>
+    </main>
+  );
   } 

@@ -13,14 +13,13 @@ import './App.css'
 const App = () => {
 
   const [page, setPage] = useState('/')
-//   const [squeaks, setSqueaks] = useState([])
-//   const [flaggedSqueaks, setFlaggedSqueaks] = useState([])
+  const [squeaks, setSqueaks] = useState([])
+  const [flaggedSqueaks, setFlaggedSqueaks] = useState([])
   const [userName, setUserName] = useState('')
 
- const [isAdminTabClicked, SetIsAdminClicked] = useState(false)
+  const [isAdminTabClicked, SetIsAdminClicked] = useState(false)
 
   console.log(SetIsAdminClicked)
-
 
   return (
     <main className='app column center'>
@@ -51,11 +50,11 @@ const App = () => {
             <User 
               setPage={setPage}
               userName={userName}
-//               squeaks={squeaks}
-//              isAdminTabClicked={isAdminTabClicked}
-//               setSqueaks={setSqueaks}
-//               flaggedSqueaks={flaggedSqueaks}
-//               setFlaggedSqueaks={setFlaggedSqueaks} 
+              squeaks={squeaks}
+             isAdminTabClicked={isAdminTabClicked}
+              setSqueaks={setSqueaks}
+              flaggedSqueaks={flaggedSqueaks}
+              setFlaggedSqueaks={setFlaggedSqueaks} 
             />
           } 
         />
@@ -65,8 +64,8 @@ const App = () => {
             <Admin 
             setPage={setPage}
             userName={userName}
-//            squeaks={squeaks}
-//            flaggedSqueaks={flaggedSqueaks}
+           squeaks={squeaks}
+           flaggedSqueaks={flaggedSqueaks}
           />
           } 
         />
