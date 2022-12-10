@@ -1,4 +1,27 @@
-# Getting Started with Create React App
+<div align="center"><img src="src/images/SqueakerIcon.png" style="width: 150px;"> 
+
+## Squeakr - Turing Capstone Project 
+
+![javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![CircleCI](https://img.shields.io/badge/circleci-343434?style=for-the-badge&logo=circleci&logoColor=white) ![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+
+#### Contributors: [Gavin Carew](https://github.com/gjcarew) | [Jedeo Manirikumwenatwe](https://github.com/Jedeo) | [Noah van Ekdom](https://github.com/noahvanekdom) | [Colby Pearce](https://github.com/Crpearce) | [Anna Marie Sterling](https://github.com/AMSterling) | [Catalyst](https://github.com/Catalyst4Change) | [Ken Lenhart](https://github.com/Penitent0)
+</div>
+
+--- 
+
+## Description
+
+A React-based twitter clone built around robust moderation tools. Uses a service-oriented architecture with a Rails backend accessed via GraphQL
+
+[Check out the the back-end repo](https://github.com/Squeaker-2207/squeaker-fe)
+
+---
+# <a name="contents"></a> Table of contents
+- [Setup](#setup)
+
+- [Endpoints](#endpoints)
+
+# <a name="setup"></a>Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
