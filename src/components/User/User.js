@@ -13,7 +13,7 @@ export const User = ({ isAdminTabClicked }) => {
   const [user, setUser] = useContext(UserContext);
   const { userId } = useParams();
   const { data: userById } = GetUser(userId);
-  const { isAdmin = false } = user || {};
+  // const { isAdmin = false } = user || {};
   const { loading, error, data } = GetSqueaks();
 
   useEffect(() => {
