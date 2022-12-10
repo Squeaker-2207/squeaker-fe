@@ -1,108 +1,31 @@
+import React, { useState } from "react";
+// import sqrl from "../../images/SqueakerIcon.png";
+import "./Home.css";
+import LoginForm from "../LoginForm/LoginPageForm";
+import CreateNewUser from "../CreateNewUserForm/CreateNewUserForm";
 
-import React, { useState } from 'react'
-import chippy from '../../images/SqueakerIcon.png'
-import './Home.css'
-import { Link } from 'react-router-dom'
-import Form from "../Form/form";
-// import { GetUser } from '../../queries/getUser'
-// import { GetSqueaks } from '../../queries/getSqueaks'
-
-export const Home = ({ setPage, setUserName }) => {
-  setPage(window.location.pathname)
-
-  const [loggingIn, setLoggingIn] = useState(false)
-  const [newUser, setNewUser] = useState(false)
-  const [textValue, setTextValue] = useState('')
-
-  const isLoggingIn = () => {
-    setLoggingIn(true)
-  }
-
-  const notLoggingIn = () => {
-    setLoggingIn(false)
-    setUserName(textValue)
-  }
+export const Home = () => {
+  const [newUser, setNewUser] = useState(false);
 
   const isNewUser = () => {
     setNewUser(true);
   };
 
-  const handleChange = (event) => {
-    setTextValue(event.target.value)
-  }
+  // const handleChange = (event) => {
+  //  setTextValue(event.target.value)
+  // }
 
   return (
     <main className='main-page column'>
       <div className='home-logo column center-x'>      
         <div className='app-image-container'>
-          <img src={chippy} alt='chipmunk logo' />
         </div>
         <h1>SQUEAKR</h1>
-      </div> 
-
-      <div className='spacer'></div> 
-      <div className='spacer'></div> 
-
-        {!loggingIn && !newUser &&
-          <div className='home-options column center distribute'>        
-              <button id='login-button' onClick={isLoggingIn} >Login</button>
-              <div className='spacer'></div> 
-              <button id='new-user-button' onClick={isNewUser} >I'm A New User</button>
-          </div>
-        }
-
-      <div className='buttons column center'>
-
-        {loggingIn && 
-        <form className='column center'>
-          <span>Enter Username:</span> 
-          <input value={textValue} onChange={event => handleChange(event)} className='text-input' type='text'></input>
-          <Link to='/user' >
-            <button className='submit-button' onClick={event => notLoggingIn(event)} >Submit</button>
-          </Link>
-        </form>  
-        }
-
-        
-        {newUser && 
-          <div className='column center'>
-            <span>Enter New Username:</span> 
-            <input type='text'></input>
-            <Link className='column center distribute' to='/user' >
-              <button>Create New User</button>
-            </Link>
-          </div>
-        }
-
       </div>
-      <div className="spacer"></div>
-      <div className="spacer"></div>
+      <div className="forms-container">
+        {!newUser ? <LoginForm isNewUser={isNewUser} newUser={newUser}/> : <CreateNewUser />}
+      </div>
 
-      {!loggingIn && !newUser && (
-        <div className="column center distribute">
-          <button onClick={isLoggingIn}>Login</button>
-          <div className="spacer"></div>
-          <button type="button" onClick={isNewUser}>
-            I'm A New User
-          </button>
-        </div>
-      )}
-
-      <div className="buttons column center">
-        {loggingIn && <Form loggingIn={loggingIn} />}
-        {newUser && <Form />}
-        <div className="spacer"></div>
-        <div className="debug row distribute">
-          debug only:
-          <Link to="/user">
-            <button>User</button>
-          </Link>
-          <Link to="/admin">
-            <button>Admin</button>
-          </Link>
-        </div>
-        
-        </div>
     </main>
   );
 };

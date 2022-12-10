@@ -1,44 +1,47 @@
-import React, { useState } from 'react'
-import './Squeak.css'
-import chippy from '../../images/SqueakerIcon.png'
+import { gql, useMutation } from "@apollo/client";
+import React from "react";
+import { useState } from "react";
+import "./Squeak.css";
 
-export const Squeak = ({ id, userName, text, flaggedSqueaks, setFlaggedSqueaks, isAdminTabClicked = false }) => {
-  const [nuts, setNuts] = useState(0)
-  const [nutted, setNutted] = useState(false)
-
-  const reportSqueak = () => {
-    setFlaggedSqueaks([...flaggedSqueaks, id])
-  }
-
-  const nutSqueak = () => {
-    setNutted(true)
-    if (nuts === 0) {
-      setNuts(nuts => nuts += 1)      
+const UPDATE_NUT = gql`
+  mutation UpdateNut($id: ID!) {
+    updateSqueak(input: { id: $id, nut: true }) {
+      squeak {
+        content
+        nuts
+      }
     }
   }
+`;
 
-  const useless = () => {
-    if (nutted) {
-      
-    }
-  }
-  useless()
+export const Squeak = ({ isAdminTabClicked = false, squeak }) => {
+  const { id: squeakId, content, nuts, user } = squeak;
+  const [count, setCount] = useState(nuts);
+
+
+  const handleClick = () => {
+   //updateNut();
+    let num = count;
+    num += 1;
+    setCount(num);
+  };
 
   return (
-    <div className='squeak'>
-      <div className='user-info row'>
-        <div className='squeak-avatar-container'>
-          <img src={chippy} alt='user' />
-        </div>
-        <span className='squeak-username'>{userName}</span>
+    <div className="squeak">
+      <div className="user-info row">
+        <div className="squeak-avatar-container"></div>
+        <span>{squeakId}</span>
       </div>
-      <span className='squeak-text'>{text}</span>
-      <p>Squeak ID: {id}</p>
-      <div className='squeak-options row'>
-        <button onClick={nutSqueak} >🌰{nuts}</button>
-        <button onClick={reportSqueak} >👁️‍🗨️</button>
+      <span className="squeak-text">{content}</span>
+
+      <div className="squeak-options row">
+        <button type="button" onClick={() => handleClick()}>
+          🌰 {count}
+        </button>
+        <button>👁️‍🗨️</button>
+
         {isAdminTabClicked && <button>❌</button>}
       </div>
     </div>
-  )
-}
+  );
+};

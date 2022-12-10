@@ -8,17 +8,6 @@ const GET_USER = gql`
       username
       isAdmin
     }
-    allSqueaks {
-      id
-      nuts
-      content
-      reports
-      approved
-      user {
-        id
-        username
-      }
-    }
   }
 `;
 
@@ -30,7 +19,7 @@ export const GetUser = (id) => {
   });
 
   return {
-    data,
+    data: data?.fetchUser,
     error,
     loading,
   };
