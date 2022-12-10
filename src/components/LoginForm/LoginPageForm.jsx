@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LoginContext } from "../../contexts/loginContext";
 import { UserContext } from "../../contexts/userContext";
 import { GetUsers } from "../../queries/getAllUsers";
@@ -38,22 +38,25 @@ export default function LoginForm({ isNewUser, newUser }) {
   return (
     <div className="column center">
       <div className="spacer"></div>
-      {/* <span>Enter Username:</span> */}
-      {/* <input
+      <span>Enter Username:</span>
+      <input
+        required
         value={loginUsername}
         onChange={(event) => handleChange(event)}
         type="text"
       >
         
-      </input> */}
+      </input>
       <button type="button" onClick={() => onSubmit()}>
         Login
       </button>
       <div className="spacer"></div>
       {!newUser && (
-        <button type="button" onClick={isNewUser}>
-          I'm A New User
-        </button>
+        <Link to='/create-account' >
+          <button type="button" onClick={isNewUser}>
+            I'm A New User
+          </button>
+        </Link>
       )}
     </div>
   );

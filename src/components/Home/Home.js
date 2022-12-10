@@ -3,13 +3,10 @@ import chippy from "../../images/SqueakerIcon.png";
 import "./Home.css";
 import LoginForm from "../LoginForm/LoginPageForm";
 import CreateNewUser from "../CreateNewUserForm/CreateNewUserForm";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
-  const [newUser, setNewUser] = useState(false);
-  const isNewUser = () => {
-    setNewUser(true);
-  };
-  
+
   return (
     <main className='main-page column'>
 
@@ -21,9 +18,7 @@ export const Home = () => {
       </div>
 
       <div className="forms-container">
-        {!newUser ? 
-          <LoginForm isNewUser={isNewUser} newUser={newUser}/> : <CreateNewUser />
-        }
+          <LoginForm/>
       </div>
 
     </main>
