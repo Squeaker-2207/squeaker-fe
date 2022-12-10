@@ -4,8 +4,14 @@ import App from './App';
 
 test('renders squeakr app', () => {
   render(
-  <Router>
-    <App />
+    <Router>
+    <ApolloProvider client={client}>
+      <LoginProvider>
+        <UserProvider>
+          <App />
+        </UserProvider>
+      </LoginProvider>
+    </ApolloProvider>
   </Router>
   );
   const linkElement = screen.getByText('SQUEAKR');
