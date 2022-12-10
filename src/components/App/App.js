@@ -8,14 +8,13 @@ import CreateNewUser from "../CreateNewUserForm/CreateNewUserForm";
 import "./App.css";
 
 const App = () => {
-  const [isAdminTabClicked, SetIsAdminClicked] = useState(false);
   return (
     <main className="app column center">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<Admin SetIsAdminClicked={SetIsAdminClicked}/>}/>
+        <Route path="/admin" element={<Admin/>}/>
         <Route path="/create-account" element={<CreateNewUser />} />
-        <Route path="/user/:userId" element={<User isAdminTabClicked={isAdminTabClicked} />} />
+        <Route path="/user/:userId" element={<User/>} />
         <Route path="*" element={<Error />} />
       </Routes>
     </main>

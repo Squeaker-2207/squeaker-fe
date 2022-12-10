@@ -4,10 +4,9 @@ import { LoginContext } from "../../contexts/loginContext";
 import { UserContext } from "../../contexts/userContext";
 import { GetUsers } from "../../queries/getAllUsers";
 
-export default function CreateNewUser({ notLoggingIn, buttonText }) {
+export default function CreateNewUser() {
   const {data} = GetUsers();
   const [loginUsername, setUsername] = useState("");
-
   const [, setLogin] = useContext(LoginContext);
   const [, setUser] = useContext(UserContext);
 
@@ -28,8 +27,6 @@ export default function CreateNewUser({ notLoggingIn, buttonText }) {
       return user.username?.toLowerCase() === loginUsername.toLowerCase();
     });
     if (!user) {
-        //please don delete it will work once the loading page is done
-      console.log("Lets create a new account");
       return navigate("/");
     } else {
       await setUser(user);
