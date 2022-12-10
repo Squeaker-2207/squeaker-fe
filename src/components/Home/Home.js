@@ -6,10 +6,12 @@ import CreateNewUser from "../CreateNewUserForm/CreateNewUserForm";
 
 export const Home = () => {
   const [newUser, setNewUser] = useState(false);
+  // const [textValue, setTextValue] = useState('')
 
   const isNewUser = () => {
     setNewUser(true);
   };
+  console.log(newUser)
 
   // const handleChange = (event) => {
   //  setTextValue(event.target.value)

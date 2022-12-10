@@ -4,7 +4,7 @@ import { LoginContext } from "../../contexts/loginContext";
 import { UserContext } from "../../contexts/userContext";
 import { GetUsers } from "../../queries/getAllUsers";
 
-export default function LoginForm({isNewUser,newUser }) {
+export default function LoginForm({ isNewUser,newUser }) {
   const {data} = GetUsers();
   const [loginUsername, setUsername] = useState("");
 
