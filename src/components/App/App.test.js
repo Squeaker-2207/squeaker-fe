@@ -1,4 +1,7 @@
 import { render, screen } from '@testing-library/react';
+import { ApolloProvider } from "@apollo/client";
+import { LoginProvider } from "./contexts/loginContext";
+import { UserProvider } from "./contexts/userContext";
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 
