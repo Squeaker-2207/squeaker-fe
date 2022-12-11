@@ -1,33 +1,43 @@
 // import { gql, useMutation } from "@apollo/client";
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { DELETE_SQUEAK } from "../../queries/deleteSqueak";
 import "./Squeak.css";
 
-// const UPDATE_NUT = gql`
-//   mutation UpdateNut($id: ID!) {
-//     updateSqueak(input: { id: $id, nut: true }) {
-//       squeak {
-//         content
-//         nuts
-//       }
-//     }
-//   }
-// `;
+export const Squeak = ({ squeak, userById }) => {
+  const { id: squeakId, content, user } = squeak;
+  const { id: userId } = user;
+  // const [count, setCount] = useState(nuts);
 
-export const Squeak = ({squeak }) => {
-  const { id: squeakId, content, nuts, user} = squeak;
+  const [deleteSqueak] = useMutation(DELETE_SQUEAK, {
+    variables: {
+      id: squeak.id,
+    },
+    onCompleted: (data) => {
+      console.log(data);
+    },
+  });
 
-  const {id: userId} = user
-
-  const [count, setCount] = useState(nuts);
-
-
-  const handleClick = () => {
-   //updateNut();
-    let num = count;
-    num += 1;
-    setCount(num);
+  const deleteClick = () => {
+    //updateNut();
+    // let num = count;
+    // num += 1;
+    // setCount(num);
+    deleteSqueak();
   };
+  // const handleClick = () => {
+    //updateNut();
+    // let num = count;
+    // num += 1;
+    // setCount(num);
+  // }
+
+
+  console.log(userId)
+  console.log(squeakId)
+  console.log(squeak.user.id)
+  console.log(userById.id)
 
   return (
     <div className="squeak">
@@ -37,12 +47,11 @@ export const Squeak = ({squeak }) => {
       <span className="squeak-text">{content}</span>
 
       <div className="squeak-options row">
-        <button type="button" onClick={() => handleClick()}>
-          🌰 {count}
-        </button>
+        {/* <button type="button" onClick={() => handleClick()}>
+          🌰 
+        </button> */}
         <button>👁️‍🗨️</button>
-
-        {userId === squeakId && <button>❌</button>}
+        {userById.id === squeak.user.id && <button onClick={() => deleteClick()}>❌</button>}
       </div>
     </div>
   );

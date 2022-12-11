@@ -23,9 +23,9 @@ export const User = ({ isAdminTabClicked }) => {
   }, [user, userById, setUser]);
 
   if (error) return <p>Error : {error.message}</p>;
-  console.log(error);
   if (loading) return <p>Loading...</p>;
-  console.log(data);
+  console.log(data)
+
   const displaySqueaks = data.allSqueaks.map((squeak) => {
     return (
       <Squeak
@@ -35,9 +35,11 @@ export const User = ({ isAdminTabClicked }) => {
         key={squeak.id}
         isAdminTabClicked={isAdminTabClicked}
         squeak={squeak}
+        userById={userById}
       />
     );
   });
+  console.log(userById)
 
   return (
     <main>
