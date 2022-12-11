@@ -1,8 +1,9 @@
 /* elements  */
 
 #root {
-  background: linear-gradient(0.25turn, #ffffff, #000000, #ffffff);
-  width: 100vw;
+  width: auto!;
+  background: linear-gradient(0.25turn, #ffffff, rgb(7, 95, 133) 25% , rgb(7, 95, 133) 75%, #ffffff);
+  margin: -8px;
 }
 
 a {
@@ -23,6 +24,10 @@ h1 {
   margin: 0;
 }
 
+html {
+  width: 100%;
+}
+
 header {
   background-color: white;
   position:static;
@@ -33,6 +38,10 @@ img {
   width: 100%;
 }
 
+input {
+  /* width: 60%; */
+}
+
 main {
   height: 100vh;
 }
@@ -41,6 +50,8 @@ main {
 
 .app {
   background-color: rgb(255, 255, 255);
+  width: 100%;
+  min-width: 300px;
 }
 
 .border {
@@ -87,16 +98,11 @@ main {
 
 /* breakpoints */
 
-@media screen and (min-width: 500px) {
-  .column {
-    width: 60%;
-    margin: 0 auto;
+@media screen and (min-width: 600px) {
+
+  
+
+  .app {
+    width: 50%;
   }
-
-  .row {
-    width: 60%;
-    margin: 0 auto;
-
-  }
-
 }

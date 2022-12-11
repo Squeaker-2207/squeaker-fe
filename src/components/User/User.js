@@ -8,6 +8,7 @@ import { GetUser } from "../../queries/getUser";
 import sqrl from "../../images/SqueakerIcon.png";
 import Navbar from "../Navigation/Navbar";
 import "./User.css";
+import "../App/App.css"
 
 export const User = ({ isAdminTabClicked }) => {
   const [user, setUser] = useContext(UserContext);
@@ -40,17 +41,17 @@ export const User = ({ isAdminTabClicked }) => {
   });
 
   return (
-    <main>
+    <main className="user">
       {isAdmin && <Navbar />}
       <header className="row center">
         <h1>SQUEAKR</h1>
-        <div className="main-image-container">
+        <div className="user-image-container">
           <img src={sqrl} alt="alt text" />
         </div>
       </header>
       <NewSqueak />
-      <button>💬</button>
-      <section className="main-content-squeaks column center">
+      <br></br>
+      <section className="user-content-squeaks column center">
         {displaySqueaks}
       </section>
     </main>

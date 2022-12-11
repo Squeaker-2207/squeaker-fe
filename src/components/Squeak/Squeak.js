@@ -2,17 +2,9 @@
 import React from "react";
 import { useState } from "react";
 import "./Squeak.css";
+import "../App/App.css"
 
-// const UPDATE_NUT = gql`
-//   mutation UpdateNut($id: ID!) {
-//     updateSqueak(input: { id: $id, nut: true }) {
-//       squeak {
-//         content
-//         nuts
-//       }
-//     }
-//   }
-// `;
+
 
 export const Squeak = ({squeak }) => {
   const { id: squeakId, content, nuts, user} = squeak;

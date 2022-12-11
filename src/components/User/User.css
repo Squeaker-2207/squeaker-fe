@@ -2,6 +2,7 @@
 .user {
   width: 100%;
   height: 100vh;
+  overflow: scroll;
 }
 
 .user-content {
@@ -12,7 +13,6 @@
 
 .user-content-squeaks {
   width: 100%;
-  padding: 0 2%;
 }
 
 .user-options {
@@ -21,3 +21,7 @@
   font-size: 2em;
 }
 
+.user-image-container {
+  height: 2em;
+  width: 2em;
+}
