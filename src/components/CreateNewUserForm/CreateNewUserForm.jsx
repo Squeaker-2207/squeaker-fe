@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../../contexts/loginContext";
 import { UserContext } from "../../contexts/userContext";
 import { GetUsers } from "../../queries/getAllUsers";
@@ -22,7 +21,9 @@ export default function CreateNewUser() {
     }
   })
 
-  const navigate = useNavigate();
+  console.log(data)
+  console.log(setUser)
+
 
   const handleChange = (event) => {
     setUsername(event.currentTarget.value);

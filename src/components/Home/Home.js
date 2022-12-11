@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import chippy from "../../images/SqueakerIcon.png";
 import "./Home.css";
 import LoginForm from "../LoginForm/LoginPageForm";
-import CreateNewUser from "../CreateNewUserForm/CreateNewUserForm";
-import { Link } from "react-router-dom";
 
 export const Home = () => {
 
