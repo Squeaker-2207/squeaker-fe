@@ -4,6 +4,9 @@ import React from "react";
 import { GetSqueaks } from "../../queries/getSqueaks";
 import { DELETE_SQUEAK } from "../../queries/deleteSqueak";
 import "./Squeak.css";
+import "../App/App.css"
+
+
 
 export const Squeak = ({ squeak, userById }) => {
   const { content, user } = squeak;
