@@ -1,16 +1,29 @@
 import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../../contexts/loginContext";
 import { UserContext } from "../../contexts/userContext";
 import { GetUsers } from "../../queries/getAllUsers";
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../../Mutations/AddUser";
 
 export default function CreateNewUser() {
   const {data} = GetUsers();
   const [loginUsername, setUsername] = useState("");
   const [, setLogin] = useContext(LoginContext);
   const [, setUser] = useContext(UserContext);
+  const [addUser] = useMutation(ADD_USER, {
+    variables: {
+      username: loginUsername,
+      isAdmin: false
+    },
+    onCompleted: (data) => {
+      console.log(data)
+      return data
+    }
+  })
 
-  const navigate = useNavigate();
+  console.log(data)
+  console.log(setUser)
+
 
   const handleChange = (event) => {
     setUsername(event.currentTarget.value);
@@ -23,15 +36,7 @@ export default function CreateNewUser() {
   };
 
   const onSubmit = async () => {
-    const user = data?.find((user) => {
-      return user.username?.toLowerCase() === loginUsername.toLowerCase();
-    });
-    if (!user) {
-      return navigate("/");
-    } else {
-      await setUser(user);
-      return navigate(`/user/${user.id}`);
-    }
+    addUser()
   };
 
   return (
