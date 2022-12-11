@@ -21,15 +21,15 @@ export const NewSqueak = () => {
     },
   });
 
-
   const submitNewSqueak = () => {
     postSqueak();
   };
 
   return (
     <div className="new-squeak column center">
-      <form className="new-squeak-form column center">
+      <form onSubmit={submitNewSqueak} className="new-squeak-form column center">
         <input
+          autoFocus
           className="text-input column center"
           type="text"
           name="squeak"
@@ -38,9 +38,8 @@ export const NewSqueak = () => {
         />
         <button
           id="post-new-squeak-button"
-          type="button"
-          onClick={() => submitNewSqueak()}
-        >
+          type="submit"
+          >
           Squeak!
         </button>
       </form>
