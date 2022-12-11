@@ -1,29 +1,24 @@
-// import { gql, useMutation } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 import React from "react";
 // import { useState } from "react";
-import { useMutation } from "@apollo/client";
+import { GetSqueaks } from "../../queries/getSqueaks";
 import { DELETE_SQUEAK } from "../../queries/deleteSqueak";
 import "./Squeak.css";
 
 export const Squeak = ({ squeak, userById }) => {
-  const { id: squeakId, content, user } = squeak;
-  const { id: userId } = user;
-  // const [count, setCount] = useState(nuts);
+  const { content, user } = squeak;
+  const { refetch } = GetSqueaks();
 
   const [deleteSqueak] = useMutation(DELETE_SQUEAK, {
     variables: {
       id: squeak.id,
     },
-    onCompleted: (data) => {
-      console.log(data);
+    onCompleted: () => {
+      refetch()
     },
   });
 
   const deleteClick = () => {
-    //updateNut();
-    // let num = count;
-    // num += 1;
-    // setCount(num);
     deleteSqueak();
   };
   // const handleClick = () => {
@@ -33,11 +28,10 @@ export const Squeak = ({ squeak, userById }) => {
     // setCount(num);
   // }
 
-
-  console.log(userId)
-  console.log(squeakId)
-  console.log(squeak.user.id)
-  console.log(userById.id)
+  // console.log(userId)
+  // console.log(squeakId)
+  // console.log(squeak.user.id)
+  // console.log(userById.id)
 
   return (
     <div className="squeak">
