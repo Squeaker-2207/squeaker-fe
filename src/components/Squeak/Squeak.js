@@ -21,6 +21,7 @@ export const Squeak = ({ squeak, userById }) => {
   const deleteClick = () => {
     deleteSqueak();
   };
+  
   // const handleClick = () => {
     //updateNut();
     // let num = count;
