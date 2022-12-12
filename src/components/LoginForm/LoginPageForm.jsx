@@ -23,7 +23,8 @@ export default function LoginForm({ isNewUser, newUser }) {
     setLogin(setLogin);
   };
 
-  const onSubmit = async () => {
+  const onSubmit = async (event) => {
+    event.preventDefault()
     const user = data?.find((user) => {
       return user.username?.toLowerCase() === loginUsername.toLowerCase();
     });
@@ -39,17 +40,19 @@ export default function LoginForm({ isNewUser, newUser }) {
     <div className="column center">
       <div className="spacer"></div>
       <span>Enter Username:</span>
-      <input
-        required
-        value={loginUsername}
-        onChange={(event) => handleChange(event)}
-        type="text"
-      >
-        
-      </input>
-      <button type="button" onClick={() => onSubmit()}>
-        Login
-      </button>
+      <form onSubmit={event => onSubmit(event)} className="column center">
+        <input
+          autoFocus
+          required
+          value={loginUsername}
+          onChange={(event) => handleChange(event)}
+          type="text"
+          >
+        </input>
+        <button type="submit">
+          Login
+        </button>
+      </form>
       <br></br>
       <div className="spacer"></div>
       {!newUser && (
