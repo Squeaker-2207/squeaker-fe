@@ -4,7 +4,6 @@ import { useMutation } from "@apollo/client";
 import { UserContext } from "../../contexts/userContext";
 import { GetSqueaks } from "../../queries/getSqueaks";
 import "./NewSqueak.css";
-import { GetSqueaks } from "../../queries/getSqueaks";
 
 export const NewSqueak = () => {
   const [squeakContent, setSqueakContent] = useState("");
