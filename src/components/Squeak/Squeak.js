@@ -19,8 +19,9 @@ export const Squeak = ({ squeak, userById }) => {
       nut: true,
     },
     optimisticResponse: {
-      ADD_NUT: {
+      updateSqueak: {
         id: squeak.id,
+        __typename: "like",
         nut: true,
       }
     },
