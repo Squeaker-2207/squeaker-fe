@@ -7,9 +7,9 @@
   width: 80%;
 }
 
-.text-input {
-  word-wrap: break-word;
-  width: 80%;
+input[type=text] {
+  width: auto;
+  padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
