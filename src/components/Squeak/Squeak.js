@@ -40,16 +40,33 @@ export const Squeak = ({ squeak, userById }) => {
       <span className="squeak-text">{content}</span>
 
       <div className="squeak-options row">
-        {/* <button type="button" onClick={() => handleClick()}>
+        <button 
+          className="squeak-nut-button" 
+          type="button" 
+          // onClick={() => handleClick()}
+          >
           🌰 
-        </button> */}
+          <span className="squeak-nut-button-tooltip tooltip">
+          Give this Squeak a Nut
+          </span>
+        </button>
         <button className="squeak-report-button">
             👁️‍🗨️ 
-          <span className="squeak-report-button-tooltip">
+          <span className="squeak-report-button-tooltip tooltip">
             Report this Squeak
           </span>
         </button>
-        {userById.id === squeak.user.id && <button onClick={() => deleteClick()}>❌</button>}
+
+        {userById.id === squeak.user.id && 
+          <button 
+          className="squeak-delete-button" 
+          onClick={() => deleteClick()}>
+            ❌
+            <span className="squeak-delete-button-tooltip tooltip">
+            Delete this Squeak
+            </span>
+          </button>
+        }
       </div>
     </div>
   );

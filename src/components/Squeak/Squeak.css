@@ -30,23 +30,56 @@
 
 .squeak-report-button .squeak-report-button-tooltip {
   visibility: hidden;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  width: 125px;
-  top: 0%;
-  left: 125%;
-  z-index: 1;
 }
 
 .squeak-report-button:hover .squeak-report-button-tooltip {
   visibility: visible;
 }
+
+
+.squeak-delete-button {
+  position: relative;
+  display: inline-block;
+}
+
+.squeak-delete-button .squeak-delete-button-tooltip {
+  visibility: hidden;
+}
+
+.squeak-delete-button:hover .squeak-delete-button-tooltip {
+  visibility: visible;
+}
+
+.squeak-nut-button {
+  position: relative;
+  display: inline-block;
+}
+
+.squeak-nut-button .squeak-nut-button-tooltip {
+  visibility: hidden;
+}
+
+.squeak-nut-button:hover .squeak-nut-button-tooltip {
+  visibility: visible;
+}
+
+
+.tooltip {
+  border: 2px solid rgb(7, 95, 133);
+  background-color: white;
+  border-radius: .75em;
+  padding: .5em;
+  box-shadow: .3em .3em rgb(7, 95, 133);
+  position: absolute;
+  width: 150px;
+  top: -40px;
+  left: -70px;  
+  z-index: 1;
+}
+
+
+
+
 
 .squeak-options {
   margin-top: .5em;
