@@ -1,37 +1,50 @@
 import { useMutation } from "@apollo/client";
 import React from "react";
-// import { useState } from "react";
 import { GetSqueaks } from "../../queries/getSqueaks";
-import { DELETE_SQUEAK } from "../../queries/deleteSqueak";
+import { ADD_NUT } from "../../Mutations/addANut";
+import { ADD_REPORT } from "../../Mutations/addReports";
+import { DELETE_SQUEAK } from "../../Mutations/deleteSqueak";
 import "./Squeak.css";
 import "../App/App.css"
 import chippy from '../../images/SqueakerIcon.png'
-
 
 
 export const Squeak = ({ squeak, userById }) => {
   const { content, user } = squeak;
   const { refetch } = GetSqueaks();
 
+  const [updateNut] = useMutation(ADD_NUT, {
+    variables: {
+      id: squeak.id,
+      nut: true,
+    },
+    onCompleted: () => {
+      refetch();
+    },
+  });
+
+  const [updateReport] = useMutation(ADD_REPORT, {
+    variables: {
+      id: squeak.id,
+      report: true,
+    },
+    onCompleted: () => {
+      refetch();
+    },
+  });
+
   const [deleteSqueak] = useMutation(DELETE_SQUEAK, {
     variables: {
       id: squeak.id,
     },
     onCompleted: () => {
-      refetch()
+      refetch();
     },
   });
 
   const deleteClick = () => {
     deleteSqueak();
   };
-  
-  // const handleClick = () => {
-    //updateNut();
-    // let num = count;
-    // num += 1;
-    // setCount(num);
-  // }
 
   return (
     <div className="squeak">
