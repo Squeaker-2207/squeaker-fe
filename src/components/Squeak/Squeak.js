@@ -5,6 +5,7 @@ import { GetSqueaks } from "../../queries/getSqueaks";
 import { DELETE_SQUEAK } from "../../queries/deleteSqueak";
 import "./Squeak.css";
 import "../App/App.css"
+import chippy from '../../images/SqueakerIcon.png'
 
 
 
@@ -34,10 +35,13 @@ export const Squeak = ({ squeak, userById }) => {
 
   return (
     <div className="squeak">
-      <div className="user-info row">
+      <div className="squeak-user-info row ">
+        <div className="squeak-avatar-container">
+          <img src={chippy}/>
+        </div>
         <span className="squeak-username">{user.username}</span>
       </div>
-      <span className="squeak-text">{content}</span>
+      <p className="row center squeak-text">{content}</p>
 
       <div className="squeak-options row">
         <button 
