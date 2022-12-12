@@ -32,15 +32,10 @@ export const Squeak = ({ squeak, userById }) => {
     // setCount(num);
   // }
 
-  // console.log(userId)
-  // console.log(squeakId)
-  // console.log(squeak.user.id)
-  // console.log(userById.id)
-
   return (
     <div className="squeak">
       <div className="user-info row">
-        <span>{user.username}</span>
+        <span className="squeak-username">{user.username}</span>
       </div>
       <span className="squeak-text">{content}</span>
 
@@ -48,7 +43,12 @@ export const Squeak = ({ squeak, userById }) => {
         {/* <button type="button" onClick={() => handleClick()}>
           🌰 
         </button> */}
-        <button>👁️‍🗨️</button>
+        <button className="squeak-report-button">
+            👁️‍🗨️ 
+          <span className="squeak-report-button-tooltip">
+            Report this Squeak
+          </span>
+        </button>
         {userById.id === squeak.user.id && <button onClick={() => deleteClick()}>❌</button>}
       </div>
     </div>

@@ -23,7 +23,29 @@
   padding-left: .5em;
 }
 
-.squeak-text {
+.squeak-report-button {
+  position: relative;
+  display: inline-block;
+}
+
+.squeak-report-button .squeak-report-button-tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  width: 125px;
+  top: 0%;
+  left: 125%;
+  z-index: 1;
+}
+
+.squeak-report-button:hover .squeak-report-button-tooltip {
+  visibility: visible;
 }
 
 .squeak-options {
