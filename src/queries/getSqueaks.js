@@ -17,11 +17,12 @@ const GET_SQUEAKS = gql`
 `;
 
 export const GetSqueaks = (userID) => {
-  const { error, data, loading } = useQuery(GET_SQUEAKS);
+  const { error, data, loading, refetch } = useQuery(GET_SQUEAKS);
 
   return {
     error,
     data,
     loading,
+    refetch
   };
 };

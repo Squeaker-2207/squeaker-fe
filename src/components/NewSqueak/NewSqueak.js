@@ -3,10 +3,12 @@ import { POST_SQUEAK } from "../../Mutations/addSqueak";
 import { useMutation } from "@apollo/client";
 import { UserContext } from "../../contexts/userContext";
 import "./NewSqueak.css";
+import { GetSqueaks } from "../../queries/getSqueaks";
 
 export const NewSqueak = () => {
   const [squeakContent, setSqueakContent] = useState("");
   const [user] = useContext(UserContext);
+  const {refetch} = GetSqueaks()
   const { id } = user;
 
   const [postSqueak] = useMutation(POST_SQUEAK, {
@@ -14,8 +16,8 @@ export const NewSqueak = () => {
       content: squeakContent,
       userId: id,
     },
-    onCompleted: (data) => {
-      return data
+    onCompleted: () => {
+      refetch()
     },
   });
 
