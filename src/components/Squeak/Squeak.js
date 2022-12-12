@@ -1,41 +1,48 @@
 import { useMutation } from "@apollo/client";
 import React from "react";
-// import { useState } from "react";
 import { GetSqueaks } from "../../queries/getSqueaks";
+import { ADD_NUT } from "../../Mutations/addANut";
+import { ADD_REPORT } from "../../Mutations/addReports";
 import { DELETE_SQUEAK } from "../../Mutations/deleteSqueak";
 import "./Squeak.css";
-import "../App/App.css"
-
-
+import "../App/App.css";
 
 export const Squeak = ({ squeak, userById }) => {
   const { content, user } = squeak;
   const { refetch } = GetSqueaks();
+
+  const [updateNut] = useMutation(ADD_NUT, {
+    variables: {
+      id: squeak.id,
+      nut: true,
+    },
+    onCompleted: () => {
+      refetch();
+    },
+  });
+
+  const [updateReport] = useMutation(ADD_REPORT, {
+    variables: {
+      id: squeak.id,
+      report: true,
+    },
+    onCompleted: () => {
+      refetch();
+    },
+  });
 
   const [deleteSqueak] = useMutation(DELETE_SQUEAK, {
     variables: {
       id: squeak.id,
     },
     onCompleted: () => {
-      refetch()
+      refetch();
     },
   });
 
   const deleteClick = () => {
     deleteSqueak();
   };
-  
-  // const handleClick = () => {
-    //updateNut();
-    // let num = count;
-    // num += 1;
-    // setCount(num);
-  // }
-
-  // console.log(userId)
-  // console.log(squeakId)
-  // console.log(squeak.user.id)
-  // console.log(userById.id)
 
   return (
     <div className="squeak">
@@ -43,13 +50,16 @@ export const Squeak = ({ squeak, userById }) => {
         <span>{user.username}</span>
       </div>
       <span className="squeak-text">{content}</span>
-
       <div className="squeak-options row">
-        {/* <button type="button" onClick={() => handleClick()}>
-          🌰 
-        </button> */}
-        <button>👁️‍🗨️</button>
-        {userById.id === squeak.user.id && <button onClick={() => deleteClick()}>❌</button>}
+        <button type="button" onClick={() => updateNut()}>
+          🌰 <span className="squeak-text">{squeak.nuts}</span>
+        </button>
+        <button type="button" onClick={() => updateReport()}>
+          👁️‍🗨️ <span className="squeak-text">{squeak.reports}</span>
+        </button>
+        {userById.id === squeak.user.id && (
+          <button onClick={() => deleteClick()}>❌</button>
+        )}
       </div>
     </div>
   );
