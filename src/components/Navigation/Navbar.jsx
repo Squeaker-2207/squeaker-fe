@@ -1,6 +1,4 @@
-import { NavLink, useNavigate, useParams } from "react-router-dom";
-import { UserContext } from "../../contexts/userContext";
-import { useContext } from "react";
+import { NavLink,useParams } from "react-router-dom";
 
 export default function Navbar() {
   const {userId} = useParams()
