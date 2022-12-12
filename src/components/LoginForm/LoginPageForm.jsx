@@ -23,7 +23,8 @@ export default function LoginForm({ isNewUser, newUser }) {
     setLogin(setLogin);
   };
 
-  const onSubmit = async () => {
+  const onSubmit = async (event) => {
+    event.preventDefault()
     const user = data?.find((user) => {
       return user.username?.toLowerCase() === loginUsername.toLowerCase();
     });
@@ -39,7 +40,7 @@ export default function LoginForm({ isNewUser, newUser }) {
     <div className="column center">
       <div className="spacer"></div>
       <span>Enter Username:</span>
-      <form onSubmit={onSubmit} className="column center">
+      <form onSubmit={event => onSubmit(event)} className="column center">
         <input
           autoFocus
           required
