@@ -6,9 +6,9 @@ export default function Navbar() {
   const { adminId } = useParams();
 
   return (
-    <>
+    <div className="row">
       {!adminId && <Link to={`/admin/${userId}`}> ADMIN </Link>}
       {!userId && <Link to={`/user/${adminId}`}> USER </Link>}
-    </>
+    </div>
   );
 }
