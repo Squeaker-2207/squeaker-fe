@@ -7,8 +7,9 @@ export const Admin = () => {
   const {data, error, loading} = GetReported();
 
 
-  if (error) return <p>Error : {error.message}</p>;
   if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error : {error.message}</p>;
+  
 
   const displaySqueaks = data?.reportedSqueaks.map((squeak)=> {
     const {metric, probability} = squeak.score
@@ -16,7 +17,7 @@ export const Admin = () => {
       <AdminSqueak key={squeak.id} id={squeak.id} user={squeak.user} content={squeak.content} metric={metric} probability={probability} />
     )
   })
-  console.log(data.reportedSqueaks);
+ 
   return (
     <main>
       <Navbar />

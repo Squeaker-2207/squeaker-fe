@@ -23,10 +23,8 @@ export const User = ({ isAdminTabClicked }) => {
     }
   }, [user, userById, setUser]);
 
-  if (error) return <p>Error : {error.message}</p>;
   if (loading) return <p>Loading...</p>;
-  // console.log(data)
-
+  if (error) return <p>Error : {error.message}</p>;
 
   const displaySqueaks = data.allSqueaks.map((squeak) => {
     return (
