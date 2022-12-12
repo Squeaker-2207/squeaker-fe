@@ -1,5 +1,6 @@
 .squeak {
   border: 2px solid rgb(7, 95, 133);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: .75em;
   min-height: 5em;
   padding: .5em;

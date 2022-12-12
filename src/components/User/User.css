@@ -1,5 +1,6 @@
 
 .user {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
   height: 100vh;
   overflow: scroll;
