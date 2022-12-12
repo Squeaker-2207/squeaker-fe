@@ -4,7 +4,6 @@ import { UserContext } from "../../contexts/userContext";
 import { GetUsers } from "../../queries/getAllUsers";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../Mutations/AddUser";
-import { Link } from "react-router-dom";
 
 export default function CreateNewUser() {
   const {data} = GetUsers();
@@ -44,20 +43,14 @@ export default function CreateNewUser() {
     <div className="column center">
       <p>Welcome to Squeakr!</p>
       <span>Enter Username:</span>
-      <form onSubmit={onSubmit} className='column'>
-        <input
-          autoFocus
-          value={loginUsername}
-          onChange={(event) => handleChange(event)}
-          type="text"
-          ></input>
-          <div className="spacer"></div>
-        <Link to='/'>
-          <button type="submit">
-            Create Account
-          </button>
-        </Link>
-        </form>
+      <input
+        value={loginUsername}
+        onChange={(event) => handleChange(event)}
+        type="text"
+      ></input>
+      <button type="button" onClick={() => onSubmit()}>
+        Create Account
+      </button>
     </div>
   );
 }
