@@ -36,6 +36,7 @@ export default function CreateNewUser() {
 
   return (
     <div className="column center">
+      <p>Welcome to Squeakr!</p>
       <span>Enter Username:</span>
       <input
         value={loginUsername}

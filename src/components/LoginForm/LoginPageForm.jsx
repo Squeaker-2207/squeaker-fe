@@ -50,6 +50,7 @@ export default function LoginForm({ isNewUser, newUser }) {
       <button type="button" onClick={() => onSubmit()}>
         Login
       </button>
+      <br></br>
       <div className="spacer"></div>
       {!newUser && (
         <Link to='/create-account' >

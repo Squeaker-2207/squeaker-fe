@@ -10,8 +10,3 @@
 .spacer {
   height: .5em;
 }
-
-.debug {
-  width: fit-content !important;
-  background-color: teal;
-}

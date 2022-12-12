@@ -22,11 +22,12 @@ const GET_REPORTED = gql`
 `;
 
 export const GetReported = () => {
-  const { data, error, loading } = useQuery(GET_REPORTED);
+  const { data, error, loading, refetch } = useQuery(GET_REPORTED);
 
   return {
     data,
     error,
     loading,
+    refetch
   };
 };
