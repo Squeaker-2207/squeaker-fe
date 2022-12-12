@@ -81,6 +81,30 @@ main {
   flex-direction: row;
 }  
 
+.tooltip {
+  border: 2px solid rgb(7, 95, 133);
+  background-color: white;
+  border-radius: .75em;
+  padding: .5em;
+  box-shadow: .3em .3em rgb(7, 95, 133);
+  position: absolute;
+  width: 150px;
+  top: -40px;
+  left: -70px;  
+  z-index: 1;
+}
+
+.tooltip::after {
+  content: " ";
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(7, 95, 133) transparent transparent transparent;
+}
+
 /* main logo  */
 
 .main-content-squeaks {

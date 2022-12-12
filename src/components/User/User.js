@@ -5,7 +5,7 @@ import { NewSqueak } from "../NewSqueak/NewSqueak";
 import { GetSqueaks } from "../../queries/getSqueaks";
 import { useParams } from "react-router-dom";
 import { GetUser } from "../../queries/getUser";
-import sqrl from "../../images/SqueakerIcon.png";
+import chippy from "../../images/SqueakerIcon.png";
 import Navbar from "../Navigation/Navbar";
 import "./User.css";
 import "../App/App.css"
@@ -39,7 +39,7 @@ export const User = ({ isAdminTabClicked }) => {
       />
     );
   });
-  console.log(userById)
+  console.log(userById.username)
 
   return (
     <main className="user">
@@ -47,9 +47,10 @@ export const User = ({ isAdminTabClicked }) => {
       <header className="row center">
         <h1>SQUEAKR</h1>
         <div className="user-image-container">
-          <img src={sqrl} alt="alt text" />
+          <img src={chippy} alt='Squeakr logo - a blue silhouette of a chipmunk' />
         </div>
       </header>
+        <span className="user-greeting column">Hello {userById.username}!</span>
       <NewSqueak />
       <br></br>
       <section className="user-content-squeaks column center">

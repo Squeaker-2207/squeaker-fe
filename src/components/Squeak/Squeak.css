@@ -1,5 +1,6 @@
 .squeak {
   border: 2px solid rgb(7, 95, 133);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: .75em;
   min-height: 5em;
   padding: .5em;
@@ -9,8 +10,8 @@
 }
 
 .squeak-avatar-container {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   background-color: white;
   border: 2px solid rgb(7, 95, 133);
   border-radius: .5em;
@@ -23,8 +24,53 @@
   padding-left: .5em;
 }
 
-.squeak-text {
+.squeak-report-button {
+  position: relative;
+  display: inline-block;
 }
+
+.squeak-report-button .squeak-report-button-tooltip {
+  visibility: hidden;
+}
+
+.squeak-report-button:hover .squeak-report-button-tooltip {
+  visibility: visible;
+}
+
+
+.squeak-delete-button {
+  position: relative;
+  display: inline-block;
+}
+
+.squeak-delete-button .squeak-delete-button-tooltip {
+  visibility: hidden;
+}
+
+.squeak-delete-button:hover .squeak-delete-button-tooltip {
+  visibility: visible;
+}
+
+.squeak-nut-button {
+  position: relative;
+  display: inline-block;
+}
+
+.squeak-nut-button .squeak-nut-button-tooltip {
+  visibility: hidden;
+}
+
+.squeak-nut-button:hover .squeak-nut-button-tooltip {
+  visibility: visible;
+}
+
+.squeak-user-info {
+  align-items: center;
+}
+
+
+
+
 
 .squeak-options {
   margin-top: .5em;
