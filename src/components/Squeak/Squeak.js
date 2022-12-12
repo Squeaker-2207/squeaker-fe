@@ -18,6 +18,12 @@ export const Squeak = ({ squeak, userById }) => {
       id: squeak.id,
       nut: true,
     },
+    optimisticResponse: {
+      ADD_NUT: {
+        id: squeak.id,
+        nut: true,
+      }
+    },
     onCompleted: () => {
       refetch();
     },
@@ -27,6 +33,12 @@ export const Squeak = ({ squeak, userById }) => {
     variables: {
       id: squeak.id,
       report: true,
+    },
+    optimisticResponse: {
+      ADD_REPORT: {
+        id: squeak.id,
+        report: true,
+      }
     },
     onCompleted: () => {
       refetch();
@@ -71,6 +83,7 @@ export const Squeak = ({ squeak, userById }) => {
         <button 
           className="squeak-report-button"
           onClick={() => updateReport()}
+          disabled={userById.isAdmin}
           >
           👁️‍🗨️ 
           <span className="squeak-text">{squeak.reports}</span>
