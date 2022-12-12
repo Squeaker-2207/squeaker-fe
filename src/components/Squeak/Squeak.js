@@ -60,15 +60,20 @@ export const Squeak = ({ squeak, userById }) => {
         <button 
           className="squeak-nut-button" 
           type="button" 
-          // onClick={() => handleClick()}
+          onClick={() => updateNut()}
           >
           🌰 
+          <span className="squeak-text">{squeak.nuts}</span>
           <span className="squeak-nut-button-tooltip tooltip">
           Give this Squeak a Nut
           </span>
         </button>
-        <button className="squeak-report-button">
-            👁️‍🗨️ 
+        <button 
+          className="squeak-report-button"
+          onClick={() => updateReport()}
+          >
+          👁️‍🗨️ 
+          <span className="squeak-text">{squeak.reports}</span>
           <span className="squeak-report-button-tooltip tooltip">
             Report this Squeak
           </span>
