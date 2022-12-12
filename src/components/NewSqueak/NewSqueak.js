@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { POST_SQUEAK } from "../../queries/addSqueak";
+import { POST_SQUEAK } from "../../Mutations/addSqueak";
 import { useMutation } from "@apollo/client";
 import { UserContext } from "../../contexts/userContext";
 import "./NewSqueak.css";
