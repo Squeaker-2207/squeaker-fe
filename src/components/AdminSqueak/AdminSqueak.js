@@ -12,8 +12,8 @@ export const AdminSqueak = ({ id, content, metric, probability, user }) => {
       <div className="squeak-options row">
         <h6> {metric}</h6>
         <h6>{probability}</h6>
-        <button onClick="">👍</button>
-        <button onClick="">👎</button>
+        <button >👍</button>
+        <button >👎</button>
       </div>
     </div>
   );
