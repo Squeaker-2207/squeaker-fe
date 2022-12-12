@@ -40,16 +40,14 @@ export default function LoginForm({ isNewUser, newUser }) {
       <div className="spacer"></div>
       <span>Enter Username:</span>
       <form onSubmit={onSubmit} className="column center">
-
-      <input
-        
-        required
-        value={loginUsername}
-        onChange={(event) => handleChange(event)}
-        type="text"
-        >
-        
-      </input>
+        <input
+          autoFocus
+          required
+          value={loginUsername}
+          onChange={(event) => handleChange(event)}
+          type="text"
+          >
+        </input>
         <button type="submit">
           Login
         </button>

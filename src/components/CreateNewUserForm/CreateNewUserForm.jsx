@@ -41,6 +41,7 @@ export default function CreateNewUser() {
       <span>Enter Username:</span>
       <form className="column" onSubmit={onSubmit}>
         <input
+          autoFocus
           value={loginUsername}
           onChange={(event) => handleChange(event)}
           type="text"

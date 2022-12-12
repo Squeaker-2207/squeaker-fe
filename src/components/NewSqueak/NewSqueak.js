@@ -23,14 +23,17 @@ export const NewSqueak = () => {
   });
 
 
-  const submitNewSqueak = () => {
+  const submitNewSqueak = (event) => {
+    event.preventDefault()
     postSqueak();
+    setSqueakContent('')
   };
 
   return (
     <div className="new-squeak column center">
-      <form className="new-squeak-form column center">
+      <form onSubmit={event => submitNewSqueak(event)} className="new-squeak-form column center">
         <input
+          autoFocus
           className="text-input column center"
           type="text"
           name="squeak"
@@ -39,8 +42,8 @@ export const NewSqueak = () => {
         />
         <button
           id="post-new-squeak-button"
-          type="button"
-          onClick={() => submitNewSqueak()}
+          type="submit"
+          // onClick={() => submitNewSqueak()}
         >
           Squeak!
         </button>
