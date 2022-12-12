@@ -2,6 +2,8 @@ import React from "react";
 import { AdminSqueak } from "../AdminSqueak/AdminSqueak";
 import { GetReported } from "../../queries/getReported";
 import Navbar from "../Navigation/Navbar";
+import './Admin.css'
+import '../App/App.css'
 
 export const Admin = () => {
   const {data, error, loading} = GetReported();
@@ -19,7 +21,7 @@ export const Admin = () => {
   })
  
   return (
-    <main>
+    <main className="">
       <Navbar />
       {displaySqueaks}
     </main>
