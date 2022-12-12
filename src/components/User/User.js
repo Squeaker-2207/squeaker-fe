@@ -3,7 +3,7 @@ import { UserContext } from "../../contexts/userContext";
 import { Squeak } from "../Squeak/Squeak";
 import { NewSqueak } from "../NewSqueak/NewSqueak";
 import { GetSqueaks } from "../../queries/getSqueaks";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { GetUser } from "../../queries/getUser";
 import chippy from "../../images/SqueakerIcon.png";
 import Navbar from "../Navigation/Navbar";
@@ -44,12 +44,15 @@ export const User = ({ isAdminTabClicked }) => {
   return (
     <main className="user">
       {isAdmin && <Navbar />}
-      <header className="row center">
-        <h1>SQUEAKR</h1>
-        <div className="user-image-container">
-          <img src={chippy} alt='Squeakr logo - a blue silhouette of a chipmunk' />
-        </div>
-      </header>
+      <Link to='/'>
+        <header className="row center">
+
+          <h1>SQUEAKR</h1>
+          <div className="user-image-container">
+            <img src={chippy} alt='Squeakr logo - a blue silhouette of a chipmunk' />
+          </div>
+        </header>
+      </Link>
         <span className="user-greeting column">Hello {userById.username}!</span>
       <NewSqueak />
       <br></br>
