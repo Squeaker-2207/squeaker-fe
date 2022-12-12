@@ -1,7 +1,7 @@
 import React from "react";
 import { useMutation } from "@apollo/client";
 import { GetReported } from "../../queries/getReported";
-import { DELETE_SQUEAK } from "../../queries/deleteSqueak";
+import { DELETE_SQUEAK } from "../../Mutations/deleteSqueak";
 
 // import chippy from "../../images/SqueakerIcon.png";
 

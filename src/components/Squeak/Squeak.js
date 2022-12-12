@@ -2,7 +2,7 @@ import { useMutation } from "@apollo/client";
 import React from "react";
 // import { useState } from "react";
 import { GetSqueaks } from "../../queries/getSqueaks";
-import { DELETE_SQUEAK } from "../../queries/deleteSqueak";
+import { DELETE_SQUEAK } from "../../Mutations/deleteSqueak";
 import "./Squeak.css";
 import "../App/App.css"
 
