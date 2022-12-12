@@ -15,6 +15,10 @@
   width: 100%;
 }
 
+.user-greeting {
+  font-size: 1.25em;
+}
+
 .user-options {
   display: flex;
   flex-direction: column;

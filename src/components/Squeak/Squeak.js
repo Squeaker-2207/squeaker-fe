@@ -37,7 +37,7 @@ export const Squeak = ({ squeak, userById }) => {
     <div className="squeak">
       <div className="squeak-user-info row ">
         <div className="squeak-avatar-container">
-          <img src={chippy}/>
+          <img src={chippy} alt='Squeakr logo - a blue silhouette of a chipmunk'/>
         </div>
         <span className="squeak-username">{user.username}</span>
       </div>
