@@ -16,14 +16,9 @@ export default function CreateNewUser() {
       isAdmin: false
     },
     onCompleted: (data) => {
-      console.log(data)
       return data
     }
   })
-
-  console.log(data)
-  console.log(setUser)
-
 
   const handleChange = (event) => {
     setUsername(event.currentTarget.value);

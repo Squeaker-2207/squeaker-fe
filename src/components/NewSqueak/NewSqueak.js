@@ -15,11 +15,10 @@ export const NewSqueak = () => {
       userId: id,
     },
     onCompleted: (data) => {
-      console.log(data);
+      return data
     },
   });
 
-  console.log(squeakContent);
   const submitNewSqueak = () => {
     postSqueak();
   };
