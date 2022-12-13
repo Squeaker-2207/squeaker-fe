@@ -39,7 +39,6 @@ export const User = ({ isAdminTabClicked }) => {
       />
     );
   });
-  console.log(userById.username)
 
   return (
     <main className="user">

@@ -8,7 +8,6 @@ import "./Squeak.css";
 import "../App/App.css"
 import chippy from '../../images/SqueakerIcon.png'
 
-
 export const Squeak = ({ squeak, userById }) => {
   const { content, user } = squeak;
   const { refetch } = GetSqueaks();
@@ -20,10 +19,12 @@ export const Squeak = ({ squeak, userById }) => {
     },
     optimisticResponse: {
       updateSqueak: {
-        id: squeak.id,
-        __typename: "like",
-        nut: true,
-      }
+        squeak: {
+          content: squeak.content,
+          nuts:squeak.nuts + 1,
+          __typename: "UpdateSqueakPayload"
+        }
+      },
     },
     onCompleted: () => {
       refetch();
@@ -36,12 +37,16 @@ export const Squeak = ({ squeak, userById }) => {
       report: true,
     },
     optimisticResponse: {
-      ADD_REPORT: {
-        id: squeak.id,
-        report: true,
+      updateSqueak: {
+        squeak: {
+          content: squeak.content,
+          reports:squeak.reports + 1,
+          __typename: "UpdateSqueakPayload"
+        }
       }
     },
-    onCompleted: () => {
+    onCompleted: (data) => {
+      console.log(data)
       refetch();
     },
   });

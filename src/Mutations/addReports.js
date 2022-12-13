@@ -5,7 +5,7 @@ export const ADD_REPORT = gql`
     updateSqueak(input: { id: $id, report: $report}) {
       squeak {
         content
-        nuts
+        reports
       }
     }
   }
