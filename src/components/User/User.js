@@ -3,9 +3,7 @@ import { UserContext } from "../../contexts/userContext";
 import { Squeak } from "../Squeak/Squeak";
 import { NewSqueak } from "../NewSqueak/NewSqueak";
 import { GetSqueaks } from "../../queries/getSqueaks";
-
 import { useParams} from "react-router-dom";
-
 import { GetUser } from "../../queries/getUser";
 import chippy from "../../images/SqueakerIcon.png";
 import Navbar from "../Navigation/Navbar";
