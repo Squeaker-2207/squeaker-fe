@@ -2,8 +2,10 @@ import React from "react";
 import { AdminSqueak } from "../AdminSqueak/AdminSqueak";
 import { GetReported } from "../../queries/getReported";
 import Navbar from "../Navigation/Navbar";
+
 import chippy from "../../images/SqueakerIcon.png";
 import "./Admin.css";
+
 
 export const Admin = () => {
   const { data, error, loading } = GetReported();
@@ -44,6 +46,7 @@ export const Admin = () => {
       <section className="user-content-squeaks column center">
         {displaySqueaks}
       </section>
+
     </main>
    
   );
