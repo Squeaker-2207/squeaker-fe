@@ -11,7 +11,7 @@ const App = () => {
   return (
     <main className="app column center">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/login" element={<LoginForm/>}/>
         <Route path="/create-account" element={<CreateNewUser />} />
         <Route path="/admin/:adminId" element={<Admin/>}/>

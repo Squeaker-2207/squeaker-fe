@@ -79,6 +79,8 @@ main {
 .row {
   display: flex;
   flex-direction: row;
+  justify-content:space-between;
+  word-break: break-word;
 }  
 
 .tooltip {
@@ -111,6 +113,11 @@ main {
   padding: 0em 1em;
 }
 
+.app{
+  display: flex;
+  justify-items: center;
+}
+
 .logo-image-container {
   height: 2.5em;
   width: 2.5em;
@@ -119,10 +126,7 @@ main {
 /* breakpoints */
 
 @media screen and (min-width: 600px) {
-
-  
-
   .app {
-    width: 50%;
+    width: 50vw;
   }
 }
