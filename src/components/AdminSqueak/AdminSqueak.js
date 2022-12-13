@@ -18,8 +18,6 @@ export const AdminSqueak = ({ id, content, metric, probability, user }) => {
     }
   });
 
-  const deleteReportedSqueak = () => removeSqueak();
-
   const [approveSqueak] = useMutation(APPROVE_SQUEAK, {
     variables: {
       id: id,
@@ -48,7 +46,7 @@ export const AdminSqueak = ({ id, content, metric, probability, user }) => {
             Approve this Squeak
             </span>
         </button>
-        <button className="admin-squeak-deny" onClick={() => deleteReportedSqueak()}>
+        <button className="admin-squeak-deny" onClick={() => removeSqueak()}>
           👎
           <span className="admin-squeak-deny-tooltip tooltip">
             Deny this Squeak
