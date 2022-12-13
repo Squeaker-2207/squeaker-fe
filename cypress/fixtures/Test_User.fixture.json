@@ -1,0 +1,8 @@
+{
+  "createdAt": "2022-12-06T02:19:42Z",
+  "id": "7",
+  "isAdmin": "false",
+  "updatedAt": "2022-12-06T02:19:42Z",
+  "username": "Test_User",
+  "__typename": "User"
+}

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { LoginContext } from "../../contexts/loginContext";
@@ -5,11 +6,16 @@ import { UserContext } from "../../contexts/userContext";
 import { GetUsers } from "../../queries/getAllUsers";
 
 export default function LoginForm({ isNewUser, newUser }) {
-  const { data } = GetUsers();
+  const { data, refetch } = GetUsers();
   const [loginUsername, setUsername] = useState("");
-
+  const [allUserData, setAllUserData] = useState([]);
   const [, setLogin] = useContext(LoginContext);
   const [, setUser] = useContext(UserContext);
+
+  useEffect(() => {
+    refetch();
+    setAllUserData(data);
+  }, [data]);
 
   const navigate = useNavigate();
 
@@ -23,9 +29,11 @@ export default function LoginForm({ isNewUser, newUser }) {
     setLogin(setLogin);
   };
 
+  console.log("data", allUserData);
+
   const onSubmit = async (event) => {
     event.preventDefault();
-    const user = data?.find((user) => {
+    const user = allUserData?.find((user) => {
       return user.username?.toLowerCase() === loginUsername.toLowerCase();
     });
     if (!user) {
