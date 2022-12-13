@@ -45,6 +45,5 @@ export const Admin = () => {
         {displaySqueaks}
       </section>
     </main>
-   
   );
 };

@@ -42,6 +42,7 @@ export default function LoginForm({ isNewUser, newUser }) {
       <span>Enter Username:</span>
       <form onSubmit={event => onSubmit(event)} className="column center">
         <input
+        style={{borderRadius: 8, width: "20em", height: "2em", margin: 2}}
           autoFocus
           required
           value={loginUsername}
@@ -49,15 +50,14 @@ export default function LoginForm({ isNewUser, newUser }) {
           type="text"
           >
         </input>
-        <div className="spacer"></div>
-        <button type="submit">
+        <button style={{borderRadius: 8, width: "20em", height: "2em", margin: 2}}type="submit">
           Login
         </button>
       </form>
       <br></br>
       {!newUser && (
         <Link to='/create-account' >
-          <button type="button" onClick={isNewUser}>
+          <button style={{borderRadius: 8, width: "20em", height: "2em"}} type="button" onClick={isNewUser}>
             I'm A New User
           </button>
         </Link>
