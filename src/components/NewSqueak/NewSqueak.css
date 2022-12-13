@@ -1,15 +1,65 @@
-.new-squeak {
-  width: auto;
-  margin: auto;
-}
 
 .new-squeak-form {
   width: 80%;
+  align-self: flex-start;
 }
 
 .text-input {
-  width: 80%;
+  border-radius: 6px;
+  width: 45vw;
+  height: 20vh;
   padding: 12px 20px;
-  margin: 8px 0;
   box-sizing: border-box;
+  word-break: break-all;
+  word-wrap: normal;
 }
+.new-squeaks-buttons {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#post-new-squeak-button, .cancel-button{
+  width: 10em;
+  padding: 10px;
+  margin: 2px;
+  background-color: rgb(7, 95, 133);
+}
+.cancel-button{
+  background-color: rgb(189, 33, 9)
+}
+
+#post-new-squeak-button:hover,
+.cancel-button:hover {
+  cursor: pointer;
+}
+#post-new-squeak-button:hover{
+  transition: .5s;
+  background-color: rgb(73, 167, 208);
+}
+
+#post-new-squeak-button:disabled{
+  cursor:auto;
+  background-color: rgb(73, 167, 208);
+}
+
+.cancel-button:hover {
+  transition: .5s;
+  background-color: red;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px){
+  .text-input {
+    border-radius: 6px;
+    width: 90vw;
+    height: 20vh;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    word-break: break-all;
+    word-wrap: normal;
+  }
+}
+  

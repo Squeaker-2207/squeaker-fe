@@ -2,11 +2,10 @@ import React, { useState, useContext } from "react";
 import { useMutation } from "@apollo/client";
 import { UserContext } from "../../contexts/userContext";
 import { GetSqueaks } from "../../queries/getSqueaks";
-import { POST_SQUEAK } from '../../Mutations/addSqueak';
+import { POST_SQUEAK } from "../../Mutations/addSqueak";
 import "./NewSqueak.css";
 
-
-export const NewSqueak = () => {
+export const NewSqueak = ({ setShow }) => {
   const [squeakContent, setSqueakContent] = useState("");
   const [user] = useContext(UserContext);
   const { refetch } = GetSqueaks();
@@ -22,17 +21,25 @@ export const NewSqueak = () => {
     },
   });
 
-
   const submitNewSqueak = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     postSqueak();
-    setSqueakContent('')
+    setSqueakContent("");
+    setShow(false);
+  };
+
+  const handleCancel = () => {
+    setSqueakContent("");
+    setShow(false);
   };
 
   return (
     <div className="new-squeak column center">
-      <form onSubmit={event => submitNewSqueak(event)} className="new-squeak-form column center">
-        <input
+      <form
+        onSubmit={(event) => submitNewSqueak(event)}
+        className="new-squeak-form column center"
+      >
+        <textarea
           autoFocus
           className="text-input column center"
           type="text"
@@ -40,13 +47,18 @@ export const NewSqueak = () => {
           value={squeakContent}
           onChange={(event) => setSqueakContent(event.target.value)}
         />
-        <button
-          id="post-new-squeak-button"
-          type="submit"
-          // onClick={() => submitNewSqueak()}
-        >
-          Squeak!
-        </button>
+        <div className="new-squeaks-buttons">
+          <button
+            className="cancel-button"
+            type="button"
+            onClick={() => handleCancel()}
+          >
+            Cancel
+          </button>
+          <button id="post-new-squeak-button" disabled={!squeakContent} type="submit">
+            Squeak!
+          </button>
+        </div>
       </form>
     </div>
   );
