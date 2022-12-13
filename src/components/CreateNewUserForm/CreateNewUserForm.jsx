@@ -1,16 +1,12 @@
 import { useContext, useState } from "react";
 import { LoginContext } from "../../contexts/loginContext";
-// import { UserContext } from "../../contexts/userContext";
-// import { GetUsers } from "../../queries/getAllUsers";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../Mutations/AddUser";
 import { Link } from "react-router-dom";
 
 export default function CreateNewUser() {
-  // const {data} = GetUsers();
   const [loginUsername, setUsername] = useState("");
   const [, setLogin] = useContext(LoginContext);
-  // const [, setUser] = useContext(UserContext);
   const [addUser] = useMutation(ADD_USER, {
     variables: {
       username: loginUsername,

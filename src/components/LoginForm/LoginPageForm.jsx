@@ -24,7 +24,7 @@ export default function LoginForm({ isNewUser, newUser }) {
   };
 
   const onSubmit = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const user = data?.find((user) => {
       return user.username?.toLowerCase() === loginUsername.toLowerCase();
     });
@@ -40,25 +40,33 @@ export default function LoginForm({ isNewUser, newUser }) {
     <div className="column center">
       <div className="spacer"></div>
       <span>Enter Username:</span>
-      <form onSubmit={event => onSubmit(event)} className="column center">
+      <form onSubmit={(event) => onSubmit(event)} className="column center">
         <input
           id="login-input"
+          style={{ borderRadius: 8, width: "20em", height: "2em", margin: 2 }}
           autoFocus
           required
           value={loginUsername}
           onChange={(event) => handleChange(event)}
           type="text"
-          >
-        </input>
-        <div className="spacer"></div>
-        <button id="login-button" type="submit">
+        ></input>
+        <button
+          id="login-button"
+          style={{ borderRadius: 8, width: "20em", height: "2em", margin: 2 }}
+          type="submit"
+        >
           Login
         </button>
       </form>
       <br></br>
       {!newUser && (
-        <Link to='/create-account' >
-          <button id="new-user-button" type="button" onClick={isNewUser}>
+        <Link to="/create-account">
+          <button
+            id="new-user-button"
+            style={{ borderRadius: 8, width: "20em", height: "2em" }}
+            type="button"
+            onClick={isNewUser}
+          >
             I'm A New User
           </button>
         </Link>

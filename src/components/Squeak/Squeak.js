@@ -8,7 +8,6 @@ import "./Squeak.css";
 import "../App/App.css"
 import chippy from '../../images/SqueakerIcon.png'
 
-
 export const Squeak = ({ squeak, userById }) => {
   const { content, user } = squeak;
   const { refetch } = GetSqueaks();
@@ -18,12 +17,17 @@ export const Squeak = ({ squeak, userById }) => {
       id: squeak.id,
       nut: true,
     },
-    optimisticResponse: {
-      ADD_NUT: {
-        id: squeak.id,
-        nut: true,
-      }
-    },
+    // optimisticResponse: {
+    //   updateSqueak: {
+    //     squeak: {
+    //       id: squeak.id,
+    //       content: squeak.content,
+    //       nuts:squeak.nuts + 1,
+    //       __typename: "Squeak"
+    //     },
+    //     __typename: "UpdateSqueakPayload"
+    //   },
+    // },
     onCompleted: () => {
       refetch();
     },
@@ -32,26 +36,31 @@ export const Squeak = ({ squeak, userById }) => {
   const [updateReport] = useMutation(ADD_REPORT, {
     variables: {
       id: squeak.id,
-      report: true,
+      report: true
     },
-    optimisticResponse: {
-      ADD_REPORT: {
-        id: squeak.id,
-        report: true,
-      }
-    },
+    // optimisticResponse: {
+    //   updateSqueak: {
+    //     squeak: {
+    //       id: squeak.id,
+    //       content: squeak.content,
+    //       reports: squeak.reports + 1,
+    //       __typename: "Squeak"
+    //     },
+    //     __typename: "UpdateSqueakPayload"
+    //   }
+    // },
     onCompleted: () => {
       refetch();
-    },
+    }
   });
 
   const [deleteSqueak] = useMutation(DELETE_SQUEAK, {
     variables: {
-      id: squeak.id,
+      id: squeak.id
     },
     onCompleted: () => {
       refetch();
-    },
+    }
   });
 
   const deleteClick = () => {
@@ -67,7 +76,6 @@ export const Squeak = ({ squeak, userById }) => {
         <span className="squeak-username">{user.username}</span>
       </div>
       <p className="row center squeak-text">{content}</p>
-
       <div className="squeak-options row">
         <button 
           className="squeak-nut-button" 
@@ -91,7 +99,6 @@ export const Squeak = ({ squeak, userById }) => {
             Report this Squeak
           </span>
         </button>
-
         {userById.id === squeak.user.id && 
           <button 
           className="squeak-delete-button" 
