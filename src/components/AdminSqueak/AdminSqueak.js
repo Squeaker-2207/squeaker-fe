@@ -29,8 +29,6 @@ export const AdminSqueak = ({ id, content, metric, probability, user }) => {
       refetch();
     }
   });
-
-  const approveClick = () => approveSqueak();
  
   return (
     <div className="squeak">
