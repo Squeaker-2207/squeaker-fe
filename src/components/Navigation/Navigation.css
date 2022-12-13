@@ -1,0 +1,26 @@
+.admin-tab,
+.user-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: end;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(7, 95, 133);
+  width: 5em;
+  height: 20px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.admin-tab:hover,
+.user-tab:hover {
+  transition: 0.5s;
+  background-color: rgb(43, 154, 201);
+}
