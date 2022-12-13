@@ -55,7 +55,6 @@ export default function LoginForm({ isNewUser, newUser }) {
         </button>
       </form>
       <br></br>
-      <div className="spacer"></div>
       {!newUser && (
         <Link to='/create-account' >
           <button style={{borderRadius: 8, width: "20em", height: "2em"}} type="button" onClick={isNewUser}>

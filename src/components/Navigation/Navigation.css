@@ -1,3 +1,4 @@
+
 .admin-tab,
 .user-tab {
   display: flex;
@@ -24,3 +25,9 @@
   transition: 0.5s;
   background-color: rgb(43, 154, 201);
 }
+
+a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+

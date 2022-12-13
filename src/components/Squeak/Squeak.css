@@ -64,10 +64,36 @@
   visibility: visible;
 }
 
+
 .squeak-user-info {
   align-items: center;
 }
 
+.admin-squeak-approve {
+  position: relative;
+  display: inline-block;
+}
+
+.admin-squeak-approve .admin-squeak-approve-tooltip {
+  visibility: hidden;
+}
+
+.admin-squeak-approve:hover .admin-squeak-approve-tooltip {
+  visibility: visible;
+}
+
+.admin-squeak-deny {
+  position: relative;
+  display: inline-block;
+}
+
+.admin-squeak-deny .admin-squeak-deny-tooltip {
+  visibility: hidden;
+}
+
+.admin-squeak-deny:hover .admin-squeak-deny-tooltip {
+  visibility: visible;
+}
 
 
 
