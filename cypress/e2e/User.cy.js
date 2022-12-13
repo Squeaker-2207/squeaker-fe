@@ -5,13 +5,14 @@ import {
 } from "../fixtures/graphql-test-utils";
 import { getUserFixture } from "../fixtures/Test_User.fixture.json";
 import { getUsersPluralFixture } from "../fixtures/Test_UsersPlural.fixture.json";
+// i assume fixtures are not in the right format for GQL
 
 describe("user spec", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000/");
-    cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
+    cy.intercept("GET", "https://squeakr-be.fly.dev/graphql/", (req) => {
       // Queries
-      aliasQuery(req, "GetUsers");
+      aliasQuery(req, "fetchUsers");
       aliasQuery(req, "GetReported");
       aliasQuery(req, "GetSqueaks");
       aliasQuery(req, "GetUser");
@@ -21,27 +22,30 @@ describe("user spec", () => {
       aliasMutation(req, "addSqueak");
       aliasMutation(req, "addUser");
       aliasMutation(req, "deleteSqueak");
-    });
+    }).as("utils");
   });
 
-  it.only("the page loads", () => {
-    cy.get("h1").contains("SQUEAKR");
+  it.only("the data loads", () => {
     cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
-      const { body } = req;
-      if (hasOperationName(req, "GetUsers")) {
-        // Declare the alias from the initial intercept in the beforeEach
-        req.alias = "gqlGetUsersQuery";
+      aliasQuery(req, "fetchUsers");
+      if (hasOperationName(req, "fetchUsers")) {
+        req.alias = "fetchUsersResponse";
 
-        // Set req.fixture or use req.reply to modify portions of the response
-        req.fixture(getUserFixture);
+        req.reply({
+          fixture: getUsersPluralFixture,
+        });
       }
-    });
+    }).as("fetchUsersQuery");
+    cy.visit("http://localhost:3000/");
+    cy.wait("@fetchUsersQuery")
+      .its("response.body.data.fetchUsers")
+      .should("have.length", 17);
   });
 
   it.skip("user can enter username and log in", () => {
     cy.get("#login-input").type("test_user");
     cy.get("#login-button").click();
-    cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
+    cy.intercept("GET", "https://squeakr-be.fly.dev/graphql/", (req) => {
       const { body } = req;
       if (hasOperationName(req, "GetUser")) {
         // Declare the alias from the initial intercept in the beforeEach

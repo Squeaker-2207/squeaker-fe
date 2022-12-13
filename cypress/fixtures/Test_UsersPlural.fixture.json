@@ -1,36 +1,46 @@
 {
-  "id": "1",
-  "username": "User 1",
-  "isAdmin": false,
-  "createdAt": "2022-12-05T22:58:28Z",
-  "updatedAt": "2022-12-05T22:58:28Z",
-  "__typename": "User"
-},{
-  "id": "2",
-  "username": "User 2",
-  "isAdmin": false,
-  "createdAt": "2022-12-05T22:58:28Z",
-  "updatedAt": "2022-12-05T22:58:28Z",
-  "__typename": "User"
-},{
-  "id": "3",
-  "username": "User 3",
-  "isAdmin": false,
-  "createdAt": "2022-12-05T22:58:28Z",
-  "updatedAt": "2022-12-05T22:58:28Z",
-  "__typename": "User"
-},{
-  "id": "4",
-  "username": "User 4",
-  "isAdmin": false,
-  "createdAt": "2022-12-05T22:58:28Z",
-  "updatedAt": "2022-12-05T22:58:28Z",
-  "__typename": "User"
-},{
-  "id": "5",
-  "username": "User 5",
-  "isAdmin": false,
-  "createdAt": "2022-12-05T22:58:28Z",
-  "updatedAt": "2022-12-05T22:58:28Z",
-  "__typename": "User"
+  "data": {
+    "fetchUsers": [
+      {
+        "id": "1",
+        "isAdmin": false,
+        "username": "User 1",
+        "createdAt": "2022-12-05T22:58:28Z",
+        "updatedAt": "2022-12-05T22:58:28Z",
+        "__typename": "User"
+      },
+      {
+        "id": "2",
+        "username": "User 2",
+        "isAdmin": false,
+        "createdAt": "2022-12-05T22:58:28Z",
+        "updatedAt": "2022-12-05T22:58:28Z",
+        "__typename": "User"
+      },
+      {
+        "id": "3",
+        "username": "User 3",
+        "isAdmin": false,
+        "createdAt": "2022-12-05T22:58:28Z",
+        "updatedAt": "2022-12-05T22:58:28Z",
+        "__typename": "User"
+      },
+      {
+        "id": "4",
+        "username": "User 4",
+        "isAdmin": false,
+        "createdAt": "2022-12-05T22:58:28Z",
+        "updatedAt": "2022-12-05T22:58:28Z",
+        "__typename": "User"
+      },
+      {
+        "id": "5",
+        "username": "User 5",
+        "isAdmin": false,
+        "createdAt": "2022-12-05T22:58:28Z",
+        "updatedAt": "2022-12-05T22:58:28Z",
+        "__typename": "User"
+      }
+    ]
+  }
 }

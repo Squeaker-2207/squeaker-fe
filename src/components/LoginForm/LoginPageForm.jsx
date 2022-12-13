@@ -29,8 +29,6 @@ export default function LoginForm({ isNewUser, newUser }) {
     setLogin(setLogin);
   };
 
-  console.log("data", allUserData);
-
   const onSubmit = async (event) => {
     event.preventDefault();
     const user = allUserData?.find((user) => {
