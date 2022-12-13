@@ -49,12 +49,12 @@ export default function LoginForm({ isNewUser, newUser }) {
           type="text"
           >
         </input>
+        <div className="spacer"></div>
         <button type="submit">
           Login
         </button>
       </form>
       <br></br>
-      <div className="spacer"></div>
       {!newUser && (
         <Link to='/create-account' >
           <button type="button" onClick={isNewUser}>
