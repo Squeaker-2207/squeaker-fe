@@ -88,7 +88,7 @@ export const Squeak = ({ squeak, userById }) => {
           Give this Squeak a Nut
           </span>
         </button>
-        <button 
+        {userById.id !== squeak.user.id && <button 
           className="squeak-report-button"
           onClick={() => updateReport()}
           disabled={userById.isAdmin}
@@ -98,7 +98,7 @@ export const Squeak = ({ squeak, userById }) => {
           <span className="squeak-report-button-tooltip tooltip">
             Report this Squeak
           </span>
-        </button>
+        </button>}
         {userById.id === squeak.user.id && 
           <button 
           className="squeak-delete-button" 
