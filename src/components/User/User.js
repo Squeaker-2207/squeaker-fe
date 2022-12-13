@@ -46,7 +46,8 @@ export const User = () => {
       {!show ? (
         <img
           className="post-squeak"
-          src={postImg}
+          src={postImg }
+          alt="write a squeak"
           type="button"
           onClick={() => setShow(true)}
         />
