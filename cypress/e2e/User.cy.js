@@ -4,6 +4,7 @@ import {
   aliasMutation,
 } from "../fixtures/graphql-test-utils";
 import { getUserFixture } from "../fixtures/Test_User.fixture.json";
+import { getUsersPluralFixture } from "../fixtures/Test_UsersPlural.fixture.json";
 
 describe("user spec", () => {
   beforeEach(() => {
@@ -23,13 +24,13 @@ describe("user spec", () => {
     });
   });
 
-  it("the page loads", () => {
+  it.only("the page loads", () => {
     cy.get("h1").contains("SQUEAKR");
     cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
       const { body } = req;
-      if (hasOperationName(req, "GetUser")) {
+      if (hasOperationName(req, "GetUsers")) {
         // Declare the alias from the initial intercept in the beforeEach
-        req.alias = "gqlGetUserQuery";
+        req.alias = "gqlGetUsersQuery";
 
         // Set req.fixture or use req.reply to modify portions of the response
         req.fixture(getUserFixture);
@@ -37,7 +38,7 @@ describe("user spec", () => {
     });
   });
 
-  it.only("user can enter username and log in", () => {
+  it.skip("user can enter username and log in", () => {
     cy.get("#login-input").type("test_user");
     cy.get("#login-button").click();
     cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
