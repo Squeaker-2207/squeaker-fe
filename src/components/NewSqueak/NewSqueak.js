@@ -2,9 +2,8 @@ import React, { useState, useContext } from "react";
 import { useMutation } from "@apollo/client";
 import { UserContext } from "../../contexts/userContext";
 import { GetSqueaks } from "../../queries/getSqueaks";
-import { POST_SQUEAK } from '../../Mutations/addSqueak';
+import { POST_SQUEAK } from "../../Mutations/addSqueak";
 import "./NewSqueak.css";
-
 
 export const NewSqueak = () => {
   const [squeakContent, setSqueakContent] = useState("");
@@ -22,17 +21,20 @@ export const NewSqueak = () => {
     },
   });
 
-
   const submitNewSqueak = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     postSqueak();
-    setSqueakContent('')
+    setSqueakContent("");
   };
 
   return (
     <div className="new-squeak column center">
-      <form onSubmit={event => submitNewSqueak(event)} className="new-squeak-form column center">
+      <form
+        onSubmit={(event) => submitNewSqueak(event)}
+        className="new-squeak-form column center"
+      >
         <input
+          id="new-squeak-input"
           autoFocus
           className="text-input column center"
           type="text"

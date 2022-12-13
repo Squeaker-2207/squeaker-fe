@@ -42,6 +42,7 @@ export default function LoginForm({ isNewUser, newUser }) {
       <span>Enter Username:</span>
       <form onSubmit={event => onSubmit(event)} className="column center">
         <input
+          id="login-input"
           autoFocus
           required
           value={loginUsername}
@@ -50,14 +51,14 @@ export default function LoginForm({ isNewUser, newUser }) {
           >
         </input>
         <div className="spacer"></div>
-        <button type="submit">
+        <button id="login-button" type="submit">
           Login
         </button>
       </form>
       <br></br>
       {!newUser && (
         <Link to='/create-account' >
-          <button type="button" onClick={isNewUser}>
+          <button id="new-user-button" type="button" onClick={isNewUser}>
             I'm A New User
           </button>
         </Link>

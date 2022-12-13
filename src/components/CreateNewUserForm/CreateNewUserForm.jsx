@@ -14,12 +14,12 @@ export default function CreateNewUser() {
   const [addUser] = useMutation(ADD_USER, {
     variables: {
       username: loginUsername,
-      isAdmin: false
+      isAdmin: false,
     },
     onCompleted: (data) => {
-      return data
-    }
-  })
+      return data;
+    },
+  });
 
   const handleChange = (event) => {
     setUsername(event.currentTarget.value);
@@ -32,22 +32,23 @@ export default function CreateNewUser() {
   };
 
   const onSubmit = async () => {
-    addUser()
+    addUser();
   };
 
   return (
     <div className="column center">
-      <p>Welcome to Squeakr!</p>
+      <h3>Welcome to Squeakr!</h3>
       <span>Enter Username:</span>
       <form className="column" onSubmit={onSubmit}>
         <input
+          id="new-user-input"
           autoFocus
           value={loginUsername}
           onChange={(event) => handleChange(event)}
           type="text"
-          ></input>
-        <Link to='/'>
-          <button type="submit">
+        ></input>
+        <Link to="/">
+          <button id="submit-new-user" type="submit">
             Create Account
           </button>
         </Link>
