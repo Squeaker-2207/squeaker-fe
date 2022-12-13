@@ -4,7 +4,7 @@ import {
   aliasMutation,
 } from "../fixtures/graphql-test-utils";
 import { getUserFixture } from "../fixtures/Test_User.fixture.json";
-import { getUsersPluralFixture } from "../fixtures/Test_UsersPlural.fixture.json";
+import "../fixtures/Test_UsersPlural.fixture.json";
 // i assume fixtures are not in the right format for GQL
 
 describe("user spec", () => {
@@ -28,18 +28,15 @@ describe("user spec", () => {
   it.only("the data loads", () => {
     cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
       aliasQuery(req, "fetchUsers");
-      if (hasOperationName(req, "fetchUsers")) {
-        req.alias = "fetchUsersResponse";
 
-        req.reply({
-          fixture: getUsersPluralFixture,
-        });
-      }
-    }).as("fetchUsersQuery");
+      req.reply({
+        fixture: "../fixtures/Test_UsersPlural.fixture.json",
+      });
+    }).as("fetchUsersResponse");
     cy.visit("http://localhost:3000/");
-    cy.wait("@fetchUsersQuery")
+    cy.wait("@fetchUsersResponse")
       .its("response.body.data.fetchUsers")
-      .should("have.length", 17);
+      .should("have.length", 5);
   });
 
   it.skip("user can enter username and log in", () => {
