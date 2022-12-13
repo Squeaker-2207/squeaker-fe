@@ -1,5 +1,6 @@
 
 import { Link, useParams } from "react-router-dom";
+import "./Navigation.css"
 
 export default function Navbar() {
   const { userId } = useParams();
@@ -7,8 +8,8 @@ export default function Navbar() {
 
   return (
     <>
-      {!adminId && <Link to={`/admin/${userId}`}> ADMIN </Link>}
-      {!userId && <Link to={`/user/${adminId}`}> USER </Link>}
+      {!adminId && <Link className="admin-tab"to={`/admin/${userId}`}> ADMIN </Link>}
+      {!userId && <Link className="user-tab" to={`/user/${adminId}`}> USER </Link>}
     </>
   );
 }
