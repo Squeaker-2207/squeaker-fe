@@ -1,40 +1,31 @@
-import {
-  hasOperationName,
-  aliasQuery,
-  aliasMutation,
-} from "../fixtures/graphql-test-utils";
-
 describe("user spec", () => {
   beforeEach(() => {});
 
-  it("the data loads", () => {
+  it("the users data loads", () => {
     cy.visit("http://localhost:3000/");
     cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
-      // Queries
-      aliasQuery(req, "AllUsers");
-      // aliasQuery(req, "AllSqueaks");
-      // Mutations
-      // aliasMutation(req, "updateSqueak");
-    }).as("utilityFunction");
-    cy.visit("http://localhost:3000/");
-    cy.wait("@utilityFunction")
+      req.reply({
+        fixture: "../fixtures/Test_UsersPlural.fixture.json",
+        delay: 500,
+      });
+    }).as("AllUsers");
+    cy.wait("@AllUsers")
       .its("response.body.data.fetchUsers")
       .should("have.length", 5);
   });
 
-  it("user can enter username and log in", () => {
+  it("user can enter username and log in to see posted squeaks", () => {
     cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
-      // Queries
-      // aliasQuery(req, "AllUsers");
-      aliasQuery(req, "AllSqueaks");
-      // Mutations
-      // aliasMutation(req, "updateSqueak");
-    }).as("utilityFunction");
+      req.reply({
+        fixture: "../fixtures/Test_Squeaks.fixture.json",
+        delay: 500,
+      });
+    }).as("AllSqueaks");
 
     cy.get("#login-input").type("User 1");
     cy.get("#login-button").click();
 
-    cy.wait("@utilityFunction")
+    cy.wait("@AllSqueaks")
       .its("response.body.data.allSqueaks")
       .should("have.length", 3);
   });
