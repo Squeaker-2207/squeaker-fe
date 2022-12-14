@@ -15,7 +15,7 @@ export default function LoginForm({ isNewUser, newUser }) {
   useEffect(() => {
     refetch();
     setAllUserData(data);
-  }, [data]);
+  }, [data, refetch]);
 
   const navigate = useNavigate();
 
