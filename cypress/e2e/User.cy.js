@@ -15,6 +15,8 @@ describe("user spec", () => {
   });
 
   it("user can enter username and log in to see posted squeaks", () => {
+    cy.get("#login-input").type("User 1");
+    cy.get("#login-button").click();
     cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
       req.reply({
         fixture: "../fixtures/Test_Squeaks.fixture.json",
@@ -22,12 +24,10 @@ describe("user spec", () => {
       });
     }).as("AllSqueaks");
 
-    cy.get("#login-input").type("User 1");
-    cy.get("#login-button").click();
-
     cy.wait("@AllSqueaks")
       .its("response.body.data.allSqueaks")
       .should("have.length", 3);
+    // cy.get(".user-greeting").contains("Hello User 1!");
   });
 
   it.skip("on failed login, user is prompted to start a new account", () => {});
