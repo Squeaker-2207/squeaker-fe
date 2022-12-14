@@ -68,15 +68,6 @@ export const User = () => {
         </div>
         <Navbar isAdmin={userById.isAdmin}/>
       </header> 
-      {/* : <div style={{display:"flex", marginTop: 20, marginLeft: 10}}>
-        <h1 className="squeakr-title">SQUEAKR</h1>
-        <div className="user-image-container">
-          <img
-            src={chippy}
-            alt="Squeakr logo - a blue silhouette of a chipmunk"
-          />
-        </div>
-        </div> */}
       <span className="user-greeting column">Hello {userById.username}! {isAdmin ? <strong> User view </strong>: <p>Welcome</p>}</span>
       <br></br>
       <section className="user-content-squeaks column center">
