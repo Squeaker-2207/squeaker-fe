@@ -18,7 +18,7 @@ export const User = () => {
   const { userId } = useParams();
   const { data: userById } = GetUser(userId);
   const { isAdmin = false } = user || {};
-  const { loading, error, data } = GetSqueaks();
+  const { loading, error, data: squeaksData } = GetSqueaks(userId);
 
   useEffect(() => {
     if (!user) {
@@ -29,7 +29,11 @@ export const User = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
 
-  const displaySqueaks = data.allSqueaks.map((squeak) => {
+  console.log("user", user);
+  console.log("userId", userId);
+  console.log("squeaksData", squeaksData);
+
+  const displaySqueaks = squeaksData?.allSqueaks.map((squeak) => {
     return (
       <Squeak
         id={squeak.id}

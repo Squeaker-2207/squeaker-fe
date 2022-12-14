@@ -12,7 +12,7 @@ const GET_USER = gql`
 `;
 
 export const GetUser = (id) => {
-  const { data, error, loading } = useQuery(GET_USER, {
+  const { data, error, loading, refetch } = useQuery(GET_USER, {
     variables: {
       id,
     },
@@ -22,5 +22,6 @@ export const GetUser = (id) => {
     data: data?.fetchUser,
     error,
     loading,
+    refetch,
   };
 };
