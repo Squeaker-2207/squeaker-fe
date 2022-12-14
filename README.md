@@ -32,7 +32,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Add setup instructions at a later time
 
 # <a name="deployment"></a>Deployed UI
-Please take a look at the link to our deployed UI: https://squeaker-nyiwdrp0h-squeakr-fe.vercel.app/
+Please take a look at the link to our deployed UI: https://squeaker-fe.vercel.app
 
 # <a name="specs"></a>Project Specs
 The project specs and rubric for Squeakr can be found [here](https://mod4.turing.edu/projects/capstone/)
