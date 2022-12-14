@@ -60,22 +60,8 @@ export const User = () => {
           <NewSqueak setShow={setShow} />
         </div>
       )}
-
-      {isAdmin ? (
-        <header className="row center">
-          <div className="title-and-image">
-            <h1 className="squeakr-title">SQUEAKR</h1>
-            <div className="user-image-container">
-              <img
-                src={chippy}
-                alt="Squeakr logo - a blue silhouette of a chipmunk"
-              />
-            </div>
-          </div>
-          <Navbar />
-        </header>
-      ) : (
-        <div style={{ display: "flex", marginTop: 20, marginLeft: 10 }}>
+      <header className="row center">
+        <div className="title-and-image">
           <h1 className="squeakr-title">SQUEAKR</h1>
           <div className="user-image-container">
             <img
@@ -84,10 +70,11 @@ export const User = () => {
             />
           </div>
         </div>
-      )}
+        <Navbar isAdmin={userById.isAdmin} />
+      </header>
       <span className="user-greeting column">
-        Hello {userById?.username}!{" "}
-        {isAdmin ? <strong>you are in user view </strong> : <p>Welcome</p>}
+        Hello {userById.username}!{" "}
+        {isAdmin ? <strong> User view </strong> : <p>Welcome</p>}
       </span>
       <br></br>
       <section className="user-content-squeaks column center">

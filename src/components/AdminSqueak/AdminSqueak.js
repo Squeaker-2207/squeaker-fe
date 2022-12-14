@@ -1,7 +1,7 @@
 import React from "react";
 import { useMutation } from "@apollo/client";
 import { GetReported } from "../../queries/getReported";
-import { DELETE_SQUEAK } from "../../Mutations/deleteSqueak";
+import { HIDE_SQUEAK } from "../../Mutations/hideSqueak";
 import { APPROVE_SQUEAK } from "../../Mutations/approveSqueak";
 import '../App/App.css'
 import '../Squeak/Squeak.css'
@@ -11,14 +11,15 @@ export const AdminSqueak = ({ id, content, metric, probability, user }) => {
   const { username } = user;
   const { refetch } = GetReported();
 
-  const [removeSqueak] = useMutation(DELETE_SQUEAK, {
-    variables: { id: id },
+  const [removeSqueak] = useMutation(HIDE_SQUEAK, {
+    variables: { 
+      id: id,
+      approved: false
+    },
     onCompleted: () => {
       refetch();
     }
   });
-
-  const deleteReportedSqueak = () => removeSqueak();
 
   const [approveSqueak] = useMutation(APPROVE_SQUEAK, {
     variables: {
@@ -48,7 +49,7 @@ export const AdminSqueak = ({ id, content, metric, probability, user }) => {
             Approve this Squeak
             </span>
         </button>
-        <button className="admin-squeak-deny" onClick={() => deleteReportedSqueak()}>
+        <button className="admin-squeak-deny" onClick={() => removeSqueak()}>
           👎
           <span className="admin-squeak-deny-tooltip tooltip">
             Deny this Squeak

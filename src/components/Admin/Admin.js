@@ -39,7 +39,7 @@ export const Admin = () => {
         </div>
         <Navbar />
       </header>
-      <span className="user-greeting column"> <strong>you are in Admin view </strong></span>
+      <span className="user-greeting column"> <strong> Admin view </strong></span>
       <br></br>
       <section className="user-content-squeaks column center">
         {displaySqueaks}
