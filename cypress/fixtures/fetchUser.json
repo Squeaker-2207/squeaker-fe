@@ -1,0 +1,9 @@
+{
+    "data": {
+        "fetchUser": {
+            "id": "4",
+            "username": "User 4",
+            "isAdmin": false
+        }
+    }
+}

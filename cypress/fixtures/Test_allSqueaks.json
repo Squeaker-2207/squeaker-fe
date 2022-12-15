@@ -1,0 +1,42 @@
+{
+    "data": {
+        "allSqueaks": [
+            {
+                "id": "158",
+                "content": "Yet another test squeek",
+                "reports": 0,
+                "nuts": 0,
+                "approved": null,
+                "user": {
+                    "id": "3",
+                    "username": "User 3"
+                },
+                "createdAt": "2022-12-13T23:33:21Z"
+            },
+            {
+                "id": "157",
+                "content": "This does not, in fact, appear to be working",
+                "reports": 0,
+                "nuts": 0,
+                "approved": null,
+                "user": {
+                    "id": "7",
+                    "username": "Test_User"
+                },
+                "createdAt": "2022-12-13T22:57:41Z"
+            },
+            {
+                "id": "156",
+                "content": "I like to party. DO you like to party? ",
+                "reports": 0,
+                "nuts": 0,
+                "approved": null,
+                "user": {
+                    "id": "7",
+                    "username": "Test_User"
+                },
+                "createdAt": "2022-12-13T22:56:35Z"
+            }
+        ]
+    }
+}
