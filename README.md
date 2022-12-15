@@ -42,6 +42,7 @@ git@github.com:Squeaker-2207/squeaker-fe.git
 The project specs and rubric for Squeakr can be found [here](https://mod4.turing.edu/projects/capstone/)
 
 # <a name="demo"></a>Demo
+![Dec-15-2022 09-37-53](https://user-images.githubusercontent.com/101376200/207918300-b70dabb6-96c0-4f89-9de8-6f8cadcb0cc7.gif)
 
 # <a name="deployment"></a>Deployed UI
 Please take a look at the link to our deployed UI: https://squeaker-fe.vercel.app
