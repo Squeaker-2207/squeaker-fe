@@ -7,10 +7,20 @@ const GET_USER = gql`
       id
       username
       isAdmin
+      allSqueaks {
+        id
+        nuts
+        content
+        reports
+        approved
+        user {
+          id
+          username
+        }
+      }
     }
   }
 `;
-
 export const GetUser = (id) => {
   const { data, error, loading, refetch } = useQuery(GET_USER, {
     variables: {

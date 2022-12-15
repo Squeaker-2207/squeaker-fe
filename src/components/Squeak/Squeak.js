@@ -12,8 +12,6 @@ export const Squeak = ({ squeak, userById }) => {
   const { content, user } = squeak;
   const { refetch } = GetSqueaks();
 
-  console.log("squeak.js>squeak.id", squeak.id);
-
   const [updateNut] = useMutation(ADD_NUT, {
     variables: {
       id: squeak?.id,

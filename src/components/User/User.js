@@ -16,9 +16,8 @@ export const User = () => {
   const [show, setShow] = useState(false);
   const [user, setUser] = useContext(UserContext);
   const { userId } = useParams();
-  const { data: userById } = GetUser(userId);
+  const { data: userById, loading, error } = GetUser(userId);
   const { isAdmin = false } = user || {};
-  const { loading, error, data: squeaksData } = GetSqueaks(userId);
 
   useEffect(() => {
     if (!user) {
@@ -29,11 +28,7 @@ export const User = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
 
-  console.log("user", user);
-  console.log("userId", userId);
-  console.log("squeaksData", squeaksData);
-
-  const displaySqueaks = squeaksData?.allSqueaks.map((squeak) => {
+  const displaySqueaks = userById?.allSqueaks.map((squeak) => {
     return (
       <Squeak
         id={squeak.id}
