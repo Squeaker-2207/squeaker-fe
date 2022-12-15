@@ -9,7 +9,9 @@ describe("user spec", () => {
     }).as("AllUsers");
 
     cy.wait("@AllUsers")
+
       .its("response.body.data.fetchUsers")
+
       .should("have.length", 5);
   });
 
