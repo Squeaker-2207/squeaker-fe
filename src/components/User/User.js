@@ -17,7 +17,7 @@ export const User = () => {
   const { userId } = useParams();
   const { data: userById, loading, error } = GetUser(userId);
   const { isAdmin = false } = user || {};
-
+  
   useEffect(() => {
     if (!user) {
       setUser(userById);
