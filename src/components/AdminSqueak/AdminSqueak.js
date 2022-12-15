@@ -5,7 +5,6 @@ import { HIDE_SQUEAK } from "../../Mutations/hideSqueak";
 import { APPROVE_SQUEAK } from "../../Mutations/approveSqueak";
 import '../App/App.css'
 import '../Squeak/Squeak.css'
-// import chippy from "../../images/SqueakerIcon.png";
 
 export const AdminSqueak = ({ id, content, metric, probability, user }) => {
   const { username } = user;

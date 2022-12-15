@@ -34,7 +34,7 @@ export default function LoginForm({ isNewUser, newUser }) {
     const user = allUserData?.find((user) => {
       return user.username?.toLowerCase() === loginUsername.toLowerCase();
     });
-    console.log(user);
+
     if (!user) {
       return navigate("/create-account");
     } else {
