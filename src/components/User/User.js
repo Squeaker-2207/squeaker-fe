@@ -17,7 +17,7 @@ export const User = () => {
   const { userId } = useParams();
   const { data: userById, loading, error } = GetUser(userId);
   const { isAdmin = false } = user || {};
-
+  
   useEffect(() => {
     if (!user) {
       setUser(userById);
@@ -51,7 +51,7 @@ export const User = () => {
         />
       ) : (
         <div className="squeaks-popup">
-          <NewSqueak setShow={setShow} />
+          <NewSqueak setShow={setShow} userById={userById}/>
         </div>
       )}
       <header className="row center">
