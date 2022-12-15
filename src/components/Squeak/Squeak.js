@@ -1,6 +1,6 @@
 import { useMutation } from "@apollo/client";
 import React from "react";
-import { GetSqueaks } from "../../queries/getSqueaks";
+import { GetUser } from "../../queries/getUser";
 import { ADD_NUT } from "../../Mutations/addANut";
 import { ADD_REPORT } from "../../Mutations/addReports";
 import { DELETE_SQUEAK } from "../../Mutations/deleteSqueak";
@@ -10,7 +10,7 @@ import chippy from "../../images/SqueakerIcon.png";
 
 export const Squeak = ({ squeak, userById }) => {
   const { content, user } = squeak;
-  const { refetch } = GetSqueaks();
+  const { refetch } = GetUser(userById.id);
 
   const [updateNut] = useMutation(ADD_NUT, {
     variables: {
@@ -28,17 +28,7 @@ export const Squeak = ({ squeak, userById }) => {
       id: squeak.id,
       report: true,
     },
-    // optimisticResponse: {
-    //   updateSqueak: {
-    //     squeak: {
-    //       id: squeak.id,
-    //       content: squeak.content,
-    //       reports: squeak.reports + 1,
-    //       __typename: "Squeak"
-    //     },
-    //     __typename: "UpdateSqueakPayload"
-    //   }
-    // },
+
     onCompleted: () => {
       refetch();
     },
