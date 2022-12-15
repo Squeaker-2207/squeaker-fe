@@ -10,7 +10,7 @@
 --- 
 ## Description
 A React-based twitter clone built around robust moderation tools. Uses a service-oriented architecture with a Rails backend accessed via GraphQL.
-[Check out the the back-end repo](https://github.com/Squeaker-2207/squeaker-fe)
+[Check out the the back-end repo](https://github.com/Squeaker-2207/squeaker-be)
 
 ---
 # <a name="contents"></a> Table of contents
