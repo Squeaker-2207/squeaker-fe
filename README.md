@@ -8,8 +8,8 @@
 
 </div>
 
-
 ## Description
+
 A React-based twitter clone built around robust moderation tools. Uses a service-oriented architecture with a Rails backend accessed via GraphQL.
 [Check out the the back-end repo](https://github.com/Squeaker-2207/squeaker-be)
 
@@ -19,54 +19,64 @@ A React-based twitter clone built around robust moderation tools. Uses a service
 
 - [Setup](#setup)
 - [Project Specs](#specs)
-- [Demo](#demo)
 - [Deployed Link](#deployment)
+- [Demos](#demos)
 - [Challenges](#challenges)
 - [Wins](#wins)
 - [Endpoints](#endpoints)
 - [Future Extensions](#future)
 
 # <a name="setup"></a>Getting Started with Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 1. From your terminal, `cd` back to your parent directory
 2. Clone down this repository:
-  ```
+
+```
 git@github.com:Squeaker-2207/squeaker-fe.git
 
-  ```
+```
+
 3. `cd` into `squeaker-fe` directory and run:
-  ```
-  npm install
-  npm start
-  ```
+
+```
+npm install
+npm start
+```
+
 4. In your browser, enter the following URL: http://localhost:3000/
 
 # <a name="specs"></a>Project Specs
+
 The project specs and rubric for Squeakr can be found [here](https://mod4.turing.edu/projects/capstone/)
-
-# <a name="demo"></a>Demo
-
 
 # <a name="deployment"></a>Deployed UI
 
 Please take a look at the link to our deployed UI: https://squeaker-fe.vercel.app
 
+# <a name="demo"></a>Demos
+
+User flow:
+![User Demo](Demo/squeakr-login-demo.gif)
+Admin flow:
+![Admin Demo](Demo/squeakr-admin-demo.gif)
+
 # <a name="specs"></a>Project Specs
 
 The project specs and rubric for Squeakr can be found [here](https://mod4.turing.edu/projects/capstone/)
 
-
 # <a name="challenges"></a>Challenges
+
 - Cypress testing with GraphQL queries/mutations
 - React Context
 
 # <a name="wins"></a>Wins
+
 - Learning and implementing GraphQL
 - Collaboration with a full stack team of developers
 
 # <a name="future"></a>Future Extensions
+
 - Allow "followers/following" functionality to customize the squeaks that would be visible on a users feed
 - User removal(suspension/ban)
-
-- ![User Demo](Demo/squeakr-login-demo.gif)
-  ![Admin Demo](Demo/squeakr-admin-demo.gif)
