@@ -2,8 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../contexts/userContext";
 import { Squeak } from "../Squeak/Squeak";
 import { NewSqueak } from "../NewSqueak/NewSqueak";
-import { GetSqueaks } from "../../queries/getSqueaks";
-import { useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { GetUser } from "../../queries/getUser";
 import chippy from "../../images/SqueakerIcon.png";
 import Navbar from "../Navigation/Navbar";
@@ -18,8 +17,7 @@ export const User = () => {
   const { userId } = useParams();
   const { data: userById, loading, error } = GetUser(userId);
   const { isAdmin = false } = user || {};
-  // const { loading, error, data } = GetSqueaks();
-  console.log(userById);
+  
   useEffect(() => {
     if (!user) {
       setUser(userById);
@@ -29,7 +27,7 @@ export const User = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
 
-  const displaySqueaks = userById.allSqueaks.map((squeak) => {
+  const displaySqueaks = userById?.allSqueaks.map((squeak) => {
     return (
       <Squeak
         id={squeak.id}
@@ -46,7 +44,7 @@ export const User = () => {
       {!show ? (
         <img
           className="post-squeak"
-          src={postImg }
+          src={postImg}
           alt="write a squeak"
           type="button"
           onClick={() => setShow(true)}
@@ -58,17 +56,20 @@ export const User = () => {
       )}
       <header className="row center">
         <div className="title-and-image">
-        <h1 className="squeakr-title">SQUEAKR</h1>
-        <div className="user-image-container">
-          <img
-            src={chippy}
-            alt="Squeakr logo - a blue silhouette of a chipmunk"
-          />
+          <h1 className="squeakr-title">SQUEAKR</h1>
+          <div className="user-image-container">
+            <img
+              src={chippy}
+              alt="Squeakr logo - a blue silhouette of a chipmunk"
+            />
+          </div>
         </div>
-        </div>
-        <Navbar isAdmin={userById.isAdmin}/>
-      </header> 
-      <span className="user-greeting column">Hello {userById.username}! {isAdmin ? <strong> User view </strong>: <p>Welcome</p>}</span>
+        <Navbar isAdmin={userById.isAdmin} />
+      </header>
+      <span className="user-greeting column">
+        Hello {userById.username}!{" "}
+        {isAdmin ? <strong> User view </strong> : <p>Welcome</p>}
+      </span>
       <br></br>
       <section className="user-content-squeaks column center">
         {displaySqueaks}
