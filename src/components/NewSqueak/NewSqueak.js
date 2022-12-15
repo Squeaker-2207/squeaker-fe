@@ -40,6 +40,7 @@ export const NewSqueak = ({ setShow }) => {
         className="new-squeak-form column center"
       >
         <textarea
+          id="new-squeak-input"
           autoFocus
           className="text-input column center"
           type="text"
@@ -55,7 +56,11 @@ export const NewSqueak = ({ setShow }) => {
           >
             Cancel
           </button>
-          <button id="post-new-squeak-button" disabled={!squeakContent} type="submit">
+          <button
+            id="post-new-squeak-button"
+            disabled={!squeakContent}
+            type="submit"
+          >
             Squeak!
           </button>
         </div>
