@@ -11,7 +11,7 @@
 
 ## Description
 
-A React-based twitter clone built around robust moderation tools. Uses a service-oriented architecture with a Rails backend accessed via GraphQL
+A React-based twitter clone built around robust moderation tools. Uses a service-oriented architecture with a Rails backend accessed via GraphQL.
 
 [Check out the the back-end repo](https://github.com/Squeaker-2207/squeaker-fe)
 
@@ -29,8 +29,6 @@ A React-based twitter clone built around robust moderation tools. Uses a service
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Add setup instructions at a later time
-
 # <a name="deployment"></a>Deployed UI
 Please take a look at the link to our deployed UI: https://squeaker-fe.vercel.app
 
@@ -38,14 +36,14 @@ Please take a look at the link to our deployed UI: https://squeaker-fe.vercel.ap
 The project specs and rubric for Squeakr can be found [here](https://mod4.turing.edu/projects/capstone/)
 
 # <a name="challenges"></a>Challenges
-- 
-- 
+- Cypress testing with GraphQL queries/mutations
+- React Context
 
 
 # <a name="wins"></a>Wins
-- 
--
--
+- Learning and implementing GraphQL
+- Collaboration with a full stack team of developers
 
 # <a name="future"></a>Future Extensions
-- 
+- Allow "followers/following" functionality to customize the squeaks that would be visible on a users feed
+- User removal(suspension/ban)
