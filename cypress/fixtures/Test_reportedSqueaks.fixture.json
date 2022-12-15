@@ -1,0 +1,38 @@
+{
+    "data": {
+        "reportedSqueaks": [
+            {
+                "id": "161",
+                "content": "I hate cypress, burn it to the ground.  Checking metrics for cypress testing.",
+                "reports": 6,
+                "nuts": 0,
+                "approved": null,
+                "score": {
+                    "metric": "IDENTITY_ATTACK",
+                    "probability": 0.05794714
+                },
+                "user": {
+                    "id": "8",
+                    "username": "User 1"
+                },
+                "createdAt": "2022-12-14T03:35:47Z"
+            },
+            {
+                "id": "154",
+                "content": "newest 2",
+                "reports": 4,
+                "nuts": 0,
+                "approved": null,
+                "score": {
+                    "metric": "IDENTITY_ATTACK",
+                    "probability": 0.0045322375
+                },
+                "user": {
+                    "id": "8",
+                    "username": "User 2"
+                },
+                "createdAt": "2022-12-13T21:50:33Z"
+            }
+        ]
+    }
+}
