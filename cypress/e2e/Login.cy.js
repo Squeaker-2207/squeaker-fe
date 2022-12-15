@@ -1,6 +1,4 @@
 describe("user spec", () => {
-  beforeEach(() => {});
-
   it("the users data loads", () => {
     cy.visit("http://localhost:3000/");
     cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
