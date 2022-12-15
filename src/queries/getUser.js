@@ -7,6 +7,17 @@ const GET_USER = gql`
       id
       username
       isAdmin
+      allSqueaks {
+      id
+      nuts
+      content
+      reports
+      approved
+      user {
+        id
+        username
+      }
+    }
     }
   }
 `;
