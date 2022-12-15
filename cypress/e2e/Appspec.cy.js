@@ -1,3 +1,53 @@
+describe.only("Login spec", () => {
+  it("the users data loads", () => {
+    cy.visit("http://localhost:3000/");
+    cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
+      req.reply({
+        fixture: "../fixtures/Test_UsersPlural.fixture.json",
+        delay: 500,
+      });
+    }).as("AllUsers");
+
+    cy.wait("@AllUsers")
+      .its("response.body.data.fetchUsers")
+      .should("have.length", 5);
+  });
+
+  it("user can enter username and log in", () => {
+    cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
+      req.reply({
+        fixture: "../fixtures/Test_User.fixture.json",
+        delay: 500,
+      });
+    }).as("fetchUser");
+
+    cy.get("#login-input").type("User 1");
+    cy.get("#login-button").click();
+    cy.wait("@fetchUser")
+      .its("response.body.data.fetchUser.username")
+      .should("contain", "Test_User");
+    cy.wait("@fetchUser")
+      .its("response.body.data.fetchUser.isAdmin")
+      .should("eq", false);
+  });
+
+  it("user can see posted squeaks", () => {
+    cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
+      req.reply({
+        fixture: "../fixtures/Test_User.fixture.json",
+        delay: 500,
+      });
+    }).as("AllSqueaks");
+
+    cy.wait("@AllSqueaks")
+      .its("response.body.data.fetchUser.allSqueaks")
+      .should("have.length", 3);
+    cy.get(".user-greeting").contains("Hello Test_User!");
+  });
+});
+
+
+
 describe("Uer spec", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000/user/7");
@@ -12,15 +62,15 @@ describe("Uer spec", () => {
   });
   it("should welcome user with their name", () => {
     cy.intercept("https://squeakr-be.fly.dev/graphql/", {
-      fixture: "Test_user.json",
+      fixture: "Test_User.fixture.json",
     }).as("fetchUser");
 
-    cy.get(".user-greeting").should("exist").contains("Hello Test_User!");
-    cy.get("strong").contains("User view");
+    cy.get(".user-greeting").should("exist").contains("Hello Test_User! Welcome");
+   
   });
   it("should have a container for all the squeaks", () => {
     cy.intercept("https://squeakr-be.fly.dev/graphql/", {
-      fixture: "Test_user.json",
+      fixture: "Test_User.fixture.json",
     }).as("fetchUser");
     cy.get(".user-content-squeaks").should("exist");
     cy.get(".user-content-squeaks > :nth-child(1)")
@@ -48,7 +98,7 @@ describe("Uer spec", () => {
   })
   it.skip("should have a button to create a squeak", () => {
     cy.intercept("https://squeakr-be.fly.dev/graphql/", {
-      fixture: "Test_user.json",
+      fixture: "Test_User.fixture.json",
     }).as("fetchUser");
     cy.get(".post-squeak").click({force:true});
 
@@ -104,9 +154,10 @@ describe("admin spec", () => {
   });
 
   it("admin can click the User button to return to the main view", () => {
+    cy.get('.user-tab').should("exist").should("be.visible").click()
     cy.intercept("https://squeakr-be.fly.dev/graphql", {
-      fixture: "Test_allSqueaks.fixture.json",
-    }).as("allSqueaks");
-    cy.get('.user-tab').click()
+      fixture: "Test_User.fixture.json",
+    }).as("getUser");
+    cy.get('.user-tab').should("not.exist")
   });
 });

@@ -51,7 +51,7 @@
     },
     "branchMap": {},
     "s": {
-      "0": 21,
+      "0": 3,
       "1": 0
     },
     "f": {
@@ -143,14 +143,14 @@
     },
     "branchMap": {},
     "s": {
-      "0": 21,
-      "1": 21,
-      "2": 21,
-      "3": 21,
-      "4": 21
+      "0": 3,
+      "1": 3,
+      "2": 9,
+      "3": 9,
+      "4": 9
     },
     "f": {
-      "0": 21
+      "0": 9
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -228,13 +228,13 @@
     },
     "branchMap": {},
     "s": {
-      "0": 21,
-      "1": 27,
-      "2": 27,
-      "3": 27
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3
     },
     "f": {
-      "0": 27
+      "0": 3
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -266,11 +266,11 @@
       "2": {
         "start": {
           "line": 16,
-          "column": 35
+          "column": 44
         },
         "end": {
           "line": 16,
-          "column": 54
+          "column": 63
         }
       },
       "3": {
@@ -280,7 +280,7 @@
         },
         "end": {
           "line": 18,
-          "column": 52
+          "column": 61
         }
       }
     },
@@ -312,189 +312,189 @@
     },
     "branchMap": {},
     "s": {
-      "0": 21,
-      "1": 21,
-      "2": 0,
-      "3": 0
+      "0": 3,
+      "1": 3,
+      "2": 22,
+      "3": 22
     },
     "f": {
-      "0": 0
+      "0": 22
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "9453cac9533499c2f837867e9aa3b3b872c6db00"
+    "hash": "f1e3b80ec7679595f251de312e22d0d16366a124"
   },
   "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/components/LoginForm/LoginPageForm.jsx": {
     "path": "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/components/LoginForm/LoginPageForm.jsx",
     "statementMap": {
       "0": {
         "start": {
-          "line": 8,
-          "column": 19
+          "line": 9,
+          "column": 28
         },
         "end": {
-          "line": 8,
-          "column": 29
+          "line": 9,
+          "column": 38
         }
       },
       "1": {
         "start": {
-          "line": 9,
+          "line": 10,
           "column": 39
         },
         "end": {
-          "line": 9,
+          "line": 10,
           "column": 51
         }
       },
       "2": {
         "start": {
           "line": 11,
-          "column": 23
+          "column": 40
         },
         "end": {
           "line": 11,
-          "column": 47
+          "column": 52
         }
       },
       "3": {
         "start": {
           "line": 12,
-          "column": 22
+          "column": 23
         },
         "end": {
           "line": 12,
-          "column": 45
+          "column": 47
         }
       },
       "4": {
         "start": {
-          "line": 14,
-          "column": 19
+          "line": 13,
+          "column": 22
         },
         "end": {
-          "line": 14,
-          "column": 32
+          "line": 13,
+          "column": 45
         }
       },
       "5": {
         "start": {
-          "line": 16,
-          "column": 23
+          "line": 15,
+          "column": 2
         },
         "end": {
-          "line": 20,
-          "column": 3
+          "line": 18,
+          "column": 22
         }
       },
       "6": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 4
         },
         "end": {
-          "line": 17,
-          "column": 43
+          "line": 16,
+          "column": 14
         }
       },
       "7": {
         "start": {
-          "line": 19,
+          "line": 17,
           "column": 4
         },
         "end": {
-          "line": 19,
-          "column": 27
+          "line": 17,
+          "column": 25
         }
       },
       "8": {
         "start": {
-          "line": 22,
-          "column": 18
+          "line": 20,
+          "column": 19
         },
         "end": {
-          "line": 24,
-          "column": 3
+          "line": 20,
+          "column": 32
         }
       },
       "9": {
         "start": {
-          "line": 23,
-          "column": 4
+          "line": 22,
+          "column": 23
         },
         "end": {
-          "line": 23,
-          "column": 23
+          "line": 26,
+          "column": 3
         }
       },
       "10": {
         "start": {
-          "line": 26,
-          "column": 19
+          "line": 23,
+          "column": 4
         },
         "end": {
-          "line": 38,
-          "column": 3
+          "line": 23,
+          "column": 43
         }
       },
       "11": {
         "start": {
-          "line": 27,
+          "line": 25,
           "column": 4
         },
         "end": {
-          "line": 27,
-          "column": 26
+          "line": 25,
+          "column": 27
         }
       },
       "12": {
         "start": {
           "line": 28,
-          "column": 17
+          "column": 18
         },
         "end": {
           "line": 30,
-          "column": 6
+          "column": 3
         }
       },
       "13": {
         "start": {
           "line": 29,
-          "column": 6
+          "column": 4
         },
         "end": {
           "line": 29,
-          "column": 74
+          "column": 23
         }
       },
       "14": {
         "start": {
-          "line": 31,
-          "column": 4
+          "line": 32,
+          "column": 19
         },
         "end": {
-          "line": 31,
-          "column": 22
+          "line": 44,
+          "column": 3
         }
       },
       "15": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 4
         },
         "end": {
-          "line": 37,
-          "column": 5
+          "line": 33,
+          "column": 27
         }
       },
       "16": {
         "start": {
-          "line": 33,
-          "column": 6
+          "line": 34,
+          "column": 17
         },
         "end": {
-          "line": 33,
-          "column": 41
+          "line": 36,
+          "column": 6
         }
       },
       "17": {
@@ -504,46 +504,86 @@
         },
         "end": {
           "line": 35,
-          "column": 26
+          "column": 74
         }
       },
       "18": {
         "start": {
-          "line": 36,
-          "column": 6
+          "line": 37,
+          "column": 4
         },
         "end": {
-          "line": 36,
-          "column": 42
+          "line": 37,
+          "column": 22
         }
       },
       "19": {
         "start": {
-          "line": 40,
-          "column": 2
+          "line": 38,
+          "column": 4
         },
         "end": {
-          "line": 67,
-          "column": 4
+          "line": 43,
+          "column": 5
         }
       },
       "20": {
         "start": {
-          "line": 44,
-          "column": 31
+          "line": 39,
+          "column": 6
         },
         "end": {
-          "line": 44,
-          "column": 46
+          "line": 39,
+          "column": 41
         }
       },
       "21": {
         "start": {
+          "line": 41,
+          "column": 6
+        },
+        "end": {
+          "line": 41,
+          "column": 26
+        }
+      },
+      "22": {
+        "start": {
+          "line": 42,
+          "column": 6
+        },
+        "end": {
+          "line": 42,
+          "column": 42
+        }
+      },
+      "23": {
+        "start": {
+          "line": 46,
+          "column": 2
+        },
+        "end": {
+          "line": 82,
+          "column": 4
+        }
+      },
+      "24": {
+        "start": {
           "line": 50,
-          "column": 31
+          "column": 33
         },
         "end": {
           "line": 50,
+          "column": 48
+        }
+      },
+      "25": {
+        "start": {
+          "line": 57,
+          "column": 31
+        },
+        "end": {
+          "line": 57,
           "column": 50
         }
       }
@@ -553,69 +593,69 @@
         "name": "LoginForm",
         "decl": {
           "start": {
-            "line": 7,
+            "line": 8,
             "column": 24
           },
           "end": {
-            "line": 7,
+            "line": 8,
             "column": 33
           }
         },
         "loc": {
           "start": {
-            "line": 7,
+            "line": 8,
             "column": 58
           },
           "end": {
-            "line": 68,
+            "line": 83,
             "column": 1
           }
         },
-        "line": 7
+        "line": 8
       },
       "1": {
         "name": "(anonymous_1)",
         "decl": {
           "start": {
-            "line": 16,
-            "column": 23
+            "line": 15,
+            "column": 12
           },
           "end": {
-            "line": 16,
-            "column": 24
+            "line": 15,
+            "column": 13
           }
         },
         "loc": {
           "start": {
-            "line": 16,
-            "column": 34
+            "line": 15,
+            "column": 18
           },
           "end": {
-            "line": 20,
+            "line": 18,
             "column": 3
           }
         },
-        "line": 16
+        "line": 15
       },
       "2": {
         "name": "(anonymous_2)",
         "decl": {
           "start": {
             "line": 22,
-            "column": 18
+            "column": 23
           },
           "end": {
             "line": 22,
-            "column": 19
+            "column": 24
           }
         },
         "loc": {
           "start": {
             "line": 22,
-            "column": 24
+            "column": 34
           },
           "end": {
-            "line": 24,
+            "line": 26,
             "column": 3
           }
         },
@@ -625,108 +665,132 @@
         "name": "(anonymous_3)",
         "decl": {
           "start": {
-            "line": 26,
-            "column": 19
+            "line": 28,
+            "column": 18
           },
           "end": {
-            "line": 26,
-            "column": 20
+            "line": 28,
+            "column": 19
           }
         },
         "loc": {
           "start": {
-            "line": 26,
-            "column": 36
+            "line": 28,
+            "column": 24
           },
           "end": {
-            "line": 38,
+            "line": 30,
             "column": 3
           }
         },
-        "line": 26
+        "line": 28
       },
       "4": {
         "name": "(anonymous_4)",
         "decl": {
           "start": {
-            "line": 28,
-            "column": 28
+            "line": 32,
+            "column": 19
           },
           "end": {
-            "line": 28,
-            "column": 29
+            "line": 32,
+            "column": 20
           }
         },
         "loc": {
           "start": {
-            "line": 28,
-            "column": 38
+            "line": 32,
+            "column": 36
           },
           "end": {
-            "line": 30,
-            "column": 5
+            "line": 44,
+            "column": 3
           }
         },
-        "line": 28
+        "line": 32
       },
       "5": {
         "name": "(anonymous_5)",
         "decl": {
           "start": {
-            "line": 44,
-            "column": 22
+            "line": 34,
+            "column": 35
           },
           "end": {
-            "line": 44,
-            "column": 23
+            "line": 34,
+            "column": 36
           }
         },
         "loc": {
           "start": {
-            "line": 44,
-            "column": 31
+            "line": 34,
+            "column": 45
           },
           "end": {
-            "line": 44,
-            "column": 46
+            "line": 36,
+            "column": 5
           }
         },
-        "line": 44
+        "line": 34
       },
       "6": {
         "name": "(anonymous_6)",
         "decl": {
           "start": {
             "line": 50,
-            "column": 20
+            "column": 22
           },
           "end": {
             "line": 50,
-            "column": 21
+            "column": 23
           }
         },
         "loc": {
           "start": {
             "line": 50,
-            "column": 31
+            "column": 33
           },
           "end": {
             "line": 50,
-            "column": 50
+            "column": 48
           }
         },
         "line": 50
+      },
+      "7": {
+        "name": "(anonymous_7)",
+        "decl": {
+          "start": {
+            "line": 57,
+            "column": 20
+          },
+          "end": {
+            "line": 57,
+            "column": 21
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 57,
+            "column": 31
+          },
+          "end": {
+            "line": 57,
+            "column": 50
+          }
+        },
+        "line": 57
       }
     },
     "branchMap": {
       "0": {
         "loc": {
           "start": {
-            "line": 32,
+            "line": 38,
             "column": 4
           },
           "end": {
-            "line": 37,
+            "line": 43,
             "column": 5
           }
         },
@@ -734,35 +798,35 @@
         "locations": [
           {
             "start": {
-              "line": 32,
+              "line": 38,
               "column": 4
             },
             "end": {
-              "line": 37,
+              "line": 43,
               "column": 5
             }
           },
           {
             "start": {
-              "line": 32,
+              "line": 38,
               "column": 4
             },
             "end": {
-              "line": 37,
+              "line": 43,
               "column": 5
             }
           }
         ],
-        "line": 32
+        "line": 38
       },
       "1": {
         "loc": {
           "start": {
-            "line": 59,
+            "line": 69,
             "column": 7
           },
           "end": {
-            "line": 65,
+            "line": 80,
             "column": 7
           }
         },
@@ -770,73 +834,78 @@
         "locations": [
           {
             "start": {
-              "line": 59,
+              "line": 69,
               "column": 7
             },
             "end": {
-              "line": 59,
+              "line": 69,
               "column": 15
             }
           },
           {
             "start": {
-              "line": 60,
+              "line": 70,
               "column": 8
             },
             "end": {
-              "line": 64,
+              "line": 79,
               "column": 15
             }
           }
         ],
-        "line": 59
+        "line": 69
       }
     },
     "s": {
-      "0": 0,
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 0,
-      "5": 0,
-      "6": 0,
-      "7": 0,
-      "8": 0,
-      "9": 0,
-      "10": 0,
-      "11": 0,
-      "12": 0,
-      "13": 0,
-      "14": 0,
-      "15": 0,
-      "16": 0,
-      "17": 0,
-      "18": 0,
-      "19": 0,
+      "0": 22,
+      "1": 22,
+      "2": 22,
+      "3": 22,
+      "4": 22,
+      "5": 22,
+      "6": 5,
+      "7": 5,
+      "8": 22,
+      "9": 22,
+      "10": 12,
+      "11": 12,
+      "12": 22,
+      "13": 12,
+      "14": 22,
+      "15": 2,
+      "16": 2,
+      "17": 2,
+      "18": 2,
+      "19": 2,
       "20": 0,
-      "21": 0
+      "21": 2,
+      "22": 2,
+      "23": 22,
+      "24": 2,
+      "25": 12
     },
     "f": {
-      "0": 0,
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 0,
-      "5": 0,
-      "6": 0
+      "0": 22,
+      "1": 5,
+      "2": 12,
+      "3": 12,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 12
     },
     "b": {
       "0": [
         0,
-        0
+        2
       ],
       "1": [
-        0,
-        0
+        22,
+        22
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "59787e4acbfde31923adc5de2f2244c26d73e5a9"
+    "hash": "bf12e7c251f18b095d93c406c400b27892e8dd2b"
   },
   "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/components/Home/Home.js": {
     "path": "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/components/Home/Home.js",
@@ -890,11 +959,11 @@
     },
     "branchMap": {},
     "s": {
-      "0": 21,
-      "1": 0
+      "0": 3,
+      "1": 3
     },
     "f": {
-      "0": 0
+      "0": 3
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -919,18 +988,18 @@
           "column": 26
         },
         "end": {
-          "line": 28,
+          "line": 27,
           "column": 1
         }
       },
       "2": {
         "start": {
           "line": 20,
-          "column": 44
+          "column": 35
         },
         "end": {
           "line": 20,
-          "column": 65
+          "column": 56
         }
       },
       "3": {
@@ -939,7 +1008,7 @@
           "column": 2
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 4
         }
       }
@@ -963,7 +1032,7 @@
             "column": 38
           },
           "end": {
-            "line": 28,
+            "line": 27,
             "column": 1
           }
         },
@@ -972,17 +1041,17 @@
     },
     "branchMap": {},
     "s": {
-      "0": 21,
-      "1": 21,
-      "2": 149,
-      "3": 149
+      "0": 3,
+      "1": 3,
+      "2": 0,
+      "3": 0
     },
     "f": {
-      "0": 149
+      "0": 0
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "4c31ec6b4f11d8cda92a03e3246ef64f8a0db414"
+    "hash": "ccff61383dd9620afe2c0ce7e5f4bce3fb373fcd"
   },
   "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/Mutations/addANut.js": {
     "path": "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/Mutations/addANut.js",
@@ -1001,7 +1070,7 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 21
+      "0": 3
     },
     "f": {},
     "b": {},
@@ -1025,7 +1094,7 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 21
+      "0": 3
     },
     "f": {},
     "b": {},
@@ -1049,7 +1118,7 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 21
+      "0": 3
     },
     "f": {},
     "b": {},
@@ -1065,7 +1134,7 @@
           "column": 22
         },
         "end": {
-          "line": 115,
+          "line": 111,
           "column": 1
         }
       },
@@ -1095,118 +1164,118 @@
           "column": 22
         },
         "end": {
-          "line": 34,
+          "line": 24,
           "column": 4
         }
       },
       "4": {
         "start": {
-          "line": 32,
+          "line": 22,
           "column": 6
         },
         "end": {
-          "line": 32,
+          "line": 22,
           "column": 16
         }
       },
       "5": {
         "start": {
-          "line": 36,
+          "line": 26,
           "column": 25
         },
         "end": {
-          "line": 55,
+          "line": 45,
           "column": 4
         }
       },
       "6": {
         "start": {
-          "line": 53,
+          "line": 43,
           "column": 6
         },
         "end": {
-          "line": 53,
+          "line": 43,
           "column": 16
         }
       },
       "7": {
         "start": {
-          "line": 57,
+          "line": 47,
           "column": 25
         },
         "end": {
-          "line": 64,
+          "line": 54,
           "column": 4
         }
       },
       "8": {
         "start": {
-          "line": 62,
+          "line": 52,
           "column": 6
         },
         "end": {
-          "line": 62,
+          "line": 52,
           "column": 16
         }
       },
       "9": {
         "start": {
-          "line": 66,
+          "line": 56,
           "column": 22
         },
         "end": {
-          "line": 68,
+          "line": 58,
           "column": 3
         }
       },
       "10": {
         "start": {
-          "line": 67,
+          "line": 57,
           "column": 4
         },
         "end": {
-          "line": 67,
+          "line": 57,
           "column": 19
         }
       },
       "11": {
         "start": {
-          "line": 70,
+          "line": 60,
           "column": 2
         },
         "end": {
-          "line": 114,
+          "line": 110,
           "column": 4
         }
       },
       "12": {
         "start": {
-          "line": 83,
+          "line": 76,
           "column": 25
         },
         "end": {
-          "line": 83,
+          "line": 76,
           "column": 36
         }
       },
       "13": {
         "start": {
-          "line": 93,
-          "column": 25
+          "line": 87,
+          "column": 27
         },
         "end": {
-          "line": 93,
-          "column": 39
+          "line": 87,
+          "column": 41
         }
       },
       "14": {
         "start": {
-          "line": 105,
-          "column": 25
+          "line": 100,
+          "column": 27
         },
         "end": {
-          "line": 105,
-          "column": 38
+          "line": 100,
+          "column": 40
         }
       }
     },
@@ -1229,7 +1298,7 @@
             "column": 48
           },
           "end": {
-            "line": 115,
+            "line": 111,
             "column": 1
           }
         },
@@ -1239,264 +1308,264 @@
         "name": "(anonymous_1)",
         "decl": {
           "start": {
-            "line": 31,
+            "line": 21,
             "column": 17
           },
           "end": {
-            "line": 31,
+            "line": 21,
             "column": 18
           }
         },
         "loc": {
           "start": {
-            "line": 31,
+            "line": 21,
             "column": 23
           },
           "end": {
-            "line": 33,
+            "line": 23,
             "column": 5
           }
         },
-        "line": 31
+        "line": 21
       },
       "2": {
         "name": "(anonymous_2)",
         "decl": {
           "start": {
-            "line": 52,
+            "line": 42,
             "column": 17
           },
           "end": {
-            "line": 52,
+            "line": 42,
             "column": 18
           }
         },
         "loc": {
           "start": {
-            "line": 52,
+            "line": 42,
             "column": 23
           },
           "end": {
-            "line": 54,
+            "line": 44,
             "column": 5
           }
         },
-        "line": 52
+        "line": 42
       },
       "3": {
         "name": "(anonymous_3)",
         "decl": {
           "start": {
-            "line": 61,
+            "line": 51,
             "column": 17
           },
           "end": {
-            "line": 61,
+            "line": 51,
             "column": 18
           }
         },
         "loc": {
           "start": {
-            "line": 61,
+            "line": 51,
             "column": 23
           },
           "end": {
-            "line": 63,
+            "line": 53,
             "column": 5
           }
         },
-        "line": 61
+        "line": 51
       },
       "4": {
         "name": "(anonymous_4)",
         "decl": {
           "start": {
-            "line": 66,
+            "line": 56,
             "column": 22
           },
           "end": {
-            "line": 66,
+            "line": 56,
             "column": 23
           }
         },
         "loc": {
           "start": {
-            "line": 66,
+            "line": 56,
             "column": 28
           },
           "end": {
-            "line": 68,
+            "line": 58,
             "column": 3
           }
         },
-        "line": 66
+        "line": 56
       },
       "5": {
         "name": "(anonymous_5)",
         "decl": {
           "start": {
-            "line": 83,
+            "line": 76,
             "column": 19
           },
           "end": {
-            "line": 83,
+            "line": 76,
             "column": 20
           }
         },
         "loc": {
           "start": {
-            "line": 83,
+            "line": 76,
             "column": 25
           },
           "end": {
-            "line": 83,
+            "line": 76,
             "column": 36
           }
         },
-        "line": 83
+        "line": 76
       },
       "6": {
         "name": "(anonymous_6)",
         "decl": {
           "start": {
-            "line": 93,
-            "column": 19
+            "line": 87,
+            "column": 21
           },
           "end": {
-            "line": 93,
-            "column": 20
+            "line": 87,
+            "column": 22
           }
         },
         "loc": {
           "start": {
-            "line": 93,
-            "column": 25
+            "line": 87,
+            "column": 27
           },
           "end": {
-            "line": 93,
-            "column": 39
+            "line": 87,
+            "column": 41
           }
         },
-        "line": 93
+        "line": 87
       },
       "7": {
         "name": "(anonymous_7)",
         "decl": {
           "start": {
-            "line": 105,
-            "column": 19
+            "line": 100,
+            "column": 21
           },
           "end": {
-            "line": 105,
-            "column": 20
+            "line": 100,
+            "column": 22
           }
         },
         "loc": {
           "start": {
-            "line": 105,
-            "column": 25
+            "line": 100,
+            "column": 27
           },
           "end": {
-            "line": 105,
-            "column": 38
+            "line": 100,
+            "column": 40
           }
         },
-        "line": 105
+        "line": 100
       }
     },
     "branchMap": {
       "0": {
         "loc": {
           "start": {
-            "line": 91,
+            "line": 84,
             "column": 9
           },
           "end": {
-            "line": 101,
-            "column": 17
+            "line": 96,
+            "column": 9
           }
         },
         "type": "binary-expr",
         "locations": [
           {
             "start": {
-              "line": 91,
+              "line": 84,
               "column": 9
             },
             "end": {
-              "line": 91,
+              "line": 84,
               "column": 39
             }
           },
           {
             "start": {
-              "line": 91,
-              "column": 43
-            },
-            "end": {
-              "line": 101,
-              "column": 17
-            }
-          }
-        ],
-        "line": 91
-      },
-      "1": {
-        "loc": {
-          "start": {
-            "line": 102,
-            "column": 9
-          },
-          "end": {
-            "line": 110,
-            "column": 19
-          }
-        },
-        "type": "binary-expr",
-        "locations": [
-          {
-            "start": {
-              "line": 102,
-              "column": 9
-            },
-            "end": {
-              "line": 102,
-              "column": 39
-            }
-          },
-          {
-            "start": {
-              "line": 103,
+              "line": 85,
               "column": 10
             },
             "end": {
-              "line": 110,
+              "line": 95,
               "column": 19
             }
           }
         ],
-        "line": 102
+        "line": 84
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 97,
+            "column": 9
+          },
+          "end": {
+            "line": 107,
+            "column": 9
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 97,
+              "column": 9
+            },
+            "end": {
+              "line": 97,
+              "column": 39
+            }
+          },
+          {
+            "start": {
+              "line": 98,
+              "column": 10
+            },
+            "end": {
+              "line": 106,
+              "column": 19
+            }
+          }
+        ],
+        "line": 97
       }
     },
     "s": {
-      "0": 21,
-      "1": 118,
-      "2": 118,
-      "3": 118,
+      "0": 3,
+      "1": 0,
+      "2": 0,
+      "3": 0,
       "4": 0,
-      "5": 118,
+      "5": 0,
       "6": 0,
-      "7": 118,
+      "7": 0,
       "8": 0,
-      "9": 118,
+      "9": 0,
       "10": 0,
-      "11": 118,
+      "11": 0,
       "12": 0,
       "13": 0,
       "14": 0
     },
     "f": {
-      "0": 118,
+      "0": 0,
       "1": 0,
       "2": 0,
       "3": 0,
@@ -1507,16 +1576,16 @@
     },
     "b": {
       "0": [
-        118,
-        34
+        0,
+        0
       ],
       "1": [
-        118,
-        84
+        0,
+        0
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "e2193771327f6439f91cf54583ec501dc96f2479"
+    "hash": "706d0e1014b136c70ac40a6729496d8e1bdfb53b"
   },
   "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/Mutations/addSqueak.js": {
     "path": "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/Mutations/addSqueak.js",
@@ -1535,7 +1604,7 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 21
+      "0": 3
     },
     "f": {},
     "b": {},
@@ -1551,7 +1620,7 @@
           "column": 25
         },
         "end": {
-          "line": 65,
+          "line": 70,
           "column": 1
         }
       },
@@ -1701,7 +1770,7 @@
           "column": 2
         },
         "end": {
-          "line": 64,
+          "line": 69,
           "column": 4
         }
       },
@@ -1717,21 +1786,21 @@
       },
       "17": {
         "start": {
-          "line": 48,
+          "line": 49,
           "column": 31
         },
         "end": {
-          "line": 48,
+          "line": 49,
           "column": 67
         }
       },
       "18": {
         "start": {
-          "line": 54,
+          "line": 55,
           "column": 27
         },
         "end": {
-          "line": 54,
+          "line": 55,
           "column": 41
         }
       }
@@ -1755,7 +1824,7 @@
             "column": 42
           },
           "end": {
-            "line": 65,
+            "line": 70,
             "column": 1
           }
         },
@@ -1861,54 +1930,54 @@
         "name": "(anonymous_5)",
         "decl": {
           "start": {
-            "line": 48,
+            "line": 49,
             "column": 20
           },
           "end": {
-            "line": 48,
+            "line": 49,
             "column": 21
           }
         },
         "loc": {
           "start": {
-            "line": 48,
+            "line": 49,
             "column": 31
           },
           "end": {
-            "line": 48,
+            "line": 49,
             "column": 67
           }
         },
-        "line": 48
+        "line": 49
       },
       "6": {
         "name": "(anonymous_6)",
         "decl": {
           "start": {
-            "line": 54,
+            "line": 55,
             "column": 21
           },
           "end": {
-            "line": 54,
+            "line": 55,
             "column": 22
           }
         },
         "loc": {
           "start": {
-            "line": 54,
+            "line": 55,
             "column": 27
           },
           "end": {
-            "line": 54,
+            "line": 55,
             "column": 41
           }
         },
-        "line": 54
+        "line": 55
       }
     },
     "branchMap": {},
     "s": {
-      "0": 21,
+      "0": 3,
       "1": 0,
       "2": 0,
       "3": 0,
@@ -1939,7 +2008,7 @@
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "c48dd183bc8edbde099f10281b48fbda47aea102"
+    "hash": "2c87b99390b27701e49fd73ae5cf975301eedd1f"
   },
   "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/queries/getUser.js": {
     "path": "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/queries/getUser.js",
@@ -1956,7 +2025,7 @@
       },
       "1": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 23
         },
         "end": {
@@ -1966,17 +2035,17 @@
       },
       "2": {
         "start": {
-          "line": 26,
-          "column": 35
+          "line": 25,
+          "column": 44
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 4
         }
       },
       "3": {
         "start": {
-          "line": 32,
+          "line": 31,
           "column": 2
         },
         "end": {
@@ -1990,17 +2059,17 @@
         "name": "(anonymous_0)",
         "decl": {
           "start": {
-            "line": 25,
+            "line": 24,
             "column": 23
           },
           "end": {
-            "line": 25,
+            "line": 24,
             "column": 24
           }
         },
         "loc": {
           "start": {
-            "line": 25,
+            "line": 24,
             "column": 31
           },
           "end": {
@@ -2008,22 +2077,22 @@
             "column": 1
           }
         },
-        "line": 25
+        "line": 24
       }
     },
     "branchMap": {},
     "s": {
-      "0": 21,
-      "1": 21,
-      "2": 26,
-      "3": 26
+      "0": 3,
+      "1": 3,
+      "2": 0,
+      "3": 0
     },
     "f": {
-      "0": 26
+      "0": 0
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "6a827cd4fa917f610e8c050e391988ccc69cb8af"
+    "hash": "cea846bd86075a28de77ed7acf145d02d923ae50"
   },
   "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/components/Navigation/Navbar.jsx": {
     "path": "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/components/Navigation/Navbar.jsx",
@@ -2204,24 +2273,24 @@
       }
     },
     "s": {
-      "0": 31,
-      "1": 31,
-      "2": 31,
-      "3": 31,
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
       "4": 0
     },
     "f": {
-      "0": 31,
+      "0": 0,
       "1": 0
     },
     "b": {
       "0": [
-        31,
-        10
+        0,
+        0
       ],
       "1": [
-        31,
-        13
+        0,
+        0
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -2232,191 +2301,181 @@
     "statementMap": {
       "0": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 16
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 53
         }
       },
       "1": {
         "start": {
-          "line": 15,
+          "line": 14,
           "column": 20
         },
         "end": {
-          "line": 78,
+          "line": 79,
           "column": 1
         }
       },
       "2": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 26
         },
         "end": {
-          "line": 16,
+          "line": 15,
           "column": 41
         }
       },
       "3": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 26
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 49
         }
       },
       "4": {
         "start": {
-          "line": 18,
+          "line": 17,
           "column": 21
         },
         "end": {
-          "line": 18,
+          "line": 17,
           "column": 32
         }
       },
       "5": {
         "start": {
-          "line": 19,
+          "line": 18,
           "column": 45
         },
         "end": {
-          "line": 19,
+          "line": 18,
           "column": 60
         }
       },
       "6": {
         "start": {
-          "line": 20,
+          "line": 19,
           "column": 30
         },
         "end": {
-          "line": 20,
+          "line": 19,
           "column": 40
         }
       },
       "7": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 2
         },
         "end": {
-          "line": 22,
-          "column": 24
+          "line": 25,
+          "column": 32
         }
       },
       "8": {
         "start": {
-          "line": 23,
-          "column": 2
+          "line": 22,
+          "column": 4
         },
         "end": {
-          "line": 27,
-          "column": 32
+          "line": 24,
+          "column": 5
         }
       },
       "9": {
         "start": {
-          "line": 24,
-          "column": 4
+          "line": 23,
+          "column": 6
         },
         "end": {
-          "line": 26,
-          "column": 5
+          "line": 23,
+          "column": 24
         }
       },
       "10": {
         "start": {
-          "line": 25,
-          "column": 6
+          "line": 27,
+          "column": 2
         },
         "end": {
-          "line": 25,
-          "column": 24
+          "line": 27,
+          "column": 40
         }
       },
       "11": {
         "start": {
-          "line": 29,
-          "column": 2
+          "line": 27,
+          "column": 15
         },
         "end": {
-          "line": 29,
+          "line": 27,
           "column": 40
         }
       },
       "12": {
         "start": {
-          "line": 29,
-          "column": 15
+          "line": 28,
+          "column": 2
         },
         "end": {
-          "line": 29,
-          "column": 40
+          "line": 28,
+          "column": 51
         }
       },
       "13": {
         "start": {
-          "line": 30,
-          "column": 2
+          "line": 28,
+          "column": 13
         },
         "end": {
-          "line": 30,
+          "line": 28,
           "column": 51
         }
       },
       "14": {
         "start": {
           "line": 30,
-          "column": 13
+          "column": 25
         },
         "end": {
-          "line": 30,
-          "column": 51
+          "line": 40,
+          "column": 4
         }
       },
       "15": {
         "start": {
-          "line": 32,
-          "column": 25
+          "line": 31,
+          "column": 4
         },
         "end": {
-          "line": 42,
-          "column": 4
+          "line": 39,
+          "column": 6
         }
       },
       "16": {
         "start": {
-          "line": 33,
-          "column": 4
+          "line": 42,
+          "column": 2
         },
         "end": {
-          "line": 41,
-          "column": 6
+          "line": 78,
+          "column": 4
         }
       },
       "17": {
         "start": {
-          "line": 44,
-          "column": 2
-        },
-        "end": {
-          "line": 77,
-          "column": 4
-        }
-      },
-      "18": {
-        "start": {
-          "line": 52,
+          "line": 50,
           "column": 25
         },
         "end": {
-          "line": 52,
+          "line": 50,
           "column": 38
         }
       }
@@ -2426,108 +2485,108 @@
         "name": "(anonymous_0)",
         "decl": {
           "start": {
-            "line": 15,
+            "line": 14,
             "column": 20
           },
           "end": {
-            "line": 15,
+            "line": 14,
             "column": 21
           }
         },
         "loc": {
           "start": {
-            "line": 15,
+            "line": 14,
             "column": 26
           },
           "end": {
-            "line": 78,
+            "line": 79,
             "column": 1
           }
         },
-        "line": 15
+        "line": 14
       },
       "1": {
         "name": "(anonymous_1)",
         "decl": {
           "start": {
-            "line": 23,
+            "line": 21,
             "column": 12
           },
           "end": {
-            "line": 23,
+            "line": 21,
             "column": 13
           }
         },
         "loc": {
           "start": {
-            "line": 23,
+            "line": 21,
             "column": 18
           },
           "end": {
-            "line": 27,
+            "line": 25,
             "column": 3
           }
         },
-        "line": 23
+        "line": 21
       },
       "2": {
         "name": "(anonymous_2)",
         "decl": {
           "start": {
-            "line": 32,
-            "column": 49
+            "line": 30,
+            "column": 50
           },
           "end": {
-            "line": 32,
-            "column": 50
+            "line": 30,
+            "column": 51
           }
         },
         "loc": {
           "start": {
-            "line": 32,
-            "column": 61
+            "line": 30,
+            "column": 62
           },
           "end": {
-            "line": 42,
+            "line": 40,
             "column": 3
           }
         },
-        "line": 32
+        "line": 30
       },
       "3": {
         "name": "(anonymous_3)",
         "decl": {
           "start": {
-            "line": 52,
+            "line": 50,
             "column": 19
           },
           "end": {
-            "line": 52,
+            "line": 50,
             "column": 20
           }
         },
         "loc": {
           "start": {
-            "line": 52,
+            "line": 50,
             "column": 25
           },
           "end": {
-            "line": 52,
+            "line": 50,
             "column": 38
           }
         },
-        "line": 52
+        "line": 50
       }
     },
     "branchMap": {
       "0": {
         "loc": {
           "start": {
-            "line": 20,
+            "line": 19,
             "column": 10
           },
           "end": {
-            "line": 20,
+            "line": 19,
             "column": 25
           }
         },
@@ -2535,25 +2594,25 @@
         "locations": [
           {
             "start": {
-              "line": 20,
+              "line": 19,
               "column": 20
             },
             "end": {
-              "line": 20,
+              "line": 19,
               "column": 25
             }
           }
         ],
-        "line": 20
+        "line": 19
       },
       "1": {
         "loc": {
           "start": {
-            "line": 20,
+            "line": 19,
             "column": 30
           },
           "end": {
-            "line": 20,
+            "line": 19,
             "column": 40
           }
         },
@@ -2561,35 +2620,35 @@
         "locations": [
           {
             "start": {
-              "line": 20,
+              "line": 19,
               "column": 30
             },
             "end": {
-              "line": 20,
+              "line": 19,
               "column": 34
             }
           },
           {
             "start": {
-              "line": 20,
+              "line": 19,
               "column": 38
             },
             "end": {
-              "line": 20,
+              "line": 19,
               "column": 40
             }
           }
         ],
-        "line": 20
+        "line": 19
       },
       "2": {
         "loc": {
           "start": {
-            "line": 24,
+            "line": 22,
             "column": 4
           },
           "end": {
-            "line": 26,
+            "line": 24,
             "column": 5
           }
         },
@@ -2597,35 +2656,35 @@
         "locations": [
           {
             "start": {
-              "line": 24,
+              "line": 22,
               "column": 4
             },
             "end": {
-              "line": 26,
+              "line": 24,
               "column": 5
             }
           },
           {
             "start": {
-              "line": 24,
+              "line": 22,
               "column": 4
             },
             "end": {
-              "line": 26,
+              "line": 24,
               "column": 5
             }
           }
         ],
-        "line": 24
+        "line": 22
       },
       "3": {
         "loc": {
           "start": {
-            "line": 29,
+            "line": 27,
             "column": 2
           },
           "end": {
-            "line": 29,
+            "line": 27,
             "column": 40
           }
         },
@@ -2633,35 +2692,35 @@
         "locations": [
           {
             "start": {
-              "line": 29,
+              "line": 27,
               "column": 2
             },
             "end": {
-              "line": 29,
+              "line": 27,
               "column": 40
             }
           },
           {
             "start": {
-              "line": 29,
+              "line": 27,
               "column": 2
             },
             "end": {
-              "line": 29,
+              "line": 27,
               "column": 40
             }
           }
         ],
-        "line": 29
+        "line": 27
       },
       "4": {
         "loc": {
           "start": {
-            "line": 30,
+            "line": 28,
             "column": 2
           },
           "end": {
-            "line": 30,
+            "line": 28,
             "column": 51
           }
         },
@@ -2669,35 +2728,35 @@
         "locations": [
           {
             "start": {
-              "line": 30,
+              "line": 28,
               "column": 2
             },
             "end": {
-              "line": 30,
+              "line": 28,
               "column": 51
             }
           },
           {
             "start": {
-              "line": 30,
+              "line": 28,
               "column": 2
             },
             "end": {
-              "line": 30,
+              "line": 28,
               "column": 51
             }
           }
         ],
-        "line": 30
+        "line": 28
       },
       "5": {
         "loc": {
           "start": {
-            "line": 46,
+            "line": 44,
             "column": 7
           },
           "end": {
-            "line": 58,
+            "line": 56,
             "column": 7
           }
         },
@@ -2705,36 +2764,36 @@
         "locations": [
           {
             "start": {
-              "line": 47,
+              "line": 45,
               "column": 8
             },
             "end": {
-              "line": 53,
+              "line": 51,
               "column": 10
             }
           },
           {
             "start": {
-              "line": 55,
+              "line": 53,
               "column": 8
             },
             "end": {
-              "line": 57,
+              "line": 55,
               "column": 14
             }
           }
         ],
-        "line": 46
+        "line": 44
       },
       "6": {
         "loc": {
           "start": {
             "line": 71,
-            "column": 73
+            "column": 9
           },
           "end": {
             "line": 71,
-            "column": 127
+            "column": 64
           }
         },
         "type": "cond-expr",
@@ -2742,21 +2801,21 @@
           {
             "start": {
               "line": 71,
-              "column": 83
+              "column": 19
             },
             "end": {
               "line": 71,
-              "column": 111
+              "column": 47
             }
           },
           {
             "start": {
               "line": 71,
-              "column": 113
+              "column": 50
             },
             "end": {
               "line": 71,
-              "column": 127
+              "column": 64
             }
           }
         ],
@@ -2764,63 +2823,62 @@
       }
     },
     "s": {
-      "0": 21,
-      "1": 21,
-      "2": 30,
-      "3": 26,
-      "4": 26,
-      "5": 26,
-      "6": 26,
-      "7": 26,
-      "8": 26,
-      "9": 25,
-      "10": 20,
-      "11": 26,
-      "12": 10,
-      "13": 16,
+      "0": 3,
+      "1": 3,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
       "14": 0,
-      "15": 16,
-      "16": 112,
-      "17": 16,
-      "18": 0
+      "15": 0,
+      "16": 0,
+      "17": 0
     },
     "f": {
-      "0": 30,
-      "1": 25,
-      "2": 112,
+      "0": 0,
+      "1": 0,
+      "2": 0,
       "3": 0
     },
     "b": {
       "0": [
-        20
+        0
       ],
       "1": [
-        26,
-        20
+        0,
+        0
       ],
       "2": [
-        20,
-        5
+        0,
+        0
       ],
       "3": [
-        10,
-        16
+        0,
+        0
       ],
       "4": [
         0,
-        16
+        0
       ],
       "5": [
-        16,
+        0,
         0
       ],
       "6": [
-        4,
-        12
+        0,
+        0
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "0cff9fefcbc8b577ac1ea243a940eb5824dc739d"
+    "hash": "6ac822eac7c6fa7b6c98f62ed35b9b47779a3d4b"
   },
   "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/queries/getReported.js": {
     "path": "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/queries/getReported.js",
@@ -2894,13 +2952,13 @@
     },
     "branchMap": {},
     "s": {
-      "0": 21,
-      "1": 21,
-      "2": 41,
-      "3": 41
+      "0": 3,
+      "1": 3,
+      "2": 0,
+      "3": 0
     },
     "f": {
-      "0": 41
+      "0": 0
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -2923,7 +2981,7 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 21
+      "0": 3
     },
     "f": {},
     "b": {},
@@ -2947,7 +3005,7 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 21
+      "0": 3
     },
     "f": {},
     "b": {},
@@ -3182,23 +3240,23 @@
     },
     "branchMap": {},
     "s": {
-      "0": 21,
-      "1": 20,
-      "2": 20,
-      "3": 20,
-      "4": 2,
-      "5": 20,
-      "6": 2,
-      "7": 20,
-      "8": 2,
-      "9": 2
+      "0": 3,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
     },
     "f": {
-      "0": 20,
-      "1": 2,
-      "2": 2,
-      "3": 2,
-      "4": 2
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -3433,29 +3491,29 @@
       }
     },
     "s": {
-      "0": 21,
-      "1": 21,
-      "2": 21,
-      "3": 11,
-      "4": 10,
+      "0": 3,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
       "5": 0,
-      "6": 10,
-      "7": 20,
-      "8": 20,
-      "9": 10
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
     },
     "f": {
-      "0": 21,
-      "1": 20
+      "0": 0,
+      "1": 0
     },
     "b": {
       "0": [
-        11,
-        10
+        0,
+        0
       ],
       "1": [
         0,
-        10
+        0
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -3478,7 +3536,7 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 21
+      "0": 3
     },
     "f": {},
     "b": {},
@@ -3525,7 +3583,7 @@
         },
         "end": {
           "line": 16,
-          "column": 17
+          "column": 18
         }
       },
       "4": {
@@ -3595,7 +3653,7 @@
         },
         "end": {
           "line": 31,
-          "column": 13
+          "column": 14
         }
       },
       "11": {
@@ -3604,17 +3662,17 @@
           "column": 2
         },
         "end": {
-          "line": 52,
+          "line": 53,
           "column": 4
         }
       },
       "12": {
         "start": {
-          "line": 42,
+          "line": 43,
           "column": 31
         },
         "end": {
-          "line": 42,
+          "line": 43,
           "column": 50
         }
       }
@@ -3638,7 +3696,7 @@
             "column": 40
           },
           "end": {
-            "line": 53,
+            "line": 54,
             "column": 1
           }
         },
@@ -3744,25 +3802,25 @@
         "name": "(anonymous_5)",
         "decl": {
           "start": {
-            "line": 42,
+            "line": 43,
             "column": 20
           },
           "end": {
-            "line": 42,
+            "line": 43,
             "column": 21
           }
         },
         "loc": {
           "start": {
-            "line": 42,
+            "line": 43,
             "column": 31
           },
           "end": {
-            "line": 42,
+            "line": 43,
             "column": 50
           }
         },
-        "line": 42
+        "line": 43
       }
     },
     "branchMap": {},
@@ -3791,7 +3849,7 @@
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "6bf4baff03468c721f7a09849c8df1f74826a49f"
+    "hash": "8a11560107443af2efa644aa689a1a4dfdcbc7ec"
   },
   "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/components/App/App.js": {
     "path": "/Users/jedeo/Turing/MOD4/capstone/squeaker-fe/src/components/App/App.js",
@@ -3845,11 +3903,11 @@
     },
     "branchMap": {},
     "s": {
-      "0": 21,
-      "1": 25
+      "0": 3,
+      "1": 3
     },
     "f": {
-      "0": 25
+      "0": 3
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -3892,9 +3950,9 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 21,
-      "1": 21,
-      "2": 21
+      "0": 3,
+      "1": 3,
+      "2": 3
     },
     "f": {},
     "b": {},

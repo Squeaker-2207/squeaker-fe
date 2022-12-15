@@ -1,7 +1,4 @@
-
 describe("Login spec", () => {
-  beforeEach(() => {});
-
   it("the users data loads", () => {
     cy.visit("http://localhost:3000/");
     cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
@@ -28,9 +25,8 @@ describe("Login spec", () => {
     cy.get("#login-button").click();
     cy.wait("@fetchUser")
       .its("response.body.data.fetchUser.username")
-      .should("contain", "Test_User");
-    cy.wait("@fetchUser")
-      .its("response.body.data.fetchUser.isAdmin")
+      .should("contain", "Test_User")
+      .and("response.body.data.fetchUser.isAdmin")
       .should("eq", false);
   });
 

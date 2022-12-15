@@ -1,3 +1,4 @@
+
 describe("admin spec", () => {
   beforeEach(() => {
     cy.intercept("https://squeakr-be.fly.dev/graphql", {
