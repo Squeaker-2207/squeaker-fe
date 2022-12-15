@@ -51,7 +51,7 @@ export const User = () => {
         />
       ) : (
         <div className="squeaks-popup">
-          <NewSqueak setShow={setShow} />
+          <NewSqueak setShow={setShow} userById={userById}/>
         </div>
       )}
       <header className="row center">

@@ -1,14 +1,14 @@
 import React, { useState, useContext } from "react";
 import { useMutation } from "@apollo/client";
 import { UserContext } from "../../contexts/userContext";
-import { GetSqueaks } from "../../queries/getSqueaks";
+import { GetUser } from "../../queries/getUser";
 import { POST_SQUEAK } from "../../Mutations/addSqueak";
 import "./NewSqueak.css";
 
-export const NewSqueak = ({ setShow }) => {
+export const NewSqueak = ({ setShow, userById }) => {
   const [squeakContent, setSqueakContent] = useState("");
   const [user] = useContext(UserContext);
-  const { refetch } = GetSqueaks();
+  const { refetch } = GetUser(userById.id);
   const { id } = user;
 
   const [postSqueak] = useMutation(POST_SQUEAK, {
