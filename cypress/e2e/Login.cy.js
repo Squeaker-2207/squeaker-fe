@@ -36,13 +36,13 @@ describe("user spec", () => {
   it("user can see posted squeaks", () => {
     cy.intercept("POST", "https://squeakr-be.fly.dev/graphql/", (req) => {
       req.reply({
-        fixture: "../fixtures/Test_Squeaks.fixture.json",
+        fixture: "../fixtures/Test_User.fixture.json",
         delay: 500,
       });
     }).as("AllSqueaks");
 
     cy.wait("@AllSqueaks")
-      .its("response.body.data.allSqueaks")
+      .its("response.body.data.fetchUser.allSqueaks")
       .should("have.length", 3);
     cy.get(".user-greeting").contains("Hello Test_User!");
   });
