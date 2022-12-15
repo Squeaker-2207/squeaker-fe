@@ -57,8 +57,10 @@ Please take a look at the link to our deployed UI: https://squeaker-fe.vercel.ap
 
 # <a name="demo"></a>Demos
 
-- User flow:![User Demo](Demo/squeakr-login-demo.gif)
-- Admin flow:![Admin Demo](Demo/squeakr-admin-demo.gif)
+- User flow:
+![User Demo](Demo/squeakr-login-demo.gif)
+- Admin flow:
+![Admin Demo](Demo/squeakr-admin-demo.gif)
 
 # <a name="specs"></a>Project Specs
 
